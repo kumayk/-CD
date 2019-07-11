@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CD</title>
+    <title>俺のCD</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta charset="utf-8">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <div class="header-title">
+        <!--  topへのlink_toを追加-->
+        <h1>俺のCD</h1>
+      </div>
+      <div class="header-contents">
+        <nav class="header-nav">
+          <ul>
+            <!-- controller,routing追加後、if文とlink_toログイン追加、ログイン後で分ける -->
+            <li>Sign Up</li>
+            <li>Login</li>
+          </ul>
+        </nav>
+        <!--  
+        <dl class="searchbox">
+          <%= search_form_for @search, url: articles_path do |f| %>
+            <dt><%= f.text_field :title_cont ,placeholder: '検索するテキストを入力...' %></dt>
+            <dd><%= f.submit ("検索") , class: 'search-btn'%></dd>
+          <% end %>
+        </dl>
+        -->
+      </div>
+    </header>
+
     <%= yield %>
+
+    <footer>
+      <div class="footer-title">
+        <h3>俺のCD</h3>
+      </div>
+      <div class="footer-store-info">
+        <p>店舗情報</p><br>
+        <p>0773-22-3456</p><br>
+        <p>〒390-1243 長野県松本市神林5300</p><br>
+        <p>Open 7days 10AM-7PM</p>
+      </div>
+    </footer>
   </body>
 </html>
 
