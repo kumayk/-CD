@@ -13,4 +13,12 @@ Rails.application.routes.draw do
   registrations: 'users/registrations'
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+#reviews_routes(ikunaga)
+  post '/items/:id/reviews', to: 'reviews#create'
+  put '/items/:id/reviews/:id', to: 'reviews#update'
+  patch '/items/:id/reviews/:id', to: 'reviews#update'
+  delete '/items/:id/reviews/:id', to: 'reviews#destroy'
+
+
 end
