@@ -64,6 +64,8 @@ GEM
       erubi (>= 1.0.0)
       rack (>= 0.9.0)
     bindex (0.7.0)
+    binding_of_caller (0.8.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
     bootstrap-sass (3.3.7)
@@ -94,6 +96,10 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
+<<<<<<< HEAD
+=======
+    debug_inspector (0.0.3)
+>>>>>>> aki/master
     devise (4.6.2)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -265,6 +271,10 @@ PLATFORMS
 
 DEPENDENCIES
   better_errors
+<<<<<<< HEAD
+=======
+  binding_of_caller
+>>>>>>> aki/master
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.6)
   byebug
