@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  disk_name: MyString
+  disk_image: MyString
+  stock: 1
+  price: 1
+  item_status: 1
+
+two:
+  disk_name: MyString
+  disk_image: MyString
+  stock: 1
+  price: 1
+  item_status: 1
