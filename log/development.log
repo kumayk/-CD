@@ -288,67 +288,120 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 33ms (Views: 16.0ms | ActiveRecord: 0.0ms)
 
 
+<<<<<<< HEAD
   [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateShippingAddresses (20190713053908)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
   [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
   ↳ db/migrate/20190713053908_create_shipping_addresses.rb:3
+<<<<<<< HEAD
   [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "shipping_addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shipping_name" varchar, "address" varchar, "zip_code" varchar, "phone_number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713053908_create_shipping_addresses.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713053908"]]
   ↳ bin/rails:9
   [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "shipping_addresses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shipping_name" varchar, "address" varchar, "zip_code" varchar, "phone_number" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713053908_create_shipping_addresses.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (3.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713053908"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateReviews (20190713054128)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "review_comment" text, "is" varchar, "deleted" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054128_create_reviews.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054128"]]
   ↳ bin/rails:9
   [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "review_comment" text, "is" varchar, "deleted" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054128_create_reviews.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054128"]]
+  ↳ bin/rails:9
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateCartDetails (20190713054212)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "cart_details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054212_create_cart_details.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054212"]]
   ↳ bin/rails:9
   [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "cart_details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054212_create_cart_details.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054212"]]
+  ↳ bin/rails:9
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateOrderDetails (20190713054253)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "order_details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054253_create_order_details.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054253"]]
   ↳ bin/rails:9
   [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "order_details" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "quantity" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054253_create_order_details.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054253"]]
+  ↳ bin/rails:9
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateItems (20190713054402)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "disk_name" varchar, "disk_image" varchar, "stock" integer, "price" integer, "item_status" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054402_create_items.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054402"]]
   ↳ bin/rails:9
   [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "disk_name" varchar, "disk_image" varchar, "stock" integer, "price" integer, "item_status" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054402_create_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054402"]]
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateOrders (20190713054614)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_status" integer, "shipping_address" varchar, "payment" varchar, "sub_total_price" integer, "shipping_fee" integer, "total_price" integer, "is_deleted" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054614_create_orders.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054614"]]
   ↳ bin/rails:9
   [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "order_status" integer, "shipping_address" varchar, "payment" varchar, "sub_total_price" integer, "shipping_fee" integer, "total_price" integer, "is_deleted" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054614_create_orders.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054614"]]
+  ↳ bin/rails:9
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateArtists (20190713054642)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054642_create_artists.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054642"]]
@@ -363,28 +416,61 @@ Migrating to CreateLabels (20190713054701)
   [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054701"]]
   ↳ bin/rails:9
   [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "artists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054642_create_artists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054642"]]
+  ↳ bin/rails:9
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateLabels (20190713054701)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "labels" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "label_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054701_create_labels.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054701"]]
+  ↳ bin/rails:9
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateDisks (20190713054722)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "disks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "disk_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054722_create_disks.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054722"]]
   ↳ bin/rails:9
   [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (8.9ms)[0m  [1m[35mCREATE TABLE "disks" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "disk_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054722_create_disks.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054722"]]
+  ↳ bin/rails:9
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateSongs (20190713054804)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "truck_number" integer, "song_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054804_create_songs.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054804"]]
   ↳ bin/rails:9
   [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+=======
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE TABLE "songs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "truck_number" integer, "song_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054804_create_songs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054804"]]
+  ↳ bin/rails:9
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
 Migrating to CreateCategories (20190713054837)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   ↳ bin/rails:9
+<<<<<<< HEAD
   [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "category_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
   ↳ db/migrate/20190713054837_create_categories.rb:3
   [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054837"]]
@@ -398,4 +484,19 @@ Migrating to CreateCategories (20190713054837)
   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
   ↳ bin/rails:9
   [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+=======
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "categories" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "category_name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190713054837_create_categories.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190713054837"]]
+  ↳ bin/rails:9
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (4.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+>>>>>>> 4600c0e3e9c85e10f387c63bbfae30be9956f7d7
   ↳ bin/rails:9
