@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  review_comment: MyText
+  is: MyString
+  deleted: false
+
+two:
+  review_comment: MyText
+  is: MyString
+  deleted: false
