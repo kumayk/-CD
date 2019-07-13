@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   delete '/items/:id/reviews/:id', to: 'reviews#destroy'
 
 #items_routes(ikunaga)
-  get '/items', to: 'items#index'
+  get '/', to: 'items#index'
   get '/items/:id', to: 'items#show'
 
 #users_routes(ikunaga)
