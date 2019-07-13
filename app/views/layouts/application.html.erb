@@ -10,41 +10,39 @@
   </head>
 
   <body>
-    <header>
-      <div class="header-title">
-        <!--  topへのlink_toを追加-->
-        <h1>俺のCD</h1>
-      </div>
-      <div class="header-contents">
-        <nav class="header-nav">
-          <ul>
-            <!-- controller,routing追加後、if文とlink_toログイン追加、ログイン後で分ける -->
-            <li>Sign Up</li>
-            <li>Login</li>
-          </ul>
-        </nav>
-        <!--  
-        <dl class="searchbox">
-          <%= search_form_for @search, url: articles_path do |f| %>
-            <dt><%= f.text_field :title_cont ,placeholder: '検索するテキストを入力...' %></dt>
-            <dd><%= f.submit ("検索") , class: 'search-btn'%></dd>
-          <% end %>
-        </dl>
-        -->
+    <header class="clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="header-title col-lg-4">
+            <h1>俺のCD</h1>
+          </div>
+          <div class="header-contents col-lg-8">
+            <nav class="header-nav">
+              <ul>
+                <li>Sign Up</li>
+                <li>Login</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
       </div>
     </header>
 
-    <%= yield %>
 
-    <footer>
-      <div class="footer-title">
-        <h3>俺のCD</h3>
-      </div>
-      <div class="footer-store-info">
-        <p>店舗情報</p><br>
-        <p>0773-22-3456</p><br>
-        <p>〒390-1243 長野県松本市神林5300</p><br>
-        <p>Open 7days 10AM-7PM</p>
+      <%= yield %>
+
+
+    <footer class="container">
+      <div class="row">
+        <div class="footer-title col-lg-6">
+          <h3>俺のCD</h3>
+        </div>
+        <div class="footer-store-info col-lg-6">
+          <p>店舗情報</p><br>
+          <p>0773-22-3456</p><br>
+          <p>〒390-1243 長野県松本市神林5300</p><br>
+          <p>Open 7days 10AM-7PM</p>
+        </div>
       </div>
     </footer>
   </body>
