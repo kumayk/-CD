@@ -1,6 +1,4 @@
 class AdminItemsController < ApplicationController
-<<<<<<< HEAD
-=======
 
 def index
 end
@@ -20,5 +18,4 @@ end
 def destroy
 end
 
->>>>>>> aki/master
 end
