@@ -49,6 +49,7 @@ Rails.application.routes.draw do
   post '/order/:id', to: 'orders#create'
 
 #admin_users_routes
+  get 'admin/users/index', to: 'admin_users#index'
   get '/admin/:id', to: 'admin_users#show'
   get '/admin/:id/edit', to: 'admin_users#edit'
   put '/admin/:id', to: 'admin_users#destroy'
@@ -61,6 +62,7 @@ Rails.application.routes.draw do
 #admin_items_routes
   get '/admin/items', to: 'admin_items#index'
   get '/admin/items/:id', to: 'admin_items#show'
+  get '/admin/items/new', to: 'admin_items#new'
   post '/admin/items/:id', to: 'admin_items#create'
   get '/admin/items/:id/edit', to: 'admin_items#edit'
   put '/admin/items/:id', to: 'admin_items#update'
@@ -74,5 +76,9 @@ Rails.application.routes.draw do
   patch '/admin/orders/:id', to: 'admin_orders#update'
   delete '/admin/orders/:id', to: 'admin_orders#destroy'
   get '/admin/orders/:id/edit', to: 'admin_orders#edit'
+
+  #admins
+  get '/admin', to: 'admins#top'
+
 
 end

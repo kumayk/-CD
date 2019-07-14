@@ -3,66 +3,116 @@
     <div class="wrapper">
 
 
-      <h2 class="form_signup">Sign up</h2>
+      <h2 class="form_signup" style="text-align: center;">Sign Up</h2>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
+      <div class="name-form container">
+        <div class="row">
+          <h5 class="col-sm-2" style="line-height: 70px;">名前</h5>
 
-      <div class="field">
-        <h6>姓</h6>
-        <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name" %>
+          <div class="field col-sm-5">
+            <h6>姓</h6>
+            <%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", :size => "60*60" %>
+          </div>
+
+          <div class="field col-sm-5">
+            <h6>名</h6>
+            <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", :size => "60*60" %>
+          </div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>名</h6>
-        <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name" %>
+      <div class="hurigana-form container">
+        <div class="row">
+          <h5 class="col-sm-2" style="line-height: 70px;">フリガナ</h5>
+
+          <div class="field col-sm-5">
+            <h6>セイ</h6>
+            <%= f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana", :size => "60*60" %>
+          </div>
+
+          <div class="field col-sm-5">
+            <h6>ナ</h6>
+            <%= f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana", :size => "60*60" %>
+          </div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>セイ</h6>
-        <%= f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana" %>
+      <div class="zip-form container">
+        <div class="row">
+          <div class="space col-sm-2"></div>
+          <div class="field col-sm-5" style="text-align: left;">
+            <h6>郵便番号〒(ハイフン不要)</h6>
+            <%= f.text_field :zip_code, autofocus: true, autocomplete: "zip_code", :size => "60*60"%>
+          </div>
+          <div class="space col-sm-5"></div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>メイ</h6>
-        <%= f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana" %>
+      <div class="address-form container">
+        <div class="row">
+          <div class="space col-sm-2"></div>
+          <div class="field col-sm-5" style="text-align: left;">
+            <h6>住所</h6>
+            <%= f.text_field :address, autofocus: true, autocomplete: "address", :size => "130*130" %>
+          </div>
+          <div class="space col-sm-5"></div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>郵便番号(ハイフンなし)</h6>
-        <%= f.text_field :zip_code, autofocus: true, autocomplete: "zip_code" %>
+      <div class="address-form container">
+        <div class="row">
+          <div class="space col-sm-2"></div>
+          <div class="field col-sm-5">
+            <h6>電話番号</h6>
+            <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", :size => "60*60" %>
+          </div>
+          <div class="space col-sm-5"></div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>住所</h6>
-        <%= f.text_field :address, autofocus: true, autocomplete: "address" %>
+      <div class="email-form container">
+        <div class="row">
+          <div class="space col-sm-2"></div>
+          <div class="field col-sm-5">
+            <%= f.label :Eメール %><br/>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :size => "60*60" %>
+          </div>
+          <div class="space col-sm-5"></div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>電話番号</h6>
-        <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number" %>
+
+      <div class="email-form container">
+        <div class="row">
+          <div class="space col-sm-2"></div>
+          <div class="field col-sm-5">
+            <%= f.label :パスワード %>
+            <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> 文字以上)</em>
+            <% end %><br />
+            <%= f.password_field :password, autocomplete: "new-password", :size => "60*60" %>
+          </div>
+          <div class="space col-sm-5"></div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>メールアドレス</h6>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+
+      <div class="email-form container">
+        <div class="row">
+          <div class="space col-sm-2"></div>
+          <div class="field col-sm-5">
+            <%= f.label :パスワード（確認） %><br />
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", :size => "60*60" %>
+          </div>
+          <div class="space col-sm-5"></div>
+        </div>
       </div>
 
-      <div class="field">
-        <h6>パスワード</h6>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password" %>
-      </div>
-
-      <div class="field">
-        <h6>パスワード確認用</h6>
-        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit "Sign up" %>
+      <div class="actions" style="text-align: center; margin: 40px 0;">
+        <%= f.submit "新規登録" %>
       </div>
       <% end %>
     </div>
