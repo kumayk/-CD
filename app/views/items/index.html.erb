@@ -1,2 +1,28 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="recommend">
+				<h4 class="p-3 mb-2 bg-primary text-white" style="width: 145px; padding: 20px; text-align: center;">Recommend</h4>
+			</div>
+			<% @items.each do |item| %>
+				<div class="col-xs-6 col-md-3">
+					<div class="thumbnail">
+						<%= item %>
+					</div>
+				</div>
+			<% end %>
+
+			<div class="ranking">
+				<p>週間ランキング（2019.7.1~2019.7.7)</p>
+				<h4 class="p-3 mb-2 bg-primary text-white" style="width: 145px; padding: 20px; text-align: center;">Ranking</h4>
+			</div>
+			<% @items.each do |item| %>
+				<div class="col-xs-6 col-md-3">
+					<div class="thumbnail">
+						<%= item %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</body>
