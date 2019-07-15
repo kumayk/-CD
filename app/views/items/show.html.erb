@@ -1,2 +1,24 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<h3>商品レビュー</h3>
+<table class="table">
+           <thead>
+           <tr> 
+             <th>comment</th>
+           </tr>
+           </thead>
+
+           <tbody>
+           <% @reviews.each do |review| %>
+           <tr>
+             <th><%= review.review_comment %></th>
+           </tr>
+           <% end %>
+           </tbody>
+</table>
+
+       <%= form_for(@review, :url => {:controller => :reviews, :action => :create}) do |f| %>
+
+       <%= f.text_field :review_comment %>
+ 
+       <%= f.submit '投稿する' %>
+ 
+    <% end %>

@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'items/index'
-  get 'items/show'
   #devise_for :admins
   #devise_for :users
 
@@ -30,6 +28,7 @@ Rails.application.routes.draw do
   delete '/items/:id/reviews/:id', to: 'reviews#destroy'
 
 #items_routes
+  post 'items', to: 'items#create'
   get '/', to: 'items#index'
   get '/items/:id', to: 'items#show'
 
