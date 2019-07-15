@@ -10,6 +10,7 @@
            <% @reviews.each do |review| %>
            <tr>
              <th><%= review.review_comment %></th>
+             <th><%= link_to "削除",user_registration_path, method: :delete, "data-confirm" => "本当に消しますか？" %></th>
            </tr>
            <% end %>
            </tbody>

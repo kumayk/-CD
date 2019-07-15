@@ -18,7 +18,7 @@ end
 def destroy
     @review = Review.find(params[:id])
     if @review.destroy
-      render "items/show"
+      render items_path
     end
 end
 
