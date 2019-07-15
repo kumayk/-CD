@@ -22,55 +22,7 @@ Rails.application.routes.draw do
 
 #items_routes
   get '/', to: 'items#index'
-<<<<<<< HEAD
-  get '/items/search', to: 'items#search'
-  get '/items/:id', to: 'items#show'
 
-
-#cart_details_routes
-  get '/cart/:id', to: 'cart_details#show'
-  delete '/cart/:id', to: 'cart_details#destroy'
-  post '/cart', to: 'cart_details#create'
-  put '/cart/:id', to: 'cart_details#update'
-  patch '/cart/:id', to: 'cart_details#update'
-
-#order_details_routes
-  put '/order_detail/:id', to: 'cart_details#update'
-  patch '/order_detail/:id', to: 'cart_details#update'
-
-#orders_routes
-  get '/order/:id', to: 'orders#show'
-  post '/order/:id', to: 'orders#create'
-
-#admin_users_routes
-  get 'admin/users/index', to: 'admin_users#index'
-  get '/admin/:id', to: 'admin_users#show'
-  get '/admin/:id/edit', to: 'admin_users#edit'
-  put '/admin/:id', to: 'admin_users#destroy'
-  patch '/admin/:id', to: 'admin_users#destroy'
-  delete '/admin/:id', to: 'admin_users#update'
-
-#admin_reviews_routes
-  delete 'admin/reviews/:id', to: 'admin_reviews#destroy'
-
-#admin_items_routes
-  get '/admin/items', to: 'admin_items#index'
-  get '/admin/items/new', to: 'admin_items#new'
-  get '/admin/items/:id', to: 'admin_items#show'
-  post '/admin/items/:id', to: 'admin_items#create'
-  get '/admin/items/:id/edit', to: 'admin_items#edit'
-  put '/admin/items/:id', to: 'admin_items#update'
-  patch '/admin/items/:id', to: 'admin_items#update'
-  delete '/admin/items/:id', to: 'admin_items#destroy'
-
-#admin_orders_routes
-  get '/admin/orders', to: 'admin_orders#index'
-  get '/admin/orders/:id', to: 'admin_orders#show'
-  put '/admin/orders/:id', to: 'admin_orders#update'
-  patch '/admin/orders/:id', to: 'admin_orders#update'
-  delete '/admin/orders/:id', to: 'admin_orders#destroy'
-  get '/admin/orders/:id/edit', to: 'admin_orders#edit'
-=======
   
   resources :items, only: [:index, :show]
   get 'items/searches', to: 'items#search'
@@ -90,8 +42,7 @@ Rails.application.routes.draw do
   resources :admin_orders, only: [:index, :show, :update, :destroy, :edit]
 
 
-#others
->>>>>>> aki/master
+
 
   #admins
   get '/admin', to: 'admins#top'
