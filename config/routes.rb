@@ -22,6 +22,7 @@ Rails.application.routes.draw do
 
 #items_routes
   get '/', to: 'items#index'
+
   
   resources :items, only: [:index, :show]
   get 'items/searches', to: 'items#search'
@@ -41,7 +42,7 @@ Rails.application.routes.draw do
   resources :admin_orders, only: [:index, :show, :update, :destroy, :edit]
 
 
-#others
+
 
   #admins
   get '/admin', to: 'admins#top'
