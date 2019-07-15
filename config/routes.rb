@@ -28,7 +28,9 @@ resources :users, only: [:show, :edit, :update]
 
 #items_routes
   get '/', to: 'items#index'
+  get '/items/search', to: 'items#search'
   get '/items/:id', to: 'items#show'
+
 
 #cart_details_routes
   get '/cart/:id', to: 'cart_details#show'
@@ -58,8 +60,8 @@ resources :users, only: [:show, :edit, :update]
 
 #admin_items_routes
   get '/admin/items', to: 'admin_items#index'
-  get '/admin/items/:id', to: 'admin_items#show'
   get '/admin/items/new', to: 'admin_items#new'
+  get '/admin/items/:id', to: 'admin_items#show'
   post '/admin/items/:id', to: 'admin_items#create'
   get '/admin/items/:id/edit', to: 'admin_items#edit'
   put '/admin/items/:id', to: 'admin_items#update'
