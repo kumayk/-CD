@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'items/index'
-  get 'items/show'
+  root 'items#index'
   #devise_for :admins
   #devise_for :users
 
@@ -16,18 +15,14 @@ Rails.application.routes.draw do
   }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-#users_routes
-resources :users, only: [:show, :edit, :update]
+#resources
 
-
-#reviews_routes
-  post '/items/:id/reviews', to: 'reviews#create'
-  put '/items/:id/reviews/:id', to: 'reviews#update'
-  patch '/items/:id/reviews/:id', to: 'reviews#update'
-  delete '/items/:id/reviews/:id', to: 'reviews#destroy'
+  resources :users, only: [:show, :edit, :update]
+  resources :reviews, only: [:create, :update, :destroy]
 
 #items_routes
   get '/', to: 'items#index'
+<<<<<<< HEAD
   get '/items/search', to: 'items#search'
   get '/items/:id', to: 'items#show'
 
@@ -75,6 +70,28 @@ resources :users, only: [:show, :edit, :update]
   patch '/admin/orders/:id', to: 'admin_orders#update'
   delete '/admin/orders/:id', to: 'admin_orders#destroy'
   get '/admin/orders/:id/edit', to: 'admin_orders#edit'
+=======
+  
+  resources :items, only: [:index, :show]
+  get 'items/searches', to: 'items#search'
+
+  resources :cart_details, only: [:show, :destroy, :create, :update]
+
+  resources :order_details, only: [:update]
+
+  resources :orders, only: [:show, :create]
+
+  resources :admin_users, only: [:index, :show, :edit, :destroy, :update]
+
+  resources :reviews, only: [:destroy]
+
+  resources :admin_items, only: [:index, :show, :new, :create, :edit, :update, :destroy]
+
+  resources :admin_orders, only: [:index, :show, :update, :destroy, :edit]
+
+
+#others
+>>>>>>> aki/master
 
   #admins
   get '/admin', to: 'admins#top'
