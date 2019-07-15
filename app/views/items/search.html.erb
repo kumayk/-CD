@@ -1,0 +1,7 @@
+<% if @result.any? %>
+  <%= render @result %>
+<% end %>
+
+<% if @result.nill? %>
+    <ul><%= render @item %></ul>
+<% end %>
