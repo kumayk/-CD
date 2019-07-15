@@ -1,27 +1,27 @@
-<div class="container" style="text-align: center;">
+<div class="container" style="text-align: center; margin-bottom: 30px;">
 	<div class="row">
-	  <h4>管理者メニュー</h4>
-	  <div class="register-new-items">
-	  	<%= link_to "商品新規登録",admin_items_new_path %>
+	  <h4 class="admin-menu-title" style="margin: 20px; padding:20px 0;">管理者メニュー</h4>
+
+	  <div class="register-new-items btn-block btn-primary" style="margin: 20px; width: 460px; margin: 5px auto; padding: 50px 0;">
+	  	<%= link_to "商品新規登録", admin_items_new_path, :class => "btn", :style=>"color:white;"%>
 	  	<p>商品の新規登録を行います。</p>
 	  </div>
 
-	  <div class="user-index">
-	  	<%= link_to "ユーザー一覧", admin_users_index_path %>
-	  	<p>現在登録されているユーザーの一覧を確認できます。</p><br>
+	  <div class="user-index btn-block btn-primary" style="margin: 20px; width: 460px; margin: 5px auto; padding: 40px 0;">
+	  	<%= link_to "ユーザー一覧", admin_users_index_path, :class => "btn", :style=>"color:white;"%>
+	  	<p>現在登録されているユーザーの一覧を確認できます。</p>
 		<p>ユーザー情報の編集・削除もこちらから行えます。</p>
 	  </div>
 
-	  <div class="orders-index">
-	  	<%= link_to "注文履歴一覧", admin_orders_path %>
-	  	<p>注文履歴の一覧を確認できます。</p><br>
+	  <div class="orders-index btn-block btn-primary" style="margin: 20px; width: 460px; margin: 5px auto; padding: 40px 0;">
+	  	<%= link_to "注文履歴一覧", admin_orders_path, :class => "btn", :style=>"color:white;" %>
+	  	<p>注文履歴の一覧を確認できます。</p>
 		<p>ユーザーごとの履歴については、一覧から飛ぶことができます。</p>
 	  </div>
 
-	  <div class="items-index">
-	  	<%= link_to "登録商品一覧", admin_items_path%>
+	  <div class="items-index btn-block btn-primary" style="margin: 20px; width: 460px; margin: 5px auto; padding: 50px 0;">
+	  	<%= link_to "登録商品一覧", admin_items_path, :class => "btn", :style=>"color:white;"%>
 	  	<p>登録商品の一覧を確認できます。</p>
 	  </div>
-
-
+	</div>
 </div>
