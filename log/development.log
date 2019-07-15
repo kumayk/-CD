@@ -2137,3 +2137,21 @@ DEPRECATION WARNING: Dangerous query method (method whose arguments are used as 
 Completed 200 OK in 2729ms (Views: 2666.5ms | ActiveRecord: 7.5ms)
 
 
+Started GET "/admin_items/new" for 10.0.2.2 at 2019-07-15 09:57:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AdminItemsController#new as HTML
+  Rendering admin_items/new.html.erb within layouts/application
+  Rendered admin_items/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2690ms (Views: 2663.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_items/new" for 10.0.2.2 at 2019-07-15 09:57:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#new as HTML
+  Rendering admin_items/new.html.erb within layouts/application
+  Rendered admin_items/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 751ms (Views: 717.0ms | ActiveRecord: 0.0ms)
+
+
