@@ -41,7 +41,7 @@
                 <%end%>
               </div>
 
-              <%= search_form_for @search, url: items_searches_path, html: { method: :post} do |f| %>
+              <%= search_form_for @search, url: items_search_path, html: { method: :post} do |f| %>
                <div class="form-group">
                 <%= f.text_field :disk_name_cont, placeholder:  '検索キーワード' %>
                 </div>

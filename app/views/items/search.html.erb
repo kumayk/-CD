@@ -1,7 +1,6 @@
-<% if @result.any? %>
-  <%= render @result %>
+<% if @result %>
+  <%= render partial: 'search/result', collection: @result %>
+  <% else %>
+  <%= render partial: 'search/result', collection: @item %>
 <% end %>
 
-<% if @result.nill? %>
-    <ul><%= render @item %></ul>
-<% end %>
