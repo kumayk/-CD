@@ -28,7 +28,9 @@ Rails.application.routes.draw do
   post 'items/search'
 >>>>>>> aki/master
 
+
   resources :items, only: [:index, :show]
+
 
   resources :cart_details, only: [:show, :destroy, :create, :update]
 
