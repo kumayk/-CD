@@ -1,5 +1,6 @@
 class CartDetailsController < ApplicationController
 	def show
+		@items = Item.all
 	end
 
 	def create
