@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_13_054837) do
+ActiveRecord::Schema.define(version: 2019_07_16_052053) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -46,16 +46,21 @@ ActiveRecord::Schema.define(version: 2019_07_13_054837) do
     t.string "disk_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "item_id"
   end
 
   create_table "items", force: :cascade do |t|
     t.string "disk_name"
-    t.string "disk_image"
     t.integer "stock"
     t.integer "price"
     t.integer "item_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "artist_id"
+    t.string "label_id"
+    t.string "category_id"
+    t.string "disk_id"
+    t.string "image_id"
   end
 
   create_table "labels", force: :cascade do |t|
@@ -104,6 +109,7 @@ ActiveRecord::Schema.define(version: 2019_07_13_054837) do
     t.string "song_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "disk_id"
   end
 
   create_table "users", force: :cascade do |t|
