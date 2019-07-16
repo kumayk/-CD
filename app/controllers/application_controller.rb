@@ -2,16 +2,25 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
 
+<<<<<<< HEAD
   def authenticate_user
     unless current_user 
+=======
+	def authenticate_user
+    if @current_user == nil
+>>>>>>> aki/master
       flash[:notice] = "ログインが必要です"
       redirect_to new_admin_registration_url
     end
   end
 
   def set_search
-	  @search = Item.ransack(params[:id])
+	  @search = Item.ransack(params[:q])
   	@result = @search.result
+<<<<<<< HEAD
+=======
+    #binding.pry
+>>>>>>> aki/master
   end
 
 

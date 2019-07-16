@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <div class="container">
   <div class="row" >
@@ -34,3 +35,10 @@
   </div>
 </div>
 
+=======
+<% if @result %>
+<%= render partial: 'layouts/search_form', collection: @result %>
+<% else %>
+<%= render 'index' %>
+<% end %>
+>>>>>>> aki/master

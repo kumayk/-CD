@@ -22,9 +22,12 @@ Rails.application.routes.draw do
 
 #items_routes
   get '/', to: 'items#index'
-
   get 'items/search', to: 'items#search'
-  resources :items, only: [:index, :show,]
+  post 'items/search'
+
+
+  resources :items, only: [:index, :show]
+
 
   resources :cart_details, only: [:show, :destroy, :create, :update]
 
