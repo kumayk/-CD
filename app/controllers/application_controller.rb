@@ -2,8 +2,9 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
 
+
   def authenticate_user
-    unless current_user
+      unless current_user
       flash[:notice] = "ログインが必要です"
       redirect_to new_admin_registration_url
     end

@@ -1,0 +1,21 @@
+<body>
+
+	<div class="container">
+		<div class="row">
+			<div class="cart_index ">
+				<h2 class="p-3 mb-2" style="width: 300px; padding: 20px; text-align: center;" >カート一覧</h2>
+				<ul>
+					<li>
+				      <div class=table table-hover table-inverse style="width: 50rem">
+				      	<%= @items.each do |item| %>
+
+				          <%= item %>
+				          
+				        <% end %>
+			          </div>
+			        </li>
+		        </ul>
+		        <h2 class="p-3 mb-2" style="width: 300px; padding: 20px; text-align: center; float-left;">小計</h2>
+		    </div>
+	</div>
+</body>
