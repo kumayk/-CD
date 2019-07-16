@@ -1,5 +1,21 @@
-<h3>商品レビュー</h3>
-<table class="table">
+<html>
+<div class="container">
+  <div class="row">
+     <div class="col-md-9">
+<h1>アーティスト名/商品名を表示</h1>
+<p class="bg-info text-left">商品詳細</p>
+  <h3>ジャケット画像</h3>
+<p class="bg-info text-left">収録内容</p>
+<p>(Disk1)</p>
+<p>(Disk2)</p>
+
+
+
+     </div>
+  </div>
+
+	<h3>✾商品レビュー</h3>
+   <table class="table">
            <thead>
            <tr> 
              <th>comment</th>
@@ -12,11 +28,11 @@
              <th><%= review.user.last_name %></th>
              <th><%= review.created_at.strftime('%Y/%m/%d') %></th>
              <th><%= review.review_comment %></th>
-             <th><%= link_to "削除",review_path, method: :delete, "data-confirm" => "本当に消しますか？" %></th>
+             <th><%= link_to "削除", review_path, method: :delete, "data-confirm" => "本当に消しますか？" %></th>
            </tr>
            <% end %>
            </tbody>
-</table>
+   </table>
 
        <%= form_for(@review, :url => {:controller => :reviews, :action => :create}) do |f| %>
 
@@ -27,3 +43,6 @@
        <%= f.submit '投稿する' %>
 
     <% end %>
+
+</div>
+</html>
