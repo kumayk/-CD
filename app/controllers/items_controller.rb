@@ -9,21 +9,22 @@ class ItemsController < ApplicationController
   end
   
   def show
+  	@item = Item.find(params[:id])
   	@review = Review.new
+  	@review.item_id = @item.id
   	@reviews = Review.all
-  	@user = User.find_by(id: params[:id])
   end
 
   def create
   end
 
-<<<<<<< HEAD
   private
-    def review_params
-      params.require(:review).permit(:review_comment, :item_id, :user_id)
-    end
+    # def review_params
+    #   params.require(:review).permit(:review_comment, :item_id, :user_id)
+    # end
+     def item_params
+     	params.require(:item).permit(:user_id, :item_id, :review_comment)
+     end
 
 end
-=======
-end
->>>>>>> aki/master
+

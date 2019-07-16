@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-=======
+
   root 'items#index'
->>>>>>> aki/master
+
   #devise_for :admins
   #devise_for :users
 
