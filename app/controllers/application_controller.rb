@@ -1,9 +1,10 @@
 class ApplicationController < ActionController::Base
-  before_action :set_search
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_search
+
 
 	def authenticate_user
-    if @current_user == nil
+    if @current_user 
       flash[:notice] = "ログインが必要です"
       redirect_to new_admin_registration_url
     end
@@ -14,11 +15,6 @@ class ApplicationController < ActionController::Base
   	@result = @search.result
     #binding.pry
   end
-
-  # private
-  #   def search_params
-  # 	params.require(:search).permit(:disk_name, :disk_image, :stock, :price, :item_status)
-  #   end
 
   protected
     def configure_permitted_parameters
