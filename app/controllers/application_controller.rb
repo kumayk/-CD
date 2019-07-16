@@ -3,8 +3,8 @@ class ApplicationController < ActionController::Base
   before_action :set_search
 
 
-	def authenticate_user
-    if @current_user 
+  def authenticate_user
+      unless current_user
       flash[:notice] = "ログインが必要です"
       redirect_to new_admin_registration_url
     end
@@ -13,8 +13,13 @@ class ApplicationController < ActionController::Base
   def set_search
 	  @search = Item.ransack(params[:q])
   	@result = @search.result
-    #binding.pry
   end
+
+  #binding.pry
+  # private
+  #   def search_params
+  # 	params.require(:search).permit(:disk_name, :disk_image, :stock, :price, :item_status)
+  #   end
 
   protected
     def configure_permitted_parameters
