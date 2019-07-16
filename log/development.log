@@ -2874,3 +2874,1717 @@ ActionView::Template::Error (undefined method `nill?' for #<ActiveRecord::Relati
     7: <% end %>
   
 app/views/items/search.html.erb:5:in `_app_views_items_search_html_erb__2140927093055375963_70075579320500'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 10:33:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0yFiwoBYFGnjDXLVlHEwnSsKeOf8ixvzNabLH8/5rAbtZPH5HRShsX50ikTpuKP6BAIOL24sSMbZNmwn8pIcw==", "q"=>{"disk_name_cont"=>"yyyyyyyyyy"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered items/search.html.erb within layouts/application (156.5ms)
+Completed 500 Internal Server Error in 492ms (ActiveRecord: 12.4ms)
+
+
+  
+ActionView::Template::Error (Missing partial search/_result with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result %>
+    2:   <%= render partial: 'search/result', collection: @result %>
+    3:   <% else %>
+    4:   <%= render partial: 'search/result', collection: @item %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:2:in `_app_views_items_search_html_erb__4565864575966134968_47119861211060'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:06:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/俺のCD/app/controllers/items_controller.rb:14: syntax error, unexpected <<, expecting keyword_end
+<<<<<<< HEAD
+^~
+/vagrant/俺のCD/app/controllers/items_controller.rb:19: syntax error, unexpected ===, expecting keyword_end
+=======
+^~~):
+  
+app/controllers/items_controller.rb:14: syntax error, unexpected <<, expecting keyword_end
+app/controllers/items_controller.rb:19: syntax error, unexpected ===, expecting keyword_end
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:07:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/俺のCD/app/controllers/items_controller.rb:12: syntax error, unexpected end-of-input, expecting keyword_end
+  end
+     ^):
+  
+app/controllers/items_controller.rb:12: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:08:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (8.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0yFiwoBYFGnjDXLVlHEwnSsKeOf8ixvzNabLH8/5rAbtZPH5HRShsX50ikTpuKP6BAIOL24sSMbZNmwn8pIcw==", "q"=>{"disk_name_cont"=>"yyyyyyyyyy"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (5.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered items/search.html.erb within layouts/application (212.3ms)
+Completed 500 Internal Server Error in 700ms (ActiveRecord: 15.5ms)
+
+
+  
+ActionView::Template::Error (Missing partial search/_result with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result %>
+    2:   <%= render partial: 'search/result', collection: @result %>
+    3:   <% else %>
+    4:   <%= render partial: 'search/result', collection: @item %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:2:in `_app_views_items_search_html_erb___2333314191982191168_47068192324320'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:16:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0yFiwoBYFGnjDXLVlHEwnSsKeOf8ixvzNabLH8/5rAbtZPH5HRShsX50ikTpuKP6BAIOL24sSMbZNmwn8pIcw==", "q"=>{"disk_name_cont"=>"yyyyyyyyyy"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  Rendered items/search.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 8858ms (Views: 8743.7ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:17:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0yFiwoBYFGnjDXLVlHEwnSsKeOf8ixvzNabLH8/5rAbtZPH5HRShsX50ikTpuKP6BAIOL24sSMbZNmwn8pIcw==", "q"=>{"disk_name_cont"=>"yyyyyyyyyy"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  Rendered items/search.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 2098ms (Views: 1978.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:22:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0yFiwoBYFGnjDXLVlHEwnSsKeOf8ixvzNabLH8/5rAbtZPH5HRShsX50ikTpuKP6BAIOL24sSMbZNmwn8pIcw==", "q"=>{"disk_name_cont"=>"yyyyyyyyyy"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  Rendered items/search.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2333ms (Views: 2194.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:22:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ntCUZYQ/MvT9nqqlqJ0LPL8KzHMdk52Fqg8nBnX7mBKiKYIpakoAI5/rTUftai1xI7btqD/ZAMl9vWWalQ420Q==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  Rendered items/search.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1686ms (Views: 1517.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-15 11:22:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 2353ms (Views: 2195.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:22:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J0yFiwoBYFGnjDXLVlHEwnSsKeOf8ixvzNabLH8/5rAbtZPH5HRShsX50ikTpuKP6BAIOL24sSMbZNmwn8pIcw==", "q"=>{"disk_name_cont"=>"yyyyyyyyyy"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  Rendered items/search.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 3276ms (Views: 3114.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-15 11:36:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (6.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (25.0ms)
+Started GET "/" for 10.0.2.2 at 2019-07-15 11:36:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 2005ms (Views: 1936.1ms | ActiveRecord: 2.7ms)
+
+
+Completed 200 OK in 5338ms (Views: 5246.4ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:37:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oqbGdoeKFhCGsyYx8S9e8F7DBfmIBnTkKg2MJNQkrMKeX9A6af8kx+TGwdO02Hi9wn8kIqpM6aj9v864NNECAQ==", "q"=>{"disk_name_cont"=>"qqqq"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (5.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.1ms)
+  Rendered items/search.html.erb within layouts/application (118.7ms)
+Completed 200 OK in 1781ms (Views: 1656.6ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-15 11:39:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j/y6No+hiGNIkP7rlxCrixmwhBMdeMzBbpKYQOi0NiCzBax6YdS6tCrlGQnS543GhQylyD8yUY25INrcCEGY4w==", "q"=>{"disk_name_cont"=>"や"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (5.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.1ms)
+  Rendered items/search.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 2386ms (Views: 2198.5ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-16 03:22:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 2435ms (Views: 2337.4ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:23:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"gggg"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (101.9ms)
+Completed 200 OK in 1073ms (Views: 968.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 03:23:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1048ms (Views: 875.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:24:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (111.8ms)
+Completed 200 OK in 2231ms (Views: 2117.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 03:24:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 1486ms (Views: 1335.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:29:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.1ms)
+  Rendered items/search.html.erb within layouts/application (106.7ms)
+Completed 200 OK in 1768ms (Views: 1657.6ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:30:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.2ms)
+  Rendered items/search.html.erb within layouts/application (113.7ms)
+Completed 200 OK in 1900ms (Views: 1769.0ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:40:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 1882ms (Views: 1838.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 03:41:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 627ms (Views: 521.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 03:43:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1728ms (Views: 1587.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:44:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (5.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered items/search.html.erb within layouts/application (423.7ms)
+Completed 500 Internal Server Error in 839ms (ActiveRecord: 5.6ms)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/__search_form with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result %>
+    2: <% render partial: 'layouts/_search_form', collection: @result %>
+    3: <% else %>
+    4: <% render partial: '/', collection: @item %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:2:in `_app_views_items_search_html_erb__3080356744697843972_70005150663240'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:44:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (9.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered items/search.html.erb within layouts/application (206.6ms)
+Completed 500 Internal Server Error in 622ms (ActiveRecord: 9.3ms)
+
+
+  
+ActionView::Template::Error (Missing partial layouts/__search_form with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result %>
+    2: <% render partial: 'layouts/_search_form', collection: @result %>
+    3: <% else %>
+    4: <% render partial: '/', collection: @item %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:2:in `_app_views_items_search_html_erb__3080356744697843972_70005370077440'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:44:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (3.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (86.5ms)
+Completed 200 OK in 1549ms (Views: 1475.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 03:45:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 866ms (Views: 694.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:52:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered items/search.html.erb within layouts/application (66.1ms)
+Completed 500 Internal Server Error in 187ms (ActiveRecord: 4.9ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_search_form, application/_search_form with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result %>
+    2: <% render partial: 'search_form', collection: @result %>
+    3: <% else %>
+    4: <% redirect_to '/' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:2:in `_app_views_items_search_html_erb___410084056384893128_47456646353260'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:53:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aEADTI3h3DBkqzq0ijnkStbHpFiki2zFV1hPzK6ZQe0qns6S7PZCNCwW1XVdtLQzRUM5AZeMHHzzswQgLpFkBA==", "q"=>{"disk_name_cont"=>"wwww"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 1918ms (Views: 1854.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 03:53:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dxGSZe+fHEq0MxR/MxEn8kR2gEM5F5jujkpeKP9U9O01z1+7joiCTvyO+77knHeL1/IdGgoQ6FcqoRXEf1zRBA==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (5.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 1493ms (Views: 1367.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 03:53:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 566ms (Views: 521.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 03:55:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 581ms (Views: 548.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-16 04:02:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 1955ms (Views: 1904.5ms | ActiveRecord: 4.7ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 04:03:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zqWIzvNigKixgbBaccbYhEYxM9zVuL0GDkQEysJUklWMe0UQknUerPk8X5umS4j91bWuhea/zb+qr08mQly3vA==", "q"=>{"disk_name_cont"=>"aaaaaaa"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 578ms (Views: 530.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 04:13:41 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zqWIzvNigKixgbBaccbYhEYxM9zVuL0GDkQEysJUklWMe0UQknUerPk8X5umS4j91bWuhea/zb+qr08mQly3vA==", "q"=>{"disk_name_cont"=>"aaaaaaa"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (7.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.0ms)
+  Rendered items/search.html.erb within layouts/application (117.3ms)
+Completed 200 OK in 2040ms (Views: 1888.2ms | ActiveRecord: 7.5ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 04:17:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iTuiLOEDesNYckjnjG+ej0n3/4sFa5AbyY2rQO1+r7vL5W/ygBTkxxDPpyZb4s722nNi0jZs4KJtZuCsbXaKUg==", "q"=>{"disk_name_cont"=>"wwr"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (6.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [0 times] (0.1ms)
+  Rendered items/search.html.erb within layouts/application (118.2ms)
+Completed 200 OK in 1941ms (Views: 1790.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-16 04:17:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 619ms (Views: 571.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 04:17:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 610ms (Views: 533.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/" for 10.0.2.2 at 2019-07-16 04:20:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 1738ms (Views: 1688.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/items/" for 10.0.2.2 at 2019-07-16 04:22:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 894ms (Views: 755.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:25:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 27165ms (Views: 2028.6ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:30:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  [1m[36mItem Load (3.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/controllers/application_controller.rb:15
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 43428ms (Views: 1790.7ms | ActiveRecord: 9.9ms)
+
+
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (5.6ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 0"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.881745"], ["updated_at", "2019-07-16 04:36:51.881745"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.1ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 1"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.894987"], ["updated_at", "2019-07-16 04:36:51.894987"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (3.9ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 2"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.906248"], ["updated_at", "2019-07-16 04:36:51.906248"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (3.3ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 3"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.917236"], ["updated_at", "2019-07-16 04:36:51.917236"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (5.3ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 4"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.926200"], ["updated_at", "2019-07-16 04:36:51.926200"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (3.9ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 5"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.938685"], ["updated_at", "2019-07-16 04:36:51.938685"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.6ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 6"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.948890"], ["updated_at", "2019-07-16 04:36:51.948890"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.3ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 7"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.960857"], ["updated_at", "2019-07-16 04:36:51.960857"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.2ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 8"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.972020"], ["updated_at", "2019-07-16 04:36:51.972020"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (3.4ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 9"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.982125"], ["updated_at", "2019-07-16 04:36:51.982125"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (3.9ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 10"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:51.991512"], ["updated_at", "2019-07-16 04:36:51.991512"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.1ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 11"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.004512"], ["updated_at", "2019-07-16 04:36:52.004512"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (5.3ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 12"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.016778"], ["updated_at", "2019-07-16 04:36:52.016778"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.8ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 13"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.030360"], ["updated_at", "2019-07-16 04:36:52.030360"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.2ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 14"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.042867"], ["updated_at", "2019-07-16 04:36:52.042867"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (3.6ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 15"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.055719"], ["updated_at", "2019-07-16 04:36:52.055719"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.6ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 16"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.069071"], ["updated_at", "2019-07-16 04:36:52.069071"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.8ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 17"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.080197"], ["updated_at", "2019-07-16 04:36:52.080197"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.0ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 18"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.093240"], ["updated_at", "2019-07-16 04:36:52.093240"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.3ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 19"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.103854"], ["updated_at", "2019-07-16 04:36:52.103854"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.1ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 20"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.116061"], ["updated_at", "2019-07-16 04:36:52.116061"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.9ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 21"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.126796"], ["updated_at", "2019-07-16 04:36:52.126796"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.2ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 22"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.138433"], ["updated_at", "2019-07-16 04:36:52.138433"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (4.7ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 23"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.148868"], ["updated_at", "2019-07-16 04:36:52.148868"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Create (3.9ms)[0m  [1m[32mINSERT INTO "items" ("disk_name", "stock", "price", "item_status", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["disk_name", "テスト 24"], ["stock", 50], ["price", 980], ["item_status", 0], ["created_at", "2019-07-16 04:36:52.161381"], ["updated_at", "2019-07-16 04:36:52.161381"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mItem Load (19.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:37:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (22.1ms)
+Completed 200 OK in 13547ms (Views: 1868.0ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:38:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:39:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:39:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:44:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:45:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:49:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:49:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:50:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:51:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:51:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:53:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:53:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  Rendered collection of layouts/_search_form.html.erb [25 times] (75.8ms)
+  Rendered items/index.html.erb within layouts/application (143.3ms)
+Completed 200 OK in 2018ms (Views: 1944.1ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:53:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  Rendered collection of layouts/_search_form.html.erb [25 times] (45.0ms)
+  Rendered items/index.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 725ms (Views: 659.3ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:53:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:54:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  [1m[36mItem Load (4.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:21
+  Rendered collection of layouts/_search_form.html.erb [25 times] (122.8ms)
+  Rendered items/index.html.erb within layouts/application (194.4ms)
+Completed 200 OK in 1359ms (Views: 1230.1ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 04:54:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"28W3Swf2Ix3FqYdyAjo66cVHQ2/t9+/p24CO995+YsmZG3qVZuG9GY0UaLPVt2qQVsPeNt7wn1B/a8UbXnZHIA==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (44.6ms)
+  Rendered items/search.html.erb within layouts/application (71.6ms)
+Completed 200 OK in 671ms (Views: 587.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:55:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (6.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 1599ms (Views: 1459.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:56:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (7.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 1719ms (Views: 1546.5ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:56:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:56:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:58:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/items" for 10.0.2.2 at 2019-07-16 04:58:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/items" for 10.0.2.2 at 2019-07-16 04:59:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 2296ms (Views: 2218.8ms | ActiveRecord: 10.5ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 04:59:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jrd1ZeDKqkLAunsWomY/e21xLWMiWdGAyUWu7RNZFSfMabi7gd00RogHlNd1628C/vWwOhFeoTltruUBk1Ewzg==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (42.6ms)
+  Rendered items/search.html.erb within layouts/application (75.4ms)
+Completed 200 OK in 682ms (Views: 635.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:00:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HGBzoC2EXNEhPLWb/5NwiLd12f8akghi7lfiHxlYVftevr5+TJPC1WmBWlooHiDxJPFEpimVeNtKvKnzmVBwEg==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (52.9ms)
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/items/search.html.erb:3
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/items/search.html.erb:3
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/items/search.html.erb:3
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/items/search.html.erb:3
+  Rendered items/search.html.erb within layouts/application (107533.6ms)
+Completed 200 OK in 109493ms (Views: 109435.6ms | ActiveRecord: 12.1ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:02:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (8.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"InHslQAg0GccUnq1m9eo8p5G/i/mvXNXinFd18pn5/ZgryFLYTdOY1TvlXRMWviLDcJjdtW6A+4umhY7Sm/CHw==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:10
+  Rendered items/search.html.erb within layouts/application (14597.8ms)
+Completed 200 OK in 16435ms (Views: 16386.1ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:03:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 2124ms (Views: 2074.9ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:03:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TKtNE/zbkCl+sR52GRtHCkEtUhpGbRNPErf+eemLWaIOdYDNncwOLTYM8bfOlhdz0qnPQ3VqY/a2XLWVaYN8Sw==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (42.8ms)
+  Rendered items/search.html.erb within layouts/application (5941.4ms)
+Completed 200 OK in 6545ms (Views: 6500.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:08:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5/lxGp74FMzm+DFvZ2bJTz+NBvl0UTnXCnFUg/4DIMelJ7zE/++KyK5F3q6w65k2rAmboEdWSW6umh9vfgsFLg==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered items/search.html.erb within layouts/application (373.4ms)
+Completed 500 Internal Server Error in 767ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_search_form, application/_search_form with {:locale=>[:ja], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result %>
+    2: <% render partial: 'search_form', collection: @result %>
+    3: <% binding.pry %>
+    4: <% else %>
+    5: <% render partial: 'items/index', collection: @item %>
+  
+app/views/items/search.html.erb:2:in `_app_views_items_search_html_erb___4350201289031033062_70152892544380'
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:10:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 650ms (Views: 540.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:10:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lv3J3Zmg4qYSPnMnyDX5wwOb4JsNkVKRPBONpkam3S9sIwQD+Ld8olqDnOYfuKm6kB99wj6WIiiY+MZKxq74xg==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of items/_search_form.html.erb [25 times] (105.8ms)
+  Rendered items/search.html.erb within layouts/application (11256.6ms)
+Completed 200 OK in 11988ms (Views: 11896.3ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:11:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 1180ms (Views: 1028.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:11:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Eus29hSXx2G4jBcptNLmxGPN4c4Iop1GSeJXMQ4QARhQNfsodYBZZfAx+OhjX7a98El8lzul7f/tCRzdjhgk8Q==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (8.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:9
+  Rendered items/search.html.erb within layouts/application (10836.4ms)
+Completed 200 OK in 11784ms (Views: 11628.4ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:11:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fNRm5WJ4DEwL9noprH42LxS9LxsHh8KHtlYS+qpbsaE+Cqs7A2+SSENLleh782ZWhzmyQjSAsj4SvVkWKlOUSA==", "q"=>{"disk_name_cont"=>"テスト 17"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:9
+  Rendered items/search.html.erb within layouts/application (7323.3ms)
+Completed 200 OK in 7877ms (Views: 7844.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:12:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YyVpjt7hIGPWqUn6I/hHY/WAYD90dPfUwvqrg6vf36sh+6RQv/a+Z54Upjv0dRcaZgT9Zkdzh21mEeBvK9f6Qg==", "q"=>{"disk_name_cont"=>"テスト 17"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:9
+  Rendered items/search.html.erb within layouts/application (64017.0ms)
+Completed 200 OK in 64692ms (Views: 64610.6ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:13:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9bQDAI1UC1BDGvw/3PxaFS1Ii+rWR30Kiv0zhSick7W3as7e7EOVVAunE/4LcQpsvswWs+VADbMuFnhpqJS2XA==", "q"=>{"disk_name_cont"=>"テスト 17"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%テスト 17%'[0m
+  ↳ app/views/items/search.html.erb:9
+  Rendered items/search.html.erb within layouts/application (12565.7ms)
+Completed 200 OK in 14559ms (Views: 14496.2ms | ActiveRecord: 12.3ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:13:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TF9RNsh7EkDyl8u1rUiNDzp+W5p5MWGd1QO9B6SFT3EOgZzoqWyMRLoqJHR6xd12qfrGw0o2ESRx6PbrJI1qmA==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:9
+  Rendered items/search.html.erb within layouts/application (7533.3ms)
+Completed 200 OK in 8165ms (Views: 8077.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:14:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 2261ms (Views: 2123.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:15:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1069ms (Views: 921.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/items/" for 10.0.2.2 at 2019-07-16 05:18:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 1966ms (Views: 1882.1ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:18:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uHbLxbV26nXaE8Z7tkJQIeA3NUK9xldRGEqrR0gVaOv6qAYb1GF0cZKuKbphzwBYc7OoG47BJ+i8oeCryB1NAg==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (82.0ms)
+  Rendered items/search.html.erb within layouts/application (8171.4ms)
+Completed 200 OK in 8937ms (Views: 8845.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:19:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"search"}
+  Rendering items/show.html.erb within layouts/application
+  Rendered items/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1693ms (Views: 1559.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:22:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (8.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/items/search"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2019-07-16 05:25:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 2321ms (Views: 2253.3ms | ActiveRecord: 15.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:25:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nlr5iXei6dVzyzExgB2f9oh5rmOr7EQd9egby8StjC3chDRXFrV30Tt23vBXkM+PG/0zOpjrNKRRA1AnRKWpxA==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (41.0ms)
+  Rendered items/search.html.erb within layouts/application (9883.9ms)
+Completed 200 OK in 10454ms (Views: 10383.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:26:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VfeSxIPigxGXbdQ90hqd94qp5xLz/icmvUSFNrSoYSviROVcxgUCA7gWJEgxToOTa46xXjIiCU+Hln4WtqEbQ==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (6.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (142.4ms)
+  Rendered items/search.html.erb within layouts/application (397.8ms)
+Completed 200 OK in 2097ms (Views: 1935.7ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:26:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3t5n6eYrXVvcBzL+0NQBlUYEsQ/dNuiC/KZzT2uZ7DmcAKo3hzzDX5S63T8HWVHs1YAsVu4xmDtYTTij65HJ0A==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (58.2ms)
+  Rendered items/search.html.erb within layouts/application (117946.0ms)
+Completed 401 Unauthorized in 118211ms (ActiveRecord: 1.6ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:36:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3t5n6eYrXVvcBzL+0NQBlUYEsQ/dNuiC/KZzT2uZ7DmcAKo3hzzDX5S63T8HWVHs1YAsVu4xmDtYTTij65HJ0A==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (40.3ms)
+  Rendered items/search.html.erb within layouts/application (9712.0ms)
+Completed 200 OK in 11926ms (Views: 11860.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-16 05:36:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MLOtBn2hiLGgjnl5hGOvG4OQhvvxPexasA09MimFHgFybWDYHLYWtegzlrhT7v9iEBQbosI6nOMU5nbeqY076A==", "q"=>{"disk_name_cont"=>"テスト 17"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%テスト 17%'[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [1 times] (1.1ms)
+  Rendered items/search.html.erb within layouts/application (7310.1ms)
+Completed 200 OK in 8162ms (Views: 8047.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:37:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (8.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (81.8ms)
+  Rendered items/search.html.erb within layouts/application (4897.1ms)
+Completed 200 OK in 5775ms (Views: 5639.2ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:37:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (7.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (106.1ms)
+  Rendered items/search.html.erb within layouts/application (7234.1ms)
+Completed 200 OK in 8198ms (Views: 8040.4ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/items" for 10.0.2.2 at 2019-07-16 05:37:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 4]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 550ms (Views: 510.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-16 05:37:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  Rendered collection of layouts/_search_form.html.erb [25 times] (36.8ms)
+  Rendered items/search.html.erb within layouts/application (10061.1ms)
+Completed 200 OK in 10619ms (Views: 10582.6ms | ActiveRecord: 1.9ms)
+
+
