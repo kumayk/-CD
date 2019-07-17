@@ -1,11 +1,8 @@
 class ReviewsController < ApplicationController
-<<<<<<< HEAD
+before_action :authenticate_user
 
 def new
 end
-=======
-before_action :authenticate_user
->>>>>>> aki/master
 
 def create
     # @item = Item.find(params[:item_id])

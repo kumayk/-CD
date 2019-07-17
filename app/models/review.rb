@@ -4,3 +4,4 @@ class Review < ApplicationRecord
      validates:review_comment,presence: true
      validates:item_id,presence: true
      validates:user_id,presence: true
+end
