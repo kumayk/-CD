@@ -1,6 +1,8 @@
 class CartDetailsController < ApplicationController
 	def show
-		@items = Item.all
+		@cart = CartDetail.all
+		@totalprice = CartDetail.all.sum(:price)
+		@totalquantity = CartDetail.all.sum(:quantity)
 	end
 
 	def create

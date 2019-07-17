@@ -13,14 +13,16 @@
 		          </tr>
 	            </thead>
 	            <tbody>
-		          <tr>
-			        <th>1</th>
-			        <td>ブルーＳＣ</td>
-			        <td>地球</td>
-			        <td>101</td>
+	            	<%= @customer.each do |customer| %>
+	            	 <tr>
+			        <th><%= customer.user.id %></th>
+			        <td><%= customer.user.last_name %></td>
+			        <td><%= customer.user.first_name %></td>
+			        <td><%= customer.user.email %></td>
 				    <td><input type="checkbox" value="checkboxA"></td>
 		          </tr>
-		          <tr>
+				    <% end %>
+				    <tr>
 			        <th>2</th>
 			        <td>ＦＣウェヌス</td>
 			        <td>金星</td>
