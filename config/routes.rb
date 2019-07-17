@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   root 'items#index'
+
   #devise_for :admins
   #devise_for :users
 
@@ -21,6 +23,7 @@ Rails.application.routes.draw do
   resources :reviews, only: [:create, :update, :destroy]
 
 #items_routes
+  post 'items', to: 'items#create'
   get '/', to: 'items#index'
   get 'items/search', to: 'items#search'
   post 'items/search'

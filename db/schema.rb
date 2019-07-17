@@ -98,8 +98,9 @@ ActiveRecord::Schema.define(version: 2019_07_16_090434) do
     t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "is_deleted"
     t.integer "user_id"
-    t.integer "item_id"
+    t.string "item_id"
   end
 
   create_table "shipping_addresses", force: :cascade do |t|
