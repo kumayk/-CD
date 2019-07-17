@@ -22,11 +22,16 @@ Rails.application.routes.draw do
 
 #items_routes
   get '/', to: 'items#index'
+<<<<<<< HEAD
 
   get 'items/search', to: 'items#search'
   post 'items/search'
 
 
+=======
+  get 'items/search', to: 'items#search'
+  post 'items/search'
+>>>>>>> aki/master
 
   resources :items, only: [:index, :show]
 

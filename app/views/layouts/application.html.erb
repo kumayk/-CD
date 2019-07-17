@@ -30,7 +30,7 @@
                 <% if user_signed_in? %>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
                     <li><%= link_to current_user.last_name, user_path(current_user.id) %></li>
-                    <li><%= link_to "Cart", "/cart/#{current_user.id}" %></li>
+                    <li><%= link_to "Cart", "/cart_details/#{current_user.id}" %></li>
                     <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete%></li>
                   </ul>
                 <%else%>
@@ -42,11 +42,16 @@
               </div>
 
 
-              <%= search_form_for @search, url: items_search_path, html: { method: :post} do |f| %>
-               <div class="form-group">
-                <%= f.text_field :disk_name_cont, placeholder:  '検索キーワード' %>
+              <div class="container">
+                <div class="row">
+                  <%= search_form_for @search, url: items_search_path, html: { method: :post} do |f| %>
+                    <div class="form-group col-sm-1" style="padding: 0; margin: 16px 5px;">
+                      <%= f.text_field :disk_name_cont, placeholder:  '検索キーワード' %>
+                    </div>
 
+                    <div class="actions col-sm-1" style="padding: 0; margin: 16px 53px;"><%= f.submit '検索' %></div>
 
+                  <% end %>
                 </div>
                 <% end %>
               </div>
