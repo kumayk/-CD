@@ -3,12 +3,12 @@
 	  <h4 class="admin-menu-title" style="margin: 20px; padding:20px 0;">管理者メニュー</h4>
 
 	  <div class="register-new-items btn-block btn-primary" style="margin: 20px; width: 460px; margin: 5px auto; padding: 50px 0;">
-	  	<%= link_to "商品新規登録", admin_items_new_path, :class => "btn", :style=>"color:white;"%>
+	  	<%= link_to "商品新規登録", new_admin_item_path, :class => "btn", :style=>"color:white;"%>
 	  	<p>商品の新規登録を行います。</p>
 	  </div>
 
 	  <div class="user-index btn-block btn-primary" style="margin: 20px; width: 460px; margin: 5px auto; padding: 40px 0;">
-	  	<%= link_to "ユーザー一覧", admin_users_index_path, :class => "btn", :style=>"color:white;"%>
+	  	<%= link_to "ユーザー一覧", admin_users_path, :class => "btn", :style=>"color:white;"%>
 	  	<p>現在登録されているユーザーの一覧を確認できます。</p>
 		<p>ユーザー情報の編集・削除もこちらから行えます。</p>
 	  </div>

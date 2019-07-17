@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_15_074516) do
+ActiveRecord::Schema.define(version: 2019_07_16_090434) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 2019_07_15_074516) do
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "item_id"
+    t.integer "user_id"
   end
 
   create_table "categories", force: :cascade do |t|
@@ -46,16 +48,21 @@ ActiveRecord::Schema.define(version: 2019_07_15_074516) do
     t.string "disk_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "item_id"
   end
 
   create_table "items", force: :cascade do |t|
     t.string "disk_name"
-    t.string "disk_image"
     t.integer "stock"
     t.integer "price"
     t.integer "item_status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "artist_id"
+    t.string "label_id"
+    t.string "category_id"
+    t.string "disk_id"
+    t.string "image_id"
   end
 
   create_table "labels", force: :cascade do |t|
@@ -68,6 +75,9 @@ ActiveRecord::Schema.define(version: 2019_07_15_074516) do
     t.integer "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "item_id"
+    t.integer "user_id"
+    t.integer "order_id"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -88,9 +98,14 @@ ActiveRecord::Schema.define(version: 2019_07_15_074516) do
     t.boolean "deleted"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
     t.boolean "is_deleted"
     t.integer "user_id"
     t.string "item_id"
+=======
+    t.integer "user_id"
+    t.integer "item_id"
+>>>>>>> aki/master
   end
 
   create_table "shipping_addresses", force: :cascade do |t|
@@ -100,6 +115,7 @@ ActiveRecord::Schema.define(version: 2019_07_15_074516) do
     t.string "phone_number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "songs", force: :cascade do |t|
@@ -107,6 +123,7 @@ ActiveRecord::Schema.define(version: 2019_07_15_074516) do
     t.string "song_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "disk_id"
   end
 
   create_table "users", force: :cascade do |t|
