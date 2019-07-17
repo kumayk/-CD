@@ -22,11 +22,10 @@ Rails.application.routes.draw do
 
 #items_routes
   get '/', to: 'items#index'
-<<<<<<< HEAD
-=======
+
   get 'items/search', to: 'items#search'
   post 'items/search'
->>>>>>> aki/master
+
 
 
   resources :items, only: [:index, :show]
@@ -36,7 +35,7 @@ Rails.application.routes.draw do
 
   resources :order_details, only: [:update]
 
-  resources :orders, only: [:show, :create]
+  resources :orders, only: [:show, :create, :new]
 
   resources :admin_users, only: [:index, :show, :edit, :destroy, :update]
 

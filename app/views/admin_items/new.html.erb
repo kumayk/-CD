@@ -17,6 +17,7 @@
    <%= f.collection_select :label_id, Label.all, :id, :label_name %>
   <h4>カテゴリ</h4>
    <%= f.collection_select :category_id, Category.all, :id, :category_name %>
+
 <div>
   <h4>ディスク</h4>
    <%= f.fields_for :disks do |disk| %>
