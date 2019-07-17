@@ -1,2 +1,78 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<html>
+<div class="container">
+
+<h1>アーティスト名/商品名を表示</h1>
+    <p class="bg-info text-left">✾商品詳細</p>
+
+      <div class="row">
+       <div class="mx-auto">
+        <div class="col-xs-4 col-xs-offset-2">
+         <%= image_tag 'disk.jpg', :size =>'240x240' %>
+        </div>
+
+        <div class="col-xs-4">
+         <p>レーベル：</p>
+         <p>ジャンル：</p>
+         <p>価格：</p>
+           <span class="text-success">販売中/</span>
+           <input type="number" name="example" min="0" max="10" value="1">個
+           <button type="button" class="btn btn-danger">カートに追加</button>
+        </div>
+       </div>
+      </div>
+
+      <p class="bg-info text-left">✾収録内容</p>
+      <p>(Disk1)</p>
+      <p>1.</p>
+      <p>2.</p>
+      <p>3.</p>
+      <p>・</p>
+      <p>・</p>
+      <p>・</p>
+
+      <p>(Disk2)</p>
+      <p>1.</p>
+      <p>2.</p>
+      <p>3.</p>
+      <p>・</p>
+      <p>・</p>
+
+
+      <p class="bg-info text-left">✾商品レビュー</p>
+        <table class="table">
+           <thead>
+             <tr> 
+               <th>name</th>
+               <th>date</th>
+               <th>comment</th>
+             </tr>
+           </thead>
+
+           <tbody>
+               <% @reviews.each do |review| %>
+             <tr>
+               <th><%= review.user.last_name %></th>
+               <th><%= review.created_at.strftime('%Y/%m/%d') %></th>
+               <th><%= review.review_comment %></th>
+               <th><% if review.user == current_user %>
+               	   <%= link_to "削除", review_path(id: review), method: :delete, "data-confirm" => "本当に消しますか？" %>
+               	   <% end %>
+               	</th>
+             </tr>
+               <% end %>
+           </tbody>
+        </table>
+
+       <!-- レビューの投稿フォーム -->
+       <%= form_for(@review, :url => {:controller => :reviews, :action => :create}) do |f| %>
+
+       <%= f.text_field :review_comment %>
+
+       <%= f.hidden_field :item_id %>
+
+       <%= f.submit '投稿する' %>
+
+       <% end %>
+
+</div>
+</html>
