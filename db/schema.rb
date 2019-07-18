@@ -100,6 +100,7 @@ ActiveRecord::Schema.define(version: 2019_07_17_100107) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "item_id"
+    t.boolean "is_deleted"
   end
 
   create_table "shipping_addresses", force: :cascade do |t|

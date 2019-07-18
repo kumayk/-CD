@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+
   root 'items#index'
+
   #devise_for :admins
   #devise_for :users
 
@@ -21,9 +23,20 @@ Rails.application.routes.draw do
   resources :reviews, only: [:create, :update, :destroy]
 
 #items_routes
+  post 'items', to: 'items#create'
   get '/', to: 'items#index'
+
   get 'items/search', to: 'items#search'
   post 'items/search'
+
+
+#admin_items
+  get '/admin_items/artist', to: 'admin_items#artistnew'
+  post '/admin_items/artist', to: 'admin_items#artistcreate'
+  get '/admin_items/label', to: 'admin_items#labelnew'
+  post '/admin_items/label', to: 'admin_items#labelcreate'
+  get '/admin_items/category', to: 'admin_items#categorynew'
+  post '/admin_items/category', to: 'admin_items#categorycreate'
 
   resources :items, only: [:index, :show]
 
@@ -32,7 +45,7 @@ Rails.application.routes.draw do
 
   resources :order_details, only: [:update]
 
-  resources :orders, only: [:show, :create]
+  resources :orders, only: [:show, :create, :new]
 
   resources :admin_users, only: [:index, :show, :edit, :destroy, :update]
 
@@ -47,6 +60,8 @@ Rails.application.routes.draw do
 
   #admins
   get '/admin', to: 'admins#top'
+
+
 
 
 end

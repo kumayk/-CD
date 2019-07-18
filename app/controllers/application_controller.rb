@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
+<<<<<<< HEAD
   before_action :set_search 
+=======
+  before_action :set_search
+>>>>>>> aki/master
 
   def authenticate_user
     unless current_user
@@ -12,6 +16,7 @@ class ApplicationController < ActionController::Base
   def set_search
 	  @search = Item.ransack(params[:q])
   	@result = @search.result
+
   end
 
   #binding.pry
