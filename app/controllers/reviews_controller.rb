@@ -9,7 +9,6 @@ def create
     @review = Review.new(review_params)
     @review.user_id = current_user.id
     # @item.user_id = current_user.id
-    # @review.user_id = current_user.id
     @review.save
       redirect_to item_path(id: @review.item_id)
 end

@@ -57,7 +57,7 @@
                <th><% if review.user == current_user %>
                	   <%= link_to "削除", review_path(id: review), method: :delete, "data-confirm" => "本当に消しますか？" %>
                	   <% end %>
-               	</th>
+               </th>
              </tr>
                <% end %>
            </tbody>
