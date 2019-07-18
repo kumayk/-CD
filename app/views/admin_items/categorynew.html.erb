@@ -1,0 +1,10 @@
+<h1>カテゴリ登録</h1>
+
+<%= form_for(@category , url: admin_items_category_path) do |f| %>
+  <h4>カテゴリ</h4>
+     <%= f.text_field :category_name %>
+<div>
+   <%= f.submit '登録' %>
+</div>
+
+<% end %>

@@ -8149,3 +8149,345 @@ Processing by AdminUsersController#show as HTML
 Completed 200 OK in 592ms (Views: 539.3ms | ActiveRecord: 7.0ms)
 
 
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:25:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/admin_users_controller.rb:8:in `show'
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:25:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12700ms (Views: 12644.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:26:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 2062ms (Views: 1911.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:27:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1643ms (Views: 1486.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:28:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 1621ms (Views: 1489.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:31:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 822ms (Views: 640.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:31:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 1319ms (Views: 1162.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:32:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 1979ms (Views: 1832.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:32:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2073ms (Views: 1907.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:33:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1939ms (Views: 1761.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:33:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 1348ms (Views: 1259.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:33:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 2098ms (Views: 1954.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:34:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 1745ms (Views: 1586.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:34:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 703ms (Views: 556.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:34:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 672ms (Views: 536.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:35:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 1503ms (Views: 1360.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:36:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 2578ms (Views: 2422.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:37:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 692ms (Views: 561.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:37:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 666ms (Views: 563.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:37:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1964ms (Views: 1802.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:38:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 636ms (Views: 549.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:47:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2212ms (Views: 2026.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:49:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2024ms (Views: 1879.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:50:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 563ms (Views: 510.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:53:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 2149ms (Views: 1974.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:54:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 690ms (Views: 555.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:55:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2035ms (Views: 1863.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:56:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1087ms (Views: 946.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:56:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 2091ms (Views: 1921.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:56:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 1380ms (Views: 1238.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 06:58:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 587ms (Views: 545.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 07:01:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2600ms (Views: 2409.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/2" for 10.0.2.2 at 2019-07-18 07:02:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+Redirected to http://localhost:3000/admins/sign_up
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admins/sign_up" for 10.0.2.2 at 2019-07-18 07:02:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admins::RegistrationsController#new as HTML
+  Rendering admins/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered admins/shared/_links.html.erb (1.3ms)
+  Rendered admins/registrations/new.html.erb within layouts/application (132.1ms)
+Completed 200 OK in 861ms (Views: 824.0ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/admin_users/2" for 10.0.2.2 at 2019-07-18 07:02:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 1730ms (Views: 1561.9ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9

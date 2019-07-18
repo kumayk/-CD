@@ -5,7 +5,7 @@ def index
 end
 
 def show
-	@user = User.find(current_user.id)
+	# @user = User.find(current_user.id)
 end
 
 def edit
