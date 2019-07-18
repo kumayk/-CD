@@ -1,20 +1,47 @@
 <div class="container">
 	<div class="row">
-		<div class="user-info col-xs-4">
-    		<h2>ユーザー</h2>
-    		<div class="user-name col-sm-3">
-    			<%= @user.last_name %>
-    		</div>
-    		<div class="user-address col-sm-3">
-    			<%= @user.address %>
-    		</div>
-    		<div class="user-shipping-address col-sm-3">
-    			<!-- zip -->
-                <!-- address -->
-    		</div>
-    		<div class="edit-page col-sm-3">
-    			<%= link_to "編集", edit_user_path(@user),class:"col-xs-12 btn btn-default glyphicon glyphicon-wrench" %>
-    		</div>
+		<div class="user-info card text-center">
+            <div class="card-header">
+                <h4>ユーザー</h4>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title"><%= @user.last_name %></h4>
+                <h4 class="card-title"><%= @user.first_name %></h4>
+                <h4 class="card-title">Eメール　<%= @user.email %></h4>
+                <h4 class="card-title">住所　<%= @user.address %></h4>
+                <div class="edit-link" style="margin-bottom: 40px;">
+                    <%= link_to "編集", edit_user_path(@user),class:"btn btn-primary glyphicon glyphicon-wrench", :style=>"width: 200px;"%>
+                </div>
+            </div>
+            <% if @user.order_details.exists? %>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">商品</th>
+                          <th scope="col">合計金額</th>
+                          <th scope="col">注文日</th>
+                          <th scope="col">送付先</th>
+                          <th scope="col">支払い方法</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% @user.order_details.each do |od| %>
+                            <tr>
+                              <th scope="row"><%= od.order_id %></th>
+                              <td><%= od.item.disk_name %></td>
+                              <td><%= od.order.total_price %></td>
+                              <td><%= od.created_at %></td>
+                              <td><%= @user.shipping_addresses.address %></td>
+                              <td><%= od.payment%></td>
+                            </tr>
+                        <% end %>
+                    </tbody>
+                </table>
+            <% end %>
     	</div>
 	</div>
 </div>
+
+
+
