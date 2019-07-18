@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
 
-
   def authenticate_user
       unless current_user
       flash[:notice] = "ログインが必要です"
@@ -13,6 +12,7 @@ class ApplicationController < ActionController::Base
   def set_search
 	  @search = Item.ransack(params[:q])
   	@result = @search.result
+
   end
 
   #binding.pry
