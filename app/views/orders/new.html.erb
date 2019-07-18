@@ -1,1 +1,49 @@
-order#new
+<h3>購入情報入力</h3>
+
+<!-- 送付先 -->
+<%= form_for(@order) do |f| %>
+<div class="field">
+  <span id= "hoge" class="job_type_engine">◾️　送付先</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :shipping_address, :住所１に発送, checked: "checked" %>
+    <%= f.label :住所１に発送, class: "job_type_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :shipping_address, :住所２に発送 %>
+    <%= f.label :住所２に発送, class: "job_type_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :shipping_address, :その他の住所に発送 %>
+    <%= f.label :その他の住所に発送, class: "job_type_label" %>
+  </div>
+  <span id="radio_label"></span>
+
+</div>
+<% end %>
+
+<!-- 支払い方法 -->
+<%= form_for(@order) do |f| %>
+<div class="field">
+  <span id= "hoge" class="job_type_engine">◾️　支払い方法</span><br>
+  <div class="radio-inline">
+    <%= f.radio_button :payment, :振り込み, checked: "checked" %>
+    <%= f.label :振り込み, class: "job_type_label" %>
+  </div>
+  <div class="radio-inline">
+    <%= f.radio_button :payment, :クレジットカード %>
+    <%= f.label :クレジットカード, class: "job_type_label" %>
+        <input type="text" class="form-control" id="inputother" placeholder="国または地域を記入" disabled>
+  </div>
+</div>
+<% end %>
+
+
+<!-- javascript -->
+<script>
+/* ラジオボタン変更時、選択した内容を表示 */
+$('input[name="order[payment]"]').change(function() {
+	//alert("push");
+	$("#inputother").attr('disabled', false);
+	//$("#inputother").val('test');
+});
+</script>

@@ -9,4 +9,5 @@ class Item < ApplicationRecord
 	has_many :cart_details, inverse_of: :item
 	has_many :order_details, inverse_of: :item
 	accepts_nested_attributes_for :disks, allow_destroy: true
+	accepts_nested_attributes_for :artist, allow_destroy: true
 end

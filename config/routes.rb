@@ -22,16 +22,18 @@ Rails.application.routes.draw do
 
 #items_routes
   get '/', to: 'items#index'
-<<<<<<< HEAD
 
   get 'items/search', to: 'items#search'
   post 'items/search'
 
 
-=======
-  get 'items/search', to: 'items#search'
-  post 'items/search'
->>>>>>> aki/master
+#admin_items
+  get '/admin_items/artist', to: 'admin_items#artistnew'
+  post '/admin_items/artist', to: 'admin_items#artistcreate'
+  get '/admin_items/label', to: 'admin_items#labelnew'
+  post '/admin_items/label', to: 'admin_items#labelcreate'
+  get '/admin_items/category', to: 'admin_items#categorynew'
+  post '/admin_items/category', to: 'admin_items#categorycreate'
 
   resources :items, only: [:index, :show]
 
@@ -55,6 +57,8 @@ Rails.application.routes.draw do
 
   #admins
   get '/admin', to: 'admins#top'
+
+
 
 
 end
