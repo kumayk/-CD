@@ -5,7 +5,7 @@ class CreateOrders < ActiveRecord::Migration[5.2]
       t.string :shipping_address
       t.string :payment
       t.integer :sub_total_price
-      t.integer :shipping_fee
+      t.integer :shipping_fee, default: 500
       t.integer :total_price
       t.boolean :is_deleted
 
