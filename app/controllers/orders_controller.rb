@@ -9,5 +9,8 @@ class OrdersController < ApplicationController
 
 	def new
 		@order = Order.new
+		@orders = Order.find(1)
+		@cart_detail = CartDetail.all
+		@cart_detail = current_user.cart_details
 	end
 end

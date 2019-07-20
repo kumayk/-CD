@@ -16,7 +16,7 @@
     <%= f.radio_button :shipping_address, :その他の住所に発送 %>
     <%= f.label :その他の住所に発送, class: "job_type_label" %>
   </div>
-  <span id="radio_label"></span>
+<div class="text text01">AAA</div>
 
 </div>
 <% end %>
@@ -42,8 +42,49 @@
 <script>
 /* ラジオボタン変更時、選択した内容を表示 */
 $('input[name="order[payment]"]').change(function() {
+	  $('[id=a]').prop('checked'){
+      $('.text').fadeOut();
+      $('.text01').fadeIn();
 	//alert("push");
-	$("#inputother").attr('disabled', false);
+	// $("#inputother").attr('disabled', false);
 	//$("#inputother").val('test');
 });
 </script>
+
+
+<!-- カート内商品表示 -->
+<h5>◾️　購入内容</h5>
+
+<table>
+
+  <tr>
+   <th>購入商品</th>
+   <th>枚数</th>
+   <th>価格</th>
+   <th>小計</th>
+  </tr>
+
+  <% @cart_detail.each do |cart_detail| %>
+  <tr>
+   <td>
+    <%= cart_detail.item.disk_name %></td>
+   <td>
+    <%= cart_detail.quantity %></td>
+   <td>
+    <%= cart_detail.item.price %></td>
+   <td>
+    <%= cart_detail.quantity * cart_detail.item.price %></td>
+  </tr>
+   <td>
+  <% end %>
+
+</table>
+
+  <p>送料　<%= @orders.shipping_fee %></p>
+
+
+
+
+
+
+
