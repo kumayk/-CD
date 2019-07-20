@@ -9,6 +9,8 @@ end
 ###newアクション###
 def new
 	@item = Item.new
+	@disk = @item.disks.build
+	@song = @disk.songs.build
 end
 
 def artistnew
@@ -28,8 +30,11 @@ end
 ###createアクション###
 def create
 	@item = Item.new(item_params)
-	@item.save
-	redirect_to new_admin_item_path
+	if @item.save!
+	   redirect_to new_admin_item_path
+	else
+       render :new
+   end
 end
 
 def artistcreate
@@ -53,18 +58,27 @@ end
 ###################
 
 def edit
+	@item = Item.find(params[:id])
+	@disk = @item.disks.build
+	@song = @disk.songs.build
 end
 
 def update
+	item = Item.find(params[:id])
+	item.update(item_params)
+	redirect_to edit_admin_item_path(item)
 end
 
 def destroy
+	@item = Item.find(params[:id])
+	@item.destroy
+	redirect_to new_admin_item_path
 end
 
 private
 
   def item_params
-     params.require(:item).permit(:image, :disk_name, :image_id, :stock, :price, :item_status, :artist_id, :label_id, :category_id, :disk_id, artists_attributes: [:id, :artist_name], disks_attributes: [:id, :disk_name], songs_attributes: [:id, :song_name, :truck_number], lavels_attributes: [:id, :lavel_name], categories_attributes: [:id, :category_name],)
+     params.require(:item).permit(:image, :disk_name, :image_id, :stock, :price, :item_status, :artist_id, :label_id, :category_id, :disk_id, disks_attributes: [:id, :disk_name, :item_id, songs_attributes: [:id, :song_name, :truck_number]])
   end
 
   def artist_params

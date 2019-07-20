@@ -1,6 +1,6 @@
-<h1>新規投稿</h1>
+<h1>商品編集</h1>
 
-<%= form_for(@item , url: admin_items_path) do |f| %>
+<%= form_for(@item , url: admin_item_path) do |f| %>
   <h4> シングル/アルバム名</h4>
    <%= f.text_field :disk_name %>
   <h4>画像</h4>
@@ -11,7 +11,6 @@
    <%= f.text_field :price %>
   <h4> ステータス</h4>
    <%= f.select :item_status, Item.item_statuses.keys.map {|k| [k, k]} %>
-
   <h4>アーティスト</h4>
    <%= f.collection_select :artist_id, Artist.all, :id, :artist_name %>
    <p><%= link_to "アーティスト追加", admin_items_artist_path %></p>
@@ -21,6 +20,9 @@
   <h4>カテゴリ</h4>
    <%= f.collection_select :category_id, Category.all, :id, :category_name %>
    <p><%= link_to "カテゴリ追加", admin_items_category_path %></p>
+  <h4> ディスク</h4>
+   <%= f.text_field :disk_id %>
+
 
 <div>
   <h4>ディスク</h4>
@@ -31,14 +33,10 @@
    <%= link_to_add_association 'ディスクを追加', f, :disks %>
 </div>
 <div>
-   <%= f.submit '登録' %>
+   <%= f.submit '更新' %>
 </div>
 <% end %>
 
-<% if @item.errors.any? %>
-<% @item.errors.full_messages.each do |message| %>
-<li><%= message %></li>
-<% end %>
-<% end %>
-
-
+<h4>
+   <%= link_to "この商品を削除する", admin_item_path(@item), method: :delete %>
+</h4>
