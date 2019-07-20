@@ -30,8 +30,13 @@
         </div>
         <div class="order table-responsive col-md-7 col-xs-7">
             <h3>注文履歴</h3>
-            <table class="table">
-            </table>
+            <% @orders.each do |oreder| %>
+                <div class="col-xs-6 col-md-3">
+                    <div class="thumbnail">
+                        <%= order %>
+                    </div>
+                </div>
+            <% end %>
         </div>
 	</div>
 </div>
