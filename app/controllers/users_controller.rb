@@ -16,12 +16,6 @@ class UsersController < ApplicationController
 	    redirect_to user_path(user.id)
 	end
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 542116da9a6b711a7206559f9596d50a4dad5c43
     private
 
     def user_params
