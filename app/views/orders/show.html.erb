@@ -1,0 +1,36 @@
+<div class="container">
+	<div class="row">
+		<h4>購入履歴詳細（注文日：@order.created_at　配送日：2019/○/○）</h4>
+		<div class="card">
+		  <ul class="list-group list-group-flush">
+		    <li class="list-group-item">
+		    	<table class="table">
+  					<thead>
+					    <tr>
+						    <th scope="col">購入商品名</th>
+						    <th scope="col">枚数</th>
+						    <th scope="col">価格</th>
+						    <th scope="col">小計</th>
+					    </tr>
+					</thead>
+					<tbody>
+						<% orders.each do |order| %>
+						    <tr>
+							    <td><%= order.item_disk_name %></td>
+							    <td><%= order.order_detail.quantity %>枚</td>
+							    <td><%= order.item.price %>円</td>
+							    <td><%= order.item.price*order.order_detail.quantity %>円</td>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</li>
+		    <li class="list-group-item">送料　500円</li>
+		    <li class="list-group-item">合計<%= @order.item.price*@order.order_detail.quantity+@order.shipping_fee %>円</li>
+		    <li class="list-group-item">配送先<%= @order.shipping_address.address %></li>
+		    <li class="list-group-item">支払い方法<%=@order.order_detail.order.payment %></li>
+		    <li class="list-group-item">@order.order_status</li>
+		  </ul>
+		</div>
+	</div>
+</div>

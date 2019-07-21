@@ -20,7 +20,6 @@ Rails.application.routes.draw do
 #resources
 
   resources :users, only: [:show, :edit, :update]
-  resources :reviews, only: [:create, :update, :destroy]
 
 #items_routes
   # post 'items', to: 'items#create'
@@ -47,7 +46,7 @@ Rails.application.routes.draw do
 
   resources :order_details, only: [:update]
 
-  resources :orders, only: [:show, :create, :new]
+  resources :orders, only: [:show, :create, :new, :confirm]
 
   resources :admin_users, only: [:index, :show, :edit, :destroy, :update]
 

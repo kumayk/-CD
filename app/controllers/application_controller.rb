@@ -1,13 +1,13 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :set_search
+
 
   # カート機能（くま追加）
   protect_from_forgery with: :exception
   helper_method :current_cart
 
   def authenticate_user
-      unless current_user
+    unless current_user
       flash[:notice] = "ログインが必要です"
       redirect_to new_admin_registration_url
     end
