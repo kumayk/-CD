@@ -4,6 +4,7 @@ def index
 end
 
 def show
+	@item = Item.find(params[:id])
 end
 
 ###newアクション###
@@ -31,7 +32,7 @@ end
 def create
 	@item = Item.new(item_params)
 	if @item.save!
-	   redirect_to new_admin_item_path
+	   redirect_to admin_item_path(@item.id)
 	else
        render :new
    end
@@ -66,7 +67,7 @@ end
 def update
 	item = Item.find(params[:id])
 	item.update(item_params)
-	redirect_to edit_admin_item_path(item)
+	redirect_to admin_item_path(item.id)
 end
 
 def destroy

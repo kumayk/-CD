@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :set_search
 
 
-  # カート機能（くま追加）
+  # カート機能用（くま追加）
   protect_from_forgery with: :exception
   helper_method :current_cart
 
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
   end
 
-  # カート機能（くま追加）
+  # カート機能用（くま追加）
   def current_cart
     if session[:item_id]
       @cart = Cart_detail.find(session[:item_id])
