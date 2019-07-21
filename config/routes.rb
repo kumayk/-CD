@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 #resources
 
   resources :users, only: [:show, :edit, :update]
+  resources :reviews, only: [:create, :update, :destroy]
 
 #items_routes
   # post 'items', to: 'items#create'

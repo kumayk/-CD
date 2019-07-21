@@ -15,7 +15,8 @@
          <p>レーベル：<%= @item.label.label_name %></p>
          <p>ジャンル：<%= @item.category.category_name %></p>
          <p>価格：<%= @item.price %></p>
-           <span class="text-success">販売中/</span>
+           <!-- 販売ステータスの表示 -->
+           <%= @item.item_status %>
 
            <!-- 個数選択ボックス -->
            <%= form_for @cart do |t| %>
@@ -32,9 +33,9 @@
          <p><%= disk.disk_name %></p>
 
 	      <% disk.songs.each do |song| %>
-	         <ol>
+	         <ul>
 	         <li><%= song.song_name %></li>
-	         </ol>
+	         </ul>
 
 	      <% end %>
       <% end %>
@@ -57,7 +58,7 @@
                <th><%= review.created_at.strftime('%Y/%m/%d') %></th>
                <th><%= review.review_comment %></th>
                <th><% if review.user == current_user %>
-               	   <%= link_to "削除", review_path(id: review), method: :delete, "data-confirm" => "本当に消しますか？" %>
+               	   <%= link_to "削除", item_review_path(id: review,item_id: @item), method: :delete, "data-confirm" => "本当に消しますか？" %>
                	   <% end %>
                </th>
              </tr>

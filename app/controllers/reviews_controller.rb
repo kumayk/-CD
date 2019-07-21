@@ -15,9 +15,6 @@ def create
     end
 end
 
-def update
-end
-
 def destroy
     review = Review.find(params[:id])
     if review.destroy
