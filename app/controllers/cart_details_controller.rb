@@ -5,6 +5,9 @@ class CartDetailsController < ApplicationController
 	  @item = Item.find(id: @cart_item)
 	  @cart_item = current_user.items
 
+	  @cart = CartDetail.all
+	  @totalprice = CartDetail.all.sum(:price)
+	  @totalquantity = CartDetail.all.sum(:quantity)
 	end
 
 	def create

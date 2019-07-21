@@ -1,18 +1,31 @@
 class AdminUsersController < ApplicationController
+	PER = 8
 
-def index
-end
+    def index
+	  @customer = User.all.page(params[:page]).per(8)
+    end
 
-def show
-end
+    def show
+      @orders = Oder.find(current_user.id)
+    end
 
-def edit
-end
+    def edit
+	  @user = User.find(params[:id])
+    end
 
-def destroy
-end
+    def update
+	  user = User.find(params[:id])
+	  user.update(user_params)
+	  sign_in(user, bypass: true)
+	  redirect_to user_path(user.id)
+    end
 
-def update
-end
+    def destroy
+    end
 
+    private
+
+    def user_params
+        params.require(:user).permit(:last_name, :first_name, :last_name_kana, :first_name_kana, :zip_code, :address, :phone_number, :email, :password, :password_confirmation)
+    end
 end
