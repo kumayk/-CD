@@ -1,5 +1,4 @@
 class Item < ApplicationRecord
-    belongs_to :user
     has_many :reviews, inverse_of: :item, dependent: :destroy
 
 	attachment :image
@@ -8,7 +7,7 @@ class Item < ApplicationRecord
 	belongs_to :category
 
     has_many :disks, inverse_of: :item
-	has_many :disks, inverse_of: :item
+	has_many :songs, inverse_of: :disk
 	has_many :cart_details, inverse_of: :item
 	has_many :order_details, inverse_of: :item
 	accepts_nested_attributes_for :disks, allow_destroy: true
