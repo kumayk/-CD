@@ -1,0 +1,18 @@
+<h4>配送先登録</h4>
+
+<%= form_for(@shipping_address , url: orders_shipping_address_path) do |f| %>
+  <h5>配送先名</h5>
+     <%= f.text_field :shipping_name %>
+  <h5>住所</h5>
+     <%= f.text_field :address %>
+  <h5>郵便番号</h5>
+     <%= f.text_field :zip_code %>
+  <h5>連絡先</h5>
+     <%= f.text_field :phone_number %>
+
+<div>
+   <%= f.submit '登録' %>
+</div>
+
+<% end %>
+
