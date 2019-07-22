@@ -101,17 +101,15 @@
 	          <div class="row">
 	            <div class="space col-sm-2"></div>
 	            <div class="field col-sm-5">
-	              <%= f.label :パスワード（確認） %><br />
-	              <%= f.password_field :password_confirmation, autocomplete: "new-password", :size => "60*60" %>
 	            </div>
 	            <div class="space col-sm-5"></div>
 	          </div>
 	        </div>
 
 	        <div class="actions" style="text-align: center; margin: 40px 0; padding: 20px 40px">
-	          <%= f.submit "編集" %>
+	          <%= f.submit "更新" %>
 	        </div>
-	        <button type="button" class="btn btn-warning" style="float: right; margin-bottom: 20px;"><%= link_to "退会",destroy_user_session_path, method: :delete %></button>
+	        <button type="button" class="btn btn-warning" style="float: right; margin-bottom: 20px;"><%= link_to "削除",destroy_user_session_path, method: :delete, "data-confirm" => "本当に消しますか？" %></button>
 	        
         <% end %>
 

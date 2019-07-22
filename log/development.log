@@ -12966,3 +12966,2591 @@ Processing by ItemsController#search as HTML
 Completed 200 OK in 2234ms (Views: 2100.5ms | ActiveRecord: 24.0ms)
 
 
+Started GET "/" for 10.0.2.2 at 2019-07-21 06:58:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:5)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (6.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 8]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 2018ms (Views: 1820.8ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 07:00:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (11.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  [1m[36mArtist Load (4.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (7.7ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (3.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.3ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered collection of layouts/_search_form.html.erb [5 times] (176.2ms)
+  Rendered items/search.html.erb within layouts/application (297.5ms)
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 07:00:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (5.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/search.html.erb:2
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (5.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (2.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered collection of layouts/_search_form.html.erb [5 times] (166.9ms)
+  Rendered items/search.html.erb within layouts/application (276.2ms)
+Completed 200 OK in 2687ms (Views: 2477.9ms | ActiveRecord: 26.7ms)
+
+
+Completed 200 OK in 1700ms (Views: 1586.0ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 07:00:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (4.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (4.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:11
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:11
+  [1m[36mCACHE Artist Load (0.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:11
+  [1m[36mArtist Load (4.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:11
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:11
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:24
+  Rendered admin_items/index.html.erb within layouts/application (196.1ms)
+Completed 200 OK in 2149ms (Views: 2038.5ms | ActiveRecord: 20.2ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-21 08:08:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:5)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 8]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 2196ms (Views: 2086.0ms | ActiveRecord: 15.5ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:08:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE/JsC9q+vy90xczY1j7nMkZb7ELpm3jjgnTnheNLuV3+x4XLbCEzAxYspMUfrlK1M+ui1UHEqxWLncUZTjbGQ==", "q"=>{"disk_name_cont"=>"eee"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  Rendered items/search.html.erb within layouts/application (58.2ms)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_index, application/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result == true %>
+    2: <%= render partial: 'layouts/search_form', collection: @result %>
+    3: <% else %>
+    4: <%= render 'index' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885863016340'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:09:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE/JsC9q+vy90xczY1j7nMkZb7ELpm3jjgnTnheNLuV3+x4XLbCEzAxYspMUfrlK1M+ui1UHEqxWLncUZTjbGQ==", "q"=>{"disk_name_cont"=>"eee"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  Rendered items/search.html.erb within layouts/application (117.1ms)
+Completed 500 Internal Server Error in 438ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result == true %>
+    2: <%= render partial: 'layouts/search_form', collection: @result %>
+    3: <% else %>
+    4: <%= render 'items/index' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885963165600'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:10:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PE/JsC9q+vy90xczY1j7nMkZb7ELpm3jjgnTnheNLuV3+x4XLbCEzAxYspMUfrlK1M+ui1UHEqxWLncUZTjbGQ==", "q"=>{"disk_name_cont"=>"eee"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (7.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%eee%'[0m
+  ↳ app/views/items/search.html.erb:2
+  [1m[36mArtist Load (6.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (5.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered collection of layouts/_search_form.html.erb [1 times] (471.9ms)
+  Rendered items/search.html.erb within layouts/application (601.3ms)
+Completed 200 OK in 2453ms (Views: 2246.2ms | ActiveRecord: 68.5ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:10:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XEs8HMMPajc6dG02NALQJf4XKyZH+Ux3E0SlEanS9aYX/+u7wdUUB4v/yJZDJJLz48HqHBlYMzjLYwGb22cAWg==", "q"=>{"disk_name_cont"=>"e"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (6.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%e%'[0m
+  ↳ app/views/items/search.html.erb:2
+  [1m[36mArtist Load (4.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (4.5ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered collection of layouts/_search_form.html.erb [2 times] (40.9ms)
+  Rendered items/search.html.erb within layouts/application (153.7ms)
+Completed 200 OK in 1679ms (Views: 1565.0ms | ActiveRecord: 16.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:10:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EWOMF2/2ebu+op9PLR0jGotVugkYlHHA8vD64PokgwVa11uwbSwHiw8pOu9aO2HMloN7M0Y1Do8q115qiJF2+Q==", "q"=>{"disk_name_cont"=>"e"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (6.0ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%e%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (8.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (7.3ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (61.0ms)
+  Rendered items/search.html.erb within layouts/application (192.0ms)
+Completed 200 OK in 1895ms (Views: 1731.8ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 08:11:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (5.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (5.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (7.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (3.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (146.0ms)
+  Rendered items/search.html.erb within layouts/application (255.7ms)
+Completed 200 OK in 1177ms (Views: 1034.3ms | ActiveRecord: 21.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:11:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UT6GkUs7c5cJMSZAJxhtdxU50WrUiJw2XsntLSB2v2kailE2SeENp7i6g+BQPi+hCO8QUIop43mG7kmnUsNKlQ==", "q"=>{"disk_name_cont"=>"e"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (2.3ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%e%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (2.4ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (23.9ms)
+  Rendered items/search.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 991ms (Views: 917.7ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:11:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GLQIecAV8mrMOaFJdWX0AYNTF4gheElCj22lNz6rX11TAN/ews+MWn2yBOkCQ7bXnoXWsn/ZNg1XSgG9TB6qoQ==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Load (4.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  Rendered layouts/_search_form.html.erb (10.5ms)
+  Rendered items/search.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 2054ms (Views: 1887.4ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:24:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (7.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (241.3ms)
+Completed 500 Internal Server Error in 718ms (ActiveRecord: 14.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render 'items/index' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885911551820'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:24:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (4.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (180.0ms)
+Completed 500 Internal Server Error in 452ms (ActiveRecord: 4.8ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_index, application/_index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render 'index' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885866624820'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:25:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered items/search.html.erb within layouts/application (395.4ms)
+Completed 500 Internal Server Error in 521ms (ActiveRecord: 5.7ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `itmes_path' for #<#<Class:0x00007f1f285b50d8>:0x00007f1f2a29adb0>):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <% redirect_to itmes_path %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885914045320'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:26:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered items/search.html.erb within layouts/application (469.2ms)
+Completed 500 Internal Server Error in 776ms (ActiveRecord: 7.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `redirect_to' for #<#<Class:0x00007f1f285b50d8>:0x00007f1f29902230>):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <% redirect_to 'itmes' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885909013980'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:26:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (5.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mItem Load (7.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered items/search.html.erb within layouts/application (668.8ms)
+Completed 500 Internal Server Error in 1205ms (ActiveRecord: 18.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `redirect_to' for #<#<Class:0x00007f1f285b50d8>:0x00005624a6c6cc78>):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <% redirect_to items_path %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_47357708435400'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:27:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendered items/search.html.erb within layouts/application (398.1ms)
+Completed 500 Internal Server Error in 759ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `redirect_to' for #<#<Class:0x00007f1f285b50d8>:0x00007f1f296282d0>):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= redirect_to items_path %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885907520800'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:28:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (42.0ms)
+Completed 500 Internal Server Error in 394ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Missing partial /_items with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render items_path %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885862412540'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:29:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (7.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (137.1ms)
+Completed 500 Internal Server Error in 669ms (ActiveRecord: 7.9ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_items_path, application/_items_path with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render partial: 'items_path' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885906592640'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:30:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (136.8ms)
+Completed 500 Internal Server Error in 633ms (ActiveRecord: 5.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render '/' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885864184000'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:31:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (97.7ms)
+Completed 500 Internal Server Error in 519ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial items/_#, application/_# with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/vagrant/俺のCD/app/views"
+  * "/var/lib/gems/2.5.0/gems/kaminari-0.17.0/app/views"
+  * "/var/lib/gems/2.5.0/gems/devise-4.6.2/app/views"
+):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render '#' %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885910065180'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:36:23 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IRWdbtHr80v3Ley2NC07RPmkQ4MGJBoT1UCFJ+y5ZBtqoUrJ0zGNe0amSRZDC3mS5HKCuViFZVwNZyGtngyR5w==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (7.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 1753ms (Views: 1588.2ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:36:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fwUqJwahiY5ShSI0HR0iJ4Nwo8lVMO98sjGStIYG6sM0sf2ABHv3vuMOh5RqO2DxnqZi8wuRkDNqFjY+9LMfPw==", "q"=>{"disk_name_cont"=>"l"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.6ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%l%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 1288ms (Views: 1160.4ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 08:36:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (2.8ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (64.3ms)
+  Rendered items/search.html.erb within layouts/application (114.1ms)
+Completed 200 OK in 1062ms (Views: 886.7ms | ActiveRecord: 12.6ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:36:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4dnmXZuJ1WbGut3E6S1hUVa2s7yAFrGugY3VE5DtR12qbTH6mVOrVncxeGSeCyOHS2Byht63zuFZqnGZ4liyoQ==", "q"=>{"disk_name_cont"=>"e"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%e%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%e%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (1.5ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (14.1ms)
+  Rendered items/search.html.erb within layouts/application (43.4ms)
+Completed 200 OK in 634ms (Views: 596.1ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:36:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q0KL2bGo/C4aefzUPXh6IvRDbvgKMzTSOSDRMTan0UTg9lx+s3KCHqvyWXRKXjj06ZWvwlSSS53hB3W7RBIkuA==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.9ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 1897ms (Views: 1766.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 08:37:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (1.5ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (38.5ms)
+  Rendered items/search.html.erb within layouts/application (63.6ms)
+Completed 200 OK in 604ms (Views: 562.5ms | ActiveRecord: 7.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:37:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U55b5q2mLhgbT6TjLHlhNEL8Y63KkMkC6NLZ4AasxwQYKoxBr3xQKKrEAUNbXyPiXyqil5Qxtk0w9X1qdBky+A==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (8.0ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 1837ms (Views: 1698.4ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:37:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HuFSH/KMQT6KokgDGP8hDxKE2fIpsQ9LfsRnnVIbXdRVVYW48FY/Djsp7aNv2WPZD1IYyHcQcASm48MXIK6oKA==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 1222ms (Views: 1087.6ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:37:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FGd6GjIxlO2w/gZuwMrPeb2c2mGWs6NTrDYkW2Dx3uRf0629MOvq3QF1o8637I2voEobW8gS3Bx0EYDREkQrGA==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 1855ms (Views: 1712.3ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 08:37:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (3.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (81.5ms)
+  Rendered items/search.html.erb within layouts/application (137.7ms)
+Completed 200 OK in 1500ms (Views: 1323.4ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:37:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vo4Lusw4T58RJSC6gDCuxCwBVGytNhx6tJoUjHXumbL1OtwdzuIxr6CuhRr3FuwSMdeVVvOXYzVsvbAGB1tsTg==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (2.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 1300ms (Views: 1236.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 08:38:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (8.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (4.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (4.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (3.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (106.7ms)
+  Rendered items/search.html.erb within layouts/application (225.5ms)
+Completed 200 OK in 1362ms (Views: 1166.4ms | ActiveRecord: 22.5ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:38:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S1VwB+bSueX1s12TKNdbF01Cx+bBXP16TIp83rYiDiMA4aeg5AjH1UQ4+DNf8RnBUJQG3J/9gjWUrdhUxJf73w==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 1336ms (Views: 1198.0ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:44:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sW9DfJO5LeQ+GmXXLO9hDy1ZKFqRf6enlCQpmY+IWIb625TbkWNT1I+RwHdbySPZMI/pYM/e2OhMA40T/T2teg==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (36.5ms)
+Completed 500 Internal Server Error in 261ms (ActiveRecord: 10.2ms)
+
+
+  
+ActionView::Template::Error (':index' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render :index %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885906223180'
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:45:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sW9DfJO5LeQ+GmXXLO9hDy1ZKFqRf6enlCQpmY+IWIb625TbkWNT1I+RwHdbySPZMI/pYM/e2OhMA40T/T2teg==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (126.5ms)
+Completed 500 Internal Server Error in 627ms (ActiveRecord: 6.3ms)
+
+
+  
+ActionView::Template::Error (You invoked render but did not give any of :partial, :template, :inline, :file, :plain, :html or :body option.):
+    1: <% if @result.any? %>
+    2: <%= render partial: 'layouts/search_form' %>
+    3: <% else %>
+    4: <%= render action: :index %>
+    5: <% end %>
+  
+app/views/items/search.html.erb:4:in `_app_views_items_search_html_erb__1525159976472196778_69885864070740'
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 08:49:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (3.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (2.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (3.6ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.6ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (72.1ms)
+  Rendered items/search.html.erb within layouts/application (123.4ms)
+Completed 200 OK in 1138ms (Views: 1051.0ms | ActiveRecord: 15.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:49:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kkbfTF7P/o8g5YHvR1gjkDrYOHFgA0rtLRH6MI7SqojZ8gjrXBWAv5FuJE8wfmFGJw75Sz6iNaL1Nl66/GdfdA==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.3ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 1320ms (Views: 1207.4ms | ActiveRecord: 6.3ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:50:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Zv/xA7y0Ib171phjd/vhS0Bf6+TFzGu+wUoRCP6W2nwtSyakvm5fjcpdPcMA3aOdXYkq3pttFPEZbbWCjCMvgA==", "q"=>{"disk_name_cont"=>"ee"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ee%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mCACHE Item Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ee%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:7
+  [1m[36mItem Load (5.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%ee%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:9
+  [1m[36mArtist Load (5.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:19
+  [1m[36mLabel Load (6.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:22
+  Rendered layouts/_search_form.html.erb (43.8ms)
+  Rendered items/search.html.erb within layouts/application (163.9ms)
+Completed 200 OK in 2571ms (Views: 2395.6ms | ActiveRecord: 23.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:50:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o3JLwCAPvxfgEqLv2BRo32KoNI7ngkq4zhEW/ul0h0LoxpxnItXBJ1GZB0+vMioJf371tLkjNfcWNrJ0m8Fyvg==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (4.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 2169ms (Views: 2050.2ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:51:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o0rvmEoL7uof9vMq4JmMMRn56GqO83tdhtf4a300ggDo/jg/SNGQ2q59VoqXv87nBC8pUNBSBBJe8FzhD4F3/A==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (4.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 1750ms (Views: 1620.0ms | ActiveRecord: 4.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 08:53:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j7Bt2MLc2fdOzT30q7ZXyhoflM+6+AJ+nLCufb6CRwbEBLp/wAanx/9GmFTckBUcB8lV9eRZfTFElwr3zDey+g==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 1651ms (Views: 1480.8ms | ActiveRecord: 5.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:00:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wuje3hQXiERaZegupdAb11xZO7XOZghBqZj0EVYffgKJXAl5Fs32dOvuTY7S9lkBQY/6j5DHdw5xv1CbJKqL/g==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (7.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 1953ms (Views: 1781.6ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 09:01:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (3.5ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (4.7ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (4.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (4.3ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (3.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (117.4ms)
+  Rendered items/search.html.erb within layouts/application (207.3ms)
+Completed 200 OK in 1610ms (Views: 1437.7ms | ActiveRecord: 21.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:01:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+InEfgwXw97OmK5XDgbz3a3vqLqao1KolDsRA41yDzizPRPZDs297n8TC/d5ILELsDlpgMQCLedMHLWJ/8f6xA==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 1973ms (Views: 1840.7ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:01:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y1a9YuUsMoB4iFVCKigayNeVv0cjgXb10L34FhC2rWSA4mrF5/ZMsMkD8OJdDlgeykN+fX0gCboImlycYgNYmA==", "q"=>{"disk_name_cont"=>"ee"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (4.7ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ee%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (5.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%ee%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (5.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (6.5ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (33.8ms)
+  Rendered items/search.html.erb within layouts/application (161.7ms)
+Completed 200 OK in 2330ms (Views: 2200.0ms | ActiveRecord: 21.8ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:01:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0v6G/wbcc5pRJ1Wso3aNOK71z5VTbDcCSMCm2G/nLTCZSlFYBAYNquCs8AzUUM/usyMOrw3NSE2Q5wJSHVLYzA==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (4.6ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 1060ms (Views: 943.0ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:03:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pO/aPNpwfca2GVqTMO/qt+YOhAmQZbFyslkOXCVSaMTvWw2b2KoD9geS/zNHyahh+9hFM87Ezj1qfqrWV+edOA==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.6ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (5.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (4.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (6.3ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (5.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (154.2ms)
+  Rendered items/search.html.erb within layouts/application (279.3ms)
+Completed 200 OK in 1660ms (Views: 1472.3ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/items/2" for 10.0.2.2 at 2019-07-21 09:04:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (6.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/items/show.html.erb:52
+  Rendered items/show.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 1711ms (Views: 1396.9ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/items/1" for 10.0.2.2 at 2019-07-21 09:04:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (7.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mReview Load (5.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/items/show.html.erb:52
+  Rendered items/show.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 1857ms (Views: 1716.3ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/items/1" for 10.0.2.2 at 2019-07-21 09:04:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (3.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/items/show.html.erb:52
+  Rendered items/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 509ms (Views: 462.0ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:04:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PwELLPj6iNZDK3+aow0jjt6F3IG1CYYem+64Ci05vAN0tdyL+iD25vKg2jrUK2FYw1Mdu+uo+VFDyRyAX4xJ/w==", "q"=>{"disk_name_cont"=>"e"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%e%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (6.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%e%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (6.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (7.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (55.0ms)
+  Rendered items/search.html.erb within layouts/application (206.0ms)
+Completed 200 OK in 3201ms (Views: 3022.2ms | ActiveRecord: 26.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:05:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nl66s9tBWddoB1YvZDVYhuDJjGOG/0Q/FHLEDG1tb/196m0U2Zsn59mM848TExpQ/R9NWdheO3DMVWCGH9iaAQ==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 3051ms (Views: 2892.0ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:05:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KNzRQ6/C8EPkxmJwiac8UnxqrQRBCGaeExlVbSo+6eFjaAbkrRiOc1VNx9D+gX6EYbxsPh+pGdHLPvHnWIscHQ==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (5.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (3.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mLabel Load (5.8ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.5ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mArtist Load (4.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:18
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:21
+  Rendered layouts/_search_form.html.erb (137.7ms)
+  Rendered items/search.html.erb within layouts/application (242.5ms)
+Completed 200 OK in 1780ms (Views: 1614.1ms | ActiveRecord: 26.1ms)
+
+
+Started GET "/items/1" for 10.0.2.2 at 2019-07-21 09:05:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mItem Load (3.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/items/show.html.erb:52
+  Rendered items/show.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 538ms (Views: 499.1ms | ActiveRecord: 4.1ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:08:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DI0vEUsnhyXC+gXND6oqxIqXn+38o9tv+cMYmCxAnlZHOfi2Sf35FXNxoG14jGgSl0Fe16ICpCAh5LwSXvVrqg==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (4.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (5.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (6.5ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mArtist Load (6.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (176.9ms)
+  Rendered items/search.html.erb within layouts/application (294.5ms)
+Completed 200 OK in 1837ms (Views: 1670.4ms | ActiveRecord: 29.2ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 09:09:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (7.8ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (8.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (3.2ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (106.8ms)
+  Rendered items/search.html.erb within layouts/application (254.7ms)
+Completed 200 OK in 1236ms (Views: 1030.9ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 09:09:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (5.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (6.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (6.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (6.6ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mArtist Load (5.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (186.1ms)
+  Rendered items/search.html.erb within layouts/application (317.5ms)
+Completed 200 OK in 1440ms (Views: 1259.9ms | ActiveRecord: 30.9ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:15:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mArtist Load (2.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (191.6ms)
+Completed 200 OK in 2020ms (Views: 1940.1ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:16:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (1.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (1.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 651ms (Views: 610.3ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:16:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (2.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 1065ms (Views: 890.7ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:17:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (5.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (6.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (6.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (248.7ms)
+Completed 200 OK in 1878ms (Views: 1688.5ms | ActiveRecord: 25.5ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:17:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (2.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (2.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (70.0ms)
+Completed 200 OK in 947ms (Views: 775.3ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:17:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (2.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (3.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (93.9ms)
+Completed 200 OK in 1442ms (Views: 1286.5ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:17:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (1.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (4.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (83.1ms)
+Completed 200 OK in 954ms (Views: 774.7ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:17:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (4.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (4.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (135.9ms)
+Completed 200 OK in 1519ms (Views: 1433.8ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:18:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (1.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (2.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 904ms (Views: 778.5ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:18:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (3.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (98.0ms)
+Completed 200 OK in 959ms (Views: 781.2ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:18:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (2.3ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (76.7ms)
+Completed 200 OK in 1258ms (Views: 1078.6ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:18:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (1.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:14
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:28
+  Rendered admin_items/index.html.erb within layouts/application (68.6ms)
+Completed 200 OK in 1065ms (Views: 889.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:21:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 641ms (Views: 575.5ms | ActiveRecord: 6.6ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:24:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lqsgF+sLu6ZjMGx2SiMrhulFh2udKCwmgIBdnpUlmp/dH/ew6dHFltK7ydY9BWlQ9JNGUcOJU2lYp/kU55BvYw==", "q"=>{"disk_name_cont"=>"ee"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ee%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (5.9ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%ee%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (6.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (7.7ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (41.5ms)
+  Rendered items/search.html.erb within layouts/application (179.1ms)
+Completed 200 OK in 2086ms (Views: 1886.7ms | ActiveRecord: 26.5ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:24:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VBvr63UvaN+Y19wjoA8xlUBYTGcoTwub8wPXpnqBieofrzxMd/UW7ylceYPXKXNDXY6NXXbudNQrJHMsCDR8Fg==", "q"=>{"disk_name_cont"=>"ll"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (10.0ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%ll%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  Rendered items/search.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 1116ms (Views: 983.8ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 09:25:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (1.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (1.4ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (39.5ms)
+  Rendered items/search.html.erb within layouts/application (69.1ms)
+Completed 200 OK in 670ms (Views: 623.8ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:25:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Uo9FOhkV3pRzUwOQXe+Y1WvGUVWm1P/n8OdKZCukW0AZO5KdG8+gpMLYpjAqydoDdhCQb/h1gKgowO7uWRGuvA==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.2ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (4.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (5.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (5.3ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mArtist Load (6.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (147.0ms)
+  Rendered items/search.html.erb within layouts/application (267.5ms)
+Completed 200 OK in 1730ms (Views: 1559.8ms | ActiveRecord: 28.4ms)
+
+
+Started GET "/items/search" for 10.0.2.2 at 2019-07-21 09:26:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (2.1ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (2.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (1.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (2.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (56.9ms)
+  Rendered items/search.html.erb within layouts/application (99.8ms)
+Completed 200 OK in 1264ms (Views: 1094.4ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:26:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (2.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (51.8ms)
+Completed 200 OK in 641ms (Views: 594.2ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:27:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (6.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (5.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (7.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (199.2ms)
+Completed 200 OK in 1413ms (Views: 1225.0ms | ActiveRecord: 26.9ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:28:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (6.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (5.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (6.4ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (234.2ms)
+Completed 200 OK in 2183ms (Views: 1993.7ms | ActiveRecord: 24.6ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:28:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1nwGJrRGLINGexH4VzFB2M0hSxpHaTqqBWCgvgoux/SdyNGBtpxSs/fwtFggFwMO0PeKIBnIReXdRwQ0eJsyCA==", "q"=>{"disk_name_cont"=>""}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (6.7ms)[0m  [1m[34mSELECT  1 AS one FROM "items" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (3.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (3.7ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mArtist Load (3.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (98.2ms)
+  Rendered items/search.html.erb within layouts/application (209.2ms)
+Completed 200 OK in 1779ms (Views: 1634.5ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:31:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (2.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (2.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (3.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (124.7ms)
+Completed 200 OK in 798ms (Views: 729.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:31:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (1.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (1.7ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 967ms (Views: 802.7ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:32:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (5.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:5
+  [1m[36mArtist Load (5.5ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mArtist Load (7.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:12
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:24
+  Rendered admin_items/index.html.erb within layouts/application (247.5ms)
+Completed 200 OK in 2570ms (Views: 2400.2ms | ActiveRecord: 25.8ms)
+
+
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:33:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (3.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (3.6ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (4.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (163.6ms)
+Completed 200 OK in 2070ms (Views: 1890.9ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-21 09:36:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:5)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (8.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 8]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 1657ms (Views: 1504.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2019-07-21 09:36:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#new as HTML
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.6.2/app/views/devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered users/registrations/new.html.erb within layouts/application (410.8ms)
+Completed 200 OK in 1027ms (Views: 995.8ms | ActiveRecord: 8.2ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2019-07-21 09:37:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lZtzfzqvudbw8RwMwzC1OAmqu2QAmN9rK/r3H2Ug/gTVyVgS/G2z8ydfZtpfcM+YryFC1ArsSlhe992ocI+FRg==", "user"=>{"last_name"=>"aaaa", "first_name"=>"aaaaaaaaaa", "last_name_kana"=>"aaaaaaaa", "first_name_kana"=>"aaaaaa", "zip_code"=>"1234567890", "address"=>"123456789", "phone_number"=>"123456789", "email"=>"l@p", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."deleted_at" IS NULL LIMIT ?[0m  [["email", "l@p"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (7.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "address", "zip_code", "phone_number", "last_name", "first_name", "last_name_kana", "first_name_kana", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "l@p"], ["encrypted_password", "$2a$11$Fz7on5goCcHVtwtkRwymnOdtB1lxYzJTL7Mh2eUy1Baxed.2Z6fle"], ["address", "123456789"], ["zip_code", "1234567890"], ["phone_number", "123456789"], ["last_name", "aaaa"], ["first_name", "aaaaaaaaaa"], ["last_name_kana", "aaaaaaaa"], ["first_name_kana", "aaaaaa"], ["created_at", "2019-07-21 09:37:12.953153"], ["updated_at", "2019-07-21 09:37:12.953153"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 500ms (ActiveRecord: 13.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-21 09:37:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:5)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 8]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 534ms (Views: 504.4ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-21 09:37:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A+qGPXXAzDQC2ZuQ0/m1aVQrqAw9fYmYpoPyYjG0LtZIXlGadxqyBLNSPjCk3/e/Sf1pNmPc9td+pFboQwHbKg==", "q"=>{"disk_name_cont"=>"e"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%e%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (3.1ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%e%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (2.8ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (3.4ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (26.2ms)
+  Rendered items/search.html.erb within layouts/application (85.1ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 1414ms (Views: 1340.8ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/items/2" for 10.0.2.2 at 2019-07-21 09:37:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (7.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mReview Load (5.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/items/show.html.erb:52
+  Rendered items/show.html.erb within layouts/application (70.8ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 1280ms (Views: 1138.7ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/cart_details/5" for 10.0.2.2 at 2019-07-21 09:37:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT SUM(price) FROM "cart_details"[0m
+  ↳ app/controllers/cart_details_controller.rb:4
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 17.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: price: SELECT SUM(price) FROM "cart_details"):
+  
+app/controllers/cart_details_controller.rb:4:in `show'
+Started GET "/items/2" for 10.0.2.2 at 2019-07-21 09:38:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (7.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mReview Load (2.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/items/show.html.erb:52
+  Rendered items/show.html.erb within layouts/application (40.0ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 1765ms (Views: 1620.0ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/cart_details/5" for 10.0.2.2 at 2019-07-21 09:38:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT SUM(price) FROM "cart_details"[0m
+  ↳ app/controllers/cart_details_controller.rb:4
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 11.8ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: price: SELECT SUM(price) FROM "cart_details"):
+  
+app/controllers/cart_details_controller.rb:4:in `show'
+Started GET "/admin_items" for 10.0.2.2 at 2019-07-21 09:38:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#index as HTML
+  Rendering admin_items/index.html.erb within layouts/application
+  [1m[36mItem Load (4.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_items/index.html.erb:6
+  [1m[36mArtist Load (4.2ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mArtist Load (2.9ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/admin_items/index.html.erb:13
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "items"[0m
+  ↳ app/views/admin_items/index.html.erb:26
+  Rendered admin_items/index.html.erb within layouts/application (125.6ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 864ms (Views: 767.6ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/admin_users" for 10.0.2.2 at 2019-07-21 09:38:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#index as HTML
+  Rendering admin_users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL LIMIT ? OFFSET ?[0m  [["LIMIT", 8], ["OFFSET", 0]]
+  ↳ app/views/admin_users/index.html.erb:15
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users" WHERE "users"."deleted_at" IS NULL[0m
+  ↳ app/views/admin_users/index.html.erb:32
+  Rendered admin_users/index.html.erb within layouts/application (29.0ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 588ms (Views: 546.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/admin_user1" for 10.0.2.2 at 2019-07-21 09:39:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_user1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin_user/1" for 10.0.2.2 at 2019-07-21 09:39:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_user/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin_user/2" for 10.0.2.2 at 2019-07-21 09:39:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_user/2"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin_user/3" for 10.0.2.2 at 2019-07-21 09:39:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_user/3"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin_users/1" for 10.0.2.2 at 2019-07-21 09:40:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant AdminUsersController::Oder):
+  
+app/controllers/admin_users_controller.rb:9:in `show'
+Started GET "/admin_user/1" for 10.0.2.2 at 2019-07-21 09:40:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_user/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin_user/5" for 10.0.2.2 at 2019-07-21 09:40:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_user/5"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin_users/1" for 10.0.2.2 at 2019-07-21 09:40:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 191ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant AdminUsersController::Oder):
+  
+app/controllers/admin_users_controller.rb:9:in `show'
+Started GET "/admin_users/1" for 10.0.2.2 at 2019-07-21 09:42:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (22.8ms)
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    30:         </div>
+    31:         <div class="order table-responsive col-md-7 col-xs-7">
+    32:             <h3>注文履歴</h3>
+    33:             <% @orders.each do |oreder| %>
+    34:                 <div class="col-xs-6 col-md-3">
+    35:                     <div class="thumbnail">
+    36:                         <%= order %>
+  
+app/views/admin_users/show.html.erb:33:in `_app_views_admin_users_show_html_erb___1722928456354783032_70064475853780'
+Started GET "/admin_users/1" for 10.0.2.2 at 2019-07-21 09:42:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering admin_users/show.html.erb within layouts/application
+  Rendered admin_users/show.html.erb within layouts/application (62.7ms)
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    30:         </div>
+    31:         <div class="order table-responsive col-md-7 col-xs-7">
+    32:             <h3>注文履歴</h3>
+    33:             <% @orders.each do |oreder| %>
+    34:                 <div class="col-xs-6 col-md-3">
+    35:                     <div class="thumbnail">
+    36:                         <%= order %>
+  
+app/views/admin_users/show.html.erb:33:in `_app_views_admin_users_show_html_erb___1722928456354783032_47065706464080'
+Started GET "/admin_users/1" for 10.0.2.2 at 2019-07-21 09:42:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (7.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AdminUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant AdminUsersController::Oder):
+  
+app/controllers/admin_users_controller.rb:9:in `show'
+Started GET "/admin_users/edit/1" for 10.0.2.2 at 2019-07-21 09:43:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/admin_users/edit/1"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/admin_users/1/edit" for 10.0.2.2 at 2019-07-21 09:43:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (8.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin_users_controller.rb:13
+  Rendering admin_users/edit.html.erb within layouts/application
+  Rendered admin_users/edit.html.erb within layouts/application (225.5ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 2946ms (Views: 2657.0ms | ActiveRecord: 49.9ms)
+
+
+Started GET "/cart_details/5" for 10.0.2.2 at 2019-07-21 09:44:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35m (7.8ms)[0m  [1m[34mSELECT SUM(price) FROM "cart_details"[0m
+  ↳ app/controllers/cart_details_controller.rb:4
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 20.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: price: SELECT SUM(price) FROM "cart_details"):
+  
+app/controllers/cart_details_controller.rb:4:in `show'
+Started GET "/admin_users/1/edit" for 10.0.2.2 at 2019-07-21 09:44:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminUsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin_users_controller.rb:13
+  Rendering admin_users/edit.html.erb within layouts/application
+  Rendered admin_users/edit.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 624ms (Views: 579.2ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/admin_users/1/edit" for 10.0.2.2 at 2019-07-21 09:53:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by AdminUsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/admin_users_controller.rb:13
+  Rendering admin_users/edit.html.erb within layouts/application
+  Rendered admin_users/edit.html.erb within layouts/application (57.0ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 2269ms (Views: 2122.5ms | ActiveRecord: 16.5ms)
+
+
+Started PATCH "/users/1" for 10.0.2.2 at 2019-07-21 10:00:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H4WnOvrZTb1n8pUeXjn60vKxBRqZVIuwQQx702jjcVRUMXCd+AMzjdZ5ML4pH7gE72fEIMf19P+ZK99ZGlaEqA==", "user"=>{"last_name"=>"q", "first_name"=>"q", "last_name_kana"=>"あ", "first_name_kana"=>"ああ", "zip_code"=>"12345678", "address"=>"1234567", "phone_number"=>"123456", "email"=>"w@w", "password"=>"[FILTERED]"}, "commit"=>"更新", "id"=>"1"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:14
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:14
+DEPRECATION WARNING: [Devise] bypass option is deprecated and it will be removed in future version of Devise.
+Please use bypass_sign_in method instead.
+Example:
+
+  bypass_sign_in(user)
+ (called from update at /vagrant/俺のCD/app/controllers/users_controller.rb:15)
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 51ms (ActiveRecord: 17.8ms)
+
+
+Started GET "/users/1" for 10.0.2.2 at 2019-07-21 10:00:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mOrderDetail Exists (2.2ms)[0m  [1m[34mSELECT  1 AS one FROM "order_details" WHERE "order_details"."user_id" = ? LIMIT ?[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/views/users/show.html.erb:16
+  Rendered users/show.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 693ms (Views: 611.1ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-22 03:30:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:5)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 8]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 2369ms (Views: 2227.8ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2019-07-22 03:31:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.5ms)
+  Rendered users/sessions/new.html.erb within layouts/application (110.8ms)
+Completed 200 OK in 646ms (Views: 610.4ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2019-07-22 03:31:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LucG6bYNoVZsC9+SEUxUA8Vvc5HBmkC91uLy2sm/PsjAAq0lr4z9KKj0y+T2CyXWQEUweN4vdVa6GmWz9qJJ4A==", "user"=>{"email"=>"q@q", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "q@q"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 263ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-22 03:31:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/俺のCD/app/controllers/items_controller.rb:5)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 8]]
+  ↳ app/views/items/index.html.erb:7
+  Rendered items/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 538ms (Views: 508.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/cart_details/4" for 10.0.2.2 at 2019-07-22 03:31:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering cart_details/show.html.erb within layouts/application
+  Rendered cart_details/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/俺のCD/app/views/cart_details/show.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+...er.append=( @totalquantity to_i );@output_buffer.safe_append...
+...                           ^~~~
+/vagrant/俺のCD/app/views/cart_details/show.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+...ffer.append=( @totalpraice to_i );@output_buffer.safe_append...
+...                           ^~~~):
+  
+app/views/cart_details/show.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/views/cart_details/show.html.erb:22: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/cart_details/4" for 10.0.2.2 at 2019-07-22 03:31:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering cart_details/show.html.erb within layouts/application
+  [1m[36mCartDetail Load (2.3ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details"[0m
+  ↳ app/views/cart_details/show.html.erb:6
+  Rendered cart_details/show.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 834ms (Views: 707.8ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/cart_details/4" for 10.0.2.2 at 2019-07-22 03:32:21 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering cart_details/show.html.erb within layouts/application
+  [1m[36mCartDetail Load (5.9ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details"[0m
+  ↳ app/views/cart_details/show.html.erb:6
+  Rendered cart_details/show.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 1223ms (Views: 1100.7ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/items/search" for 10.0.2.2 at 2019-07-22 03:32:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#search as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/R9KJ+tYILtfr3ePNXnd3+RVfLzMuDOi5I1jLyzwhBL6yEEO4ksp2uF8x3xyzFLut59aeEUrJ/K0quL6PXbKgg==", "q"=>{"disk_name_cont"=>"e"}, "commit"=>"検索"}
+  Rendering items/search.html.erb within layouts/application
+  [1m[36mItem Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "items" WHERE "items"."disk_name" LIKE '%e%' LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/items/search.html.erb:1
+  [1m[36mItem Load (4.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."disk_name" LIKE '%e%'[0m
+  ↳ app/views/layouts/_search_form.html.erb:8
+  [1m[36mArtist Load (6.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mLabel Load (6.1ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  [1m[36mCACHE Artist Load (0.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:17
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT  "labels".* FROM "labels" WHERE "labels"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_search_form.html.erb:20
+  Rendered layouts/_search_form.html.erb (432.5ms)
+  Rendered items/search.html.erb within layouts/application (549.8ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 2894ms (Views: 2740.4ms | ActiveRecord: 69.0ms)
+
+
+Started GET "/items/2" for 10.0.2.2 at 2019-07-22 03:32:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mItem Load (6.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/items_controller.rb:13
+  Rendering items/show.html.erb within layouts/application
+  [1m[36mReview Load (4.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/items/show.html.erb:52
+  Rendered items/show.html.erb within layouts/application (88.9ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 1137ms (Views: 920.2ms | ActiveRecord: 31.8ms)
+
+
+Started GET "/cart_details/4" for 10.0.2.2 at 2019-07-22 03:32:38 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering cart_details/show.html.erb within layouts/application
+  [1m[36mCartDetail Load (5.2ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details"[0m
+  ↳ app/views/cart_details/show.html.erb:6
+  Rendered cart_details/show.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 2214ms (Views: 2106.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/cart_details/4" for 10.0.2.2 at 2019-07-22 03:33:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#show as HTML
+  Parameters: {"id"=>"4"}
+  Rendering cart_details/show.html.erb within layouts/application
+  [1m[36mCartDetail Load (5.2ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details"[0m
+  ↳ app/views/cart_details/show.html.erb:6
+  Rendered cart_details/show.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:31
+Completed 200 OK in 1936ms (Views: 1805.6ms | ActiveRecord: 7.8ms)
+
+
