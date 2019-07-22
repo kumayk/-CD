@@ -4,10 +4,10 @@
       <h4>検索結果一覧</h4>
     </div>
 
-    <div class="list-group card" style="width: 18rem">
+    <div class="list-group card" style="width: 18rem; float: left;">
       <% @result.each do |item| %>
         <div class="card-img-top">
-          <%= attachment_image_tag item, :disk_image, :fill, 180, 180, fallback: "no_image.png", size: '180x180' %>
+          <%= attachment_image_tag item, :image, :fill, 180, 180, fallback: "no_img.png", size: '180x180' %>
         </div>
         <%= link_to(item, class: 'list-group-item') do %>
           <ul class="list-group list-group-flush" >
@@ -15,20 +15,17 @@
               <%= item.disk_name %>
             </h4>
             <p class="card-link list-group-item artist">
-              <%= item.artist_name%>
+              <%= item.artist.artist_name %>
             </p>
             <p class="card-link list-group-item label">
-              <%= item.label_name%>
+              <%= item.label.label_name %>
             </p>
-            <div class="card-link list-group-item" style="color: white; background-color: blue;">
-              <%= link_to "詳細", item_path %>
-            </div>
+              <%= link_to "詳細" %>
           </ul>
         <% end %>
       <% end %>
     </div>
 
-    <%= paginate @result %>
 
   </div>
 </div>

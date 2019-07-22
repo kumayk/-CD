@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   resources :reviews, only: [:create, :update, :destroy]
 
 #items_routes
-  post 'items', to: 'items#create'
+  # post 'items', to: 'items#create'
   get '/', to: 'items#index'
 
   get 'items/search', to: 'items#search'
@@ -46,18 +46,19 @@ Rails.application.routes.draw do
   get '/admin_items/category', to: 'admin_items#categorynew'
   post '/admin_items/category', to: 'admin_items#categorycreate'
 
-  resources :items, only: [:index, :show]
+  resources :items, only: [:index, :show, :create] do
+    resources :reviews, only: [:create, :update, :destroy]
+  end
 
 
   resources :cart_details, only: [:show, :destroy, :create, :update]
 
   resources :order_details, only: [:update]
 
+
   resources :orders, only: [:show, :create, :new, :confirm, :commit]
 
   resources :admin_users, only: [:index, :show, :edit, :destroy, :update]
-
-  resources :reviews, only: [:destroy]
 
   resources :admin_items, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 

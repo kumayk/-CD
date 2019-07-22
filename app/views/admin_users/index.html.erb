@@ -1,74 +1,36 @@
-<body>
-	<div class="container">
-		<div class="row">
-			<h2 style="text-align: center">ユーザー一覧</h2>
-			<table class="table col-md-12 col-xs-12" style="margin-top: 50px">
-	            <thead>
-		          <tr>
-			        <th>#</th>
-			        <th>苗字</th>
-			        <th>名前</th>
-			        <th>Eメール</th>
-			        <th>有効チェック</th>
-		          </tr>
-	            </thead>
-	            <tbody>
-		          <tr>
-			        <th>1</th>
-			        <td>ブルーＳＣ</td>
-			        <td>地球</td>
-			        <td>101</td>
-				    <td><input type="checkbox" value="checkboxA"></td>
-		          </tr>
-		          <tr>
-			        <th>2</th>
-			        <td>ＦＣウェヌス</td>
-			        <td>金星</td>
-			        <td>83</td>
-			        <td><input type="checkbox" value="checkboxA"></td>
-		          </tr>
-		          <tr>
-			        <th>3</th>
-			        <td>ジュピターＦＣ</td>
-			        <td>木星</td>
-			        <td>68</td>
-			        <td><input type="checkbox" value="checkboxA"></td>
-		          </tr>
-		          <tr>
-			        <th>4</th>
-			        <td>ＳＣマーキュリー</td>
-			        <td>水星</td>
-			        <td>67</td>
-			        <td><input type="checkbox" value="checkboxA"></td>
-		          </tr>
-		          <tr>
-			        <th>5</th>
-			        <td>ＦＣマルス</td>
-			        <td>火星</td>
-			        <td>65</td>
-			        <td><input type="checkbox" value="checkboxA"></td>
-		          </tr>
-	            </tbody>
-            </table>
-            <nav style="text-align: center">
-	            <ul class="pagination">
-		            <li>
-			            <a href="#" aria-label="前のページへ">
-				            <span aria-hidden="true">«</span>
-			            </a>
-		            </li>
-		            <li><a href="#">1</a></li>
-		            <li class="active"><a href="#">2</a></li>
-		            <li><a href="#">3</a></li>
-		            <li><a href="#">4</a></li>
-		            <li><a href="#">5</a></li>
-		            <li>
-			            <a href="#" aria-label="次のページへ">
-				            <span aria-hidden="true">»</span>
-			            </a>
-		            </li>
-	            </ul>
-            </nav>
-        </div>
+<div class="container">
+	<div class="row">
+		<h2 style="text-align: center">ユーザー一覧</h2>
+		<table class="table col-md-12 col-xs-12" style="margin-top: 50px">
+	        <thead>
+		        <tr>
+			      <th>#</th>
+			      <th>苗字</th>
+			      <th>名前</th>
+			      <th>Eメール</th>
+			      <th>有効チェック</th>
+		        </tr>
+	        </thead>
+	        <tbody>
+	            <% @customer.each do |customer| %>
+	            	<tr>
+			          <th><%= customer.id %></th>
+			          <td><%= customer.last_name %></td>
+			          <td><%= customer.first_name %></td>
+			          <td><%= customer.email %></td>
+				      <td><input type="checkbox" value="checkboxA"></td>
+		            </tr>
+				<% end %>
+	        </tbody>
+        </table>
     </div>
-</body>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 col-xs-4"></div>
+		<div class="col-md-4 col-xs-4">
+            <%= paginate @customer, class: "pagenation" %>
+        </div>
+        <div class="col-md-4 col-xs-4"></div>
+    </div>
+</div>
