@@ -6,14 +6,14 @@ class CartDetailsController < ApplicationController
 	  @cart_item = current_user.items
 
 	  @cart = CartDetail.all
-	  @totalprice = CartDetail.all.sum(:price)
-	  @totalquantity = CartDetail.all.sum(:quantity)
+	  # @totalprice = CartDetail.all.sum(:price)
+	  # @totalquantity = CartDetail.all.sum(:quantity)
 	end
 
 	def create
 	  @cart_item = current_user.cart_details.build(item_id: params[:cart_detail][:item_id])
 	  @cart_item.save
-      redirect_to cart_detail_path
+      redirect_to cart_detail_path(@item.id)
 	end
 
 	def update
