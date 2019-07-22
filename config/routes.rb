@@ -29,6 +29,14 @@ Rails.application.routes.draw do
   get 'items/search', to: 'items#search'
   post 'items/search'
 
+#orders_routes
+  get 'orders' => 'orders#new'              # 入力画面
+  post 'orders/confirm' => 'orders#confirm'   # 確認画面
+  post 'orders/commit' => 'orders#commit'     # 送信完了画面
+  get 'orders/shipping_address' => 'orders#shipping_address_new'
+  post 'orders/shipping_address' => 'orders#shipping_address_create'
+
+
 
 #admin_items
   get '/admin_items/artist', to: 'admin_items#artistnew'
@@ -45,7 +53,7 @@ Rails.application.routes.draw do
 
   resources :order_details, only: [:update]
 
-  resources :orders, only: [:show, :create, :new]
+  resources :orders, only: [:show, :create, :new, :confirm, :commit]
 
   resources :admin_users, only: [:index, :show, :edit, :destroy, :update]
 

@@ -1,10 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
-<<<<<<< HEAD
-  before_action :set_search 
-=======
   before_action :set_search
->>>>>>> aki/master
 
   def authenticate_user
     unless current_user
@@ -32,3 +28,7 @@ class ApplicationController < ActionController::Base
 	  devise_parameter_sanitizer.permit(:account_update,keys:[:last_name, :first_name, :last_name_kana, :first_name_kana, :zip_code, :address, :phone_number])
     end
 end
+
+
+
+Refile.secret_key = '25800294522430a4226af5ef5c0c80d748dcc9b32580e282bed66b7e88583b5e4345d13cbcba6578fc2ca9ff8d307f6c2f7cd0411582518e09dbb5cc6d18e2de'

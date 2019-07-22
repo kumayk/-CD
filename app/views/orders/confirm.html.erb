@@ -1,0 +1,17 @@
+<h3>購入情報確認</h3>
+
+<%= form_for(@order , url: orders_commit_path) do |f| %>
+
+	<h4> 送付先</h4>
+	<%= f.hidden_field :shipping_address %>
+	<%= @order.shipping_address %>
+
+	<h4> 支払い方法</h4>
+	<%= f.hidden_field :payment %>
+	<%= @order.payment %>
+
+	<div>
+	   <%= f.submit %>
+	</div>
+
+<% end %>
