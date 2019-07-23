@@ -26,13 +26,13 @@
       </div>
 
       <p class="bg-info text-left">✾収録内容</p>
-      <% @item.disks.each do |disk| %>
-         <p><%= disk.disk_name %></p>
+        <% @item.disks.each do |disk| %>
+          <p><b><%= disk.disk_name %></b></p>
 
-	      <% disk.songs.each do |song| %>
-	         <ul>
-	         <li><%= song.song_name %></li>
-	         </ul>
+        <% disk.songs.each do |song| %>
+          <p><%= song.truck_number %>
+            <%= song.song_name %>
+          </p>
 
 	      <% end %>
       <% end %>

@@ -31,5 +31,8 @@ class CartDetailsController < ApplicationController
 
 	def setup_cart_item!
         @cart_item = current_user.items.find(item_id: params[:item_id])
+
+    def cart_detail
+      params.require(:cart_detail).permit(:quantity, :item_id)
     end
 end
