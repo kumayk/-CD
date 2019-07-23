@@ -1,86 +1,76 @@
 <h3>購入情報入力</h3>
 
-<!-- 送付先 -->
-<%= form_for(@order) do |f| %>
-<div class="field">
-  <span id= "hoge" class="job_type_engine">◾️　送付先</span><br>
-  <div class="radio-inline">
-    <%= f.radio_button :shipping_address, :住所１に発送, checked: "checked" %>
-    <%= f.label :住所１に発送, class: "job_type_label" %>
-  </div>
-  <div class="radio-inline">
-    <%= f.radio_button :shipping_address, :住所２に発送 %>
-    <%= f.label :住所２に発送, class: "job_type_label" %>
-  </div>
-  <div class="radio-inline">
-    <%= f.radio_button :shipping_address, :その他の住所に発送 %>
-    <%= f.label :その他の住所に発送, class: "job_type_label" %>
-  </div>
-<div class="text text01">AAA</div>
 
-</div>
-<% end %>
+<!-- 配送先 -->
+<%= form_for(@order , url: orders_confirm_path) do |f| %>
+	<h5>◾️　配送先</h5>
+	<div>
+    	<%= f.collection_select :shipping_address, ShippingAddress.all, :shipping_name, :shipping_name %>
+   	</div>
+    <p><%= link_to "配送先を追加", orders_shipping_address_path %></p>
+
+
 
 <!-- 支払い方法 -->
-<%= form_for(@order) do |f| %>
-<div class="field">
-  <span id= "hoge" class="job_type_engine">◾️　支払い方法</span><br>
-  <div class="radio-inline">
-    <%= f.radio_button :payment, :振り込み, checked: "checked" %>
-    <%= f.label :振り込み, class: "job_type_label" %>
-  </div>
-  <div class="radio-inline">
-    <%= f.radio_button :payment, :クレジットカード %>
-    <%= f.label :クレジットカード, class: "job_type_label" %>
-        <input type="text" class="form-control" id="inputother" placeholder="国または地域を記入" disabled>
-  </div>
-</div>
-<% end %>
-
-
-<!-- javascript -->
-<script>
-/* ラジオボタン変更時、選択した内容を表示 */
-$('input[name="order[payment]"]').change(function() {
-	  $('[id=a]').prop('checked'){
-      $('.text').fadeOut();
-      $('.text01').fadeIn();
-	//alert("push");
-	// $("#inputother").attr('disabled', false);
-	//$("#inputother").val('test');
-});
-</script>
+	<div class="field">
+		  <span id= "hoge" class="job_type_engine">◾️　支払い方法</span><br>
+			  <div class="radio-inline">
+				    <%= f.radio_button :payment, :振り込み, checked: "checked" %>
+				    <%= f.label :振り込み, class: "job_type_label" %>
+			  </div>
+			  <div class="radio-inline">
+				 　　<%= f.radio_button :payment, :代引き %>
+					<%= f.label :代引き, class: "job_type_label" %>
+			  </div>
+			  <div class="radio-inline">
+				    <%= f.radio_button :payment, :クレジットカード %>
+				    <%= f.label :クレジットカード, class: "job_type_label" %>
+			  </div>
+	</div>
 
 
 <!-- カート内商品表示 -->
-<h5>◾️　購入内容</h5>
+	<h5>◾️　購入内容</h5>
 
-<table>
+	<table>
+			<tr>
+			   <th>購入商品</th>
+			   <th>枚数</th>
+			   <th>価格</th>
+			   <th>小計</th>
+			</tr>
 
-  <tr>
-   <th>購入商品</th>
-   <th>枚数</th>
-   <th>価格</th>
-   <th>小計</th>
-  </tr>
+	    <% @cart_detail.each do |cart_detail| %>
+			<tr>
+			   <td>
+			    <%= cart_detail.item.disk_name %></td>
+			   <td>
+			    <%= cart_detail.quantity %></td>
+			   <td>
+			    <%= cart_detail.item.price %></td>
+			   <td>
+			    <%= cart_detail.quantity * cart_detail.item.price %></td>
+			</tr>
+	    <% end %>
+	</table>
 
-  <% @cart_detail.each do |cart_detail| %>
-  <tr>
-   <td>
-    <%= cart_detail.item.disk_name %></td>
-   <td>
-    <%= cart_detail.quantity %></td>
-   <td>
-    <%= cart_detail.item.price %></td>
-   <td>
-    <%= cart_detail.quantity * cart_detail.item.price %></td>
-  </tr>
-   <td>
-  <% end %>
+	<p>送料　<%= @orders.shipping_fee %></p>
 
-</table>
+	<div>
+		<%= f.submit %>
+	</div>
 
-  <p>送料　<%= @orders.shipping_fee %></p>
+<% end %>
+
+
+
+
+
+
+
+
+
+
 
 
 

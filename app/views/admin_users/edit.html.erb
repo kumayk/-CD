@@ -1,0 +1,117 @@
+<div class="container">
+	<div class="row">
+		<h4 class="edit-title" style="text-align: center;">ユーザー編集</h4>
+
+		<%= form_for(@user) do |f| %>
+
+			<div class="name-form container">
+          		<div class="row">
+            		<h5 class="col-sm-2" style="line-height: 70px;">名前</h5>
+
+            		<div class="field col-sm-5">
+              			<h6>姓</h6>
+              			<%= f.text_field :last_name, autofocus: true, autocomplete: "last_name", :size => "60*60" %>
+            		</div>
+
+            		<div class="field col-sm-5">
+              			<h6>名</h6>
+              			<%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", :size => "60*60" %>
+            		</div>
+          		</div>
+        	</div>
+
+	        <div class="hurigana-form container">
+	          <div class="row">
+	            <h5 class="col-sm-2" style="line-height: 70px;">フリガナ</h5>
+
+	            <div class="field col-sm-5">
+	              <h6>セイ</h6>
+	              <%= f.text_field :last_name_kana, autofocus: true, autocomplete: "last_name_kana", :size => "60*60" %>
+	            </div>
+
+	            <div class="field col-sm-5">
+	              <h6>ナ</h6>
+	              <%= f.text_field :first_name_kana, autofocus: true, autocomplete: "first_name_kana", :size => "60*60" %>
+	            </div>
+	          </div>
+	        </div>
+
+	        <div class="zip-form container">
+	          <div class="row">
+	            <div class="space col-sm-2"></div>
+	            <div class="field col-sm-5" style="text-align: left;">
+	              <h6>郵便番号〒(ハイフン不要)</h6>
+	              <%= f.text_field :zip_code, autofocus: true, autocomplete: "zip_code", :size => "60*60"%>
+	            </div>
+	            <div class="space col-sm-5"></div>
+	          </div>
+	      	</div>
+
+	        <div class="address-form container">
+	          <div class="row">
+	            <div class="space col-sm-2"></div>
+	            <div class="field col-sm-5" style="text-align: left;">
+	              <h6>住所</h6>
+	              <%= f.text_field :address, autofocus: true, autocomplete: "address", :size => "130*130" %>
+	            </div>
+	            <div class="space col-sm-5"></div>
+	          </div>
+	        </div>
+
+	        <div class="address-form container">
+	          <div class="row">
+	            <div class="space col-sm-2"></div>
+	            <div class="field col-sm-5">
+	              <h6>電話番号</h6>
+	              <%= f.text_field :phone_number, autofocus: true, autocomplete: "phone_number", :size => "60*60" %>
+	            </div>
+	            <div class="space col-sm-5"></div>
+	          </div>
+	        </div>
+
+	        <div class="email-form container">
+	          <div class="row">
+	            <div class="space col-sm-2"></div>
+	            <div class="field col-sm-5">
+	              <%= f.label :Eメール %><br/>
+	              <%= f.email_field :email, autofocus: true, autocomplete: "email", :size => "60*60" %>
+	            </div>
+	            <div class="space col-sm-5"></div>
+	          </div>
+	        </div>
+
+
+	        <div class="email-form container">
+	          <div class="row">
+	            <div class="space col-sm-2"></div>
+	            <div class="field col-sm-5">
+	              <%= f.label :パスワード %>
+	              <% if @minimum_password_length %>
+	              <em>(<%= @minimum_password_length %> 文字以上)</em>
+	              <% end %><br />
+	              <%= f.password_field :password, autocomplete: "new-password", :size => "60*60" %>
+	            </div>
+	            <div class="space col-sm-5"></div>
+	          </div>
+	        </div>
+
+
+
+	        <div class="email-form container">
+	          <div class="row">
+	            <div class="space col-sm-2"></div>
+	            <div class="field col-sm-5">
+	            </div>
+	            <div class="space col-sm-5"></div>
+	          </div>
+	        </div>
+
+	        <div class="actions" style="text-align: center; margin: 40px 0; padding: 20px 40px">
+	          <%= f.submit "更新" %>
+	        </div>
+	        <button type="button" class="btn btn-warning" style="float: right; margin-bottom: 20px;"><%= link_to "削除",destroy_user_session_path, method: :delete, "data-confirm" => "本当に消しますか？" %></button>
+	        
+        <% end %>
+
+	</div>
+</div>

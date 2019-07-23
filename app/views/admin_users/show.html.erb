@@ -1,0 +1,42 @@
+<div class="container">
+	<div class="row">
+		<div class="user_info table-responsive col-md-5 col-xs-5">
+            <table class="table">
+                <thead>
+                    <div>
+                        <tr>
+                            <th>姓/名<br>
+                                カナ姓/カナ名
+                            </th>
+                        </tr>
+                    </div>
+                </thead>
+                <tbody>
+                    <tr>
+                      <th>・アドレス</th><td>a</td>
+                    </tr>
+                    <tr>
+                      <th>・電話番号</th><td>a</td>
+                    </tr>
+                    <tr>
+                      <th>・住所(郵便番号)</th><td>a</td>
+                    </tr>
+                    <tr>
+                      <th>・登録日</th><td>a</td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-default" href="#" role="button">編集</a>
+        </div>
+        <div class="order table-responsive col-md-7 col-xs-7">
+            <h3>注文履歴</h3>
+            <% @orders.each do |oreder| %>
+                <div class="col-xs-6 col-md-3">
+                    <div class="thumbnail">
+                        <%= order %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+	</div>
+</div>

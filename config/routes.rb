@@ -23,11 +23,19 @@ Rails.application.routes.draw do
   resources :reviews, only: [:create, :update, :destroy]
 
 #items_routes
-  post 'items', to: 'items#create'
+  # post 'items', to: 'items#create'
   get '/', to: 'items#index'
 
   get 'items/search', to: 'items#search'
   post 'items/search'
+
+#orders_routes
+  get 'orders' => 'orders#new'              # 入力画面
+  post 'orders/confirm' => 'orders#confirm'   # 確認画面
+  post 'orders/commit' => 'orders#commit'     # 送信完了画面
+  get 'orders/shipping_address' => 'orders#shipping_address_new'
+  post 'orders/shipping_address' => 'orders#shipping_address_create'
+
 
 
 #admin_items
@@ -37,19 +45,21 @@ Rails.application.routes.draw do
   post '/admin_items/label', to: 'admin_items#labelcreate'
   get '/admin_items/category', to: 'admin_items#categorynew'
   post '/admin_items/category', to: 'admin_items#categorycreate'
+  post '/admin_items/new', to: 'admin_items#create'
 
-  resources :items, only: [:index, :show]
+  resources :items, only: [:index, :show, :create] do
+    resources :reviews, only: [:create, :update, :destroy]
+  end
 
 
-  resources :cart_details, only: [:show, :destroy, :create, :update]
+  resources :cart_details, only: [:index, :destroy, :create, :update]
 
   resources :order_details, only: [:update]
 
-  resources :orders, only: [:show, :create, :new, :confirm]
+
+  resources :orders, only: [:show, :create, :new, :confirm, :commit]
 
   resources :admin_users, only: [:index, :show, :edit, :destroy, :update]
-
-  resources :reviews, only: [:destroy]
 
   resources :admin_items, only: [:index, :show, :new, :create, :edit, :update, :destroy]
 

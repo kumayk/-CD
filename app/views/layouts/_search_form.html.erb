@@ -4,29 +4,26 @@
       <h4>検索結果一覧</h4>
     </div>
 
-    <div class="list-group card" style="width: 18rem">
+    <div class="list-group card" style="width: 18rem; float: left;">
       <% @result.each do |item| %>
         <div class="card-img-top">
-          <%= attachment_image_tag item, :image, :fill, 180, 180, fallback: "no_image.png", size: '180x180' %>
+
+          <%= attachment_image_tag item, :image, :fill, 180, 180, fallback: "no_img.png", size: '180x180' %>
         </div>
-          <ul class="list-group list-group-flush" >
-             <h4 class="card-link list-group-item title">
-              <%= item.disk_name %>
-            </h4>
-            <p class="card-link list-group-item artist">
-              <%= item.artist.artist_name%>
-            </p>
-            <p class="card-link list-group-item label">
-              <%= item.label.label_name%>
-            </p>
-            <div class="card-link list-group-item" style="color: white; background-color: blue;">
-              <%= link_to "詳細", item_path(item.id) %>
-            </div>
-          </ul>
+        <ul class="list-group list-group-flush">
+          <p class="card-link list-group-item">
+            <%= item.disk_name %>
+          </p>
+          <p class="card-link list-group-item artist">
+            <%= item.artist.artist_name %>
+          </p>
+          <p class="card-link list-group-item label">
+            <%= item.label.label_name %>
+          </p>
+          <%= link_to "詳細", item_path(item.id) %>
+        </ul>
       <% end %>
     </div>
-
-    <%= paginate @items, class: "paginate" %>
 
   </div>
 </div>

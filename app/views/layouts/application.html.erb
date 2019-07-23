@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -23,6 +24,8 @@
                   <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
+
+
                   <%= link_to "俺のCD", "/", class: "title", :style=>"text-decoration: none;"%>
                 </div>
               </div>
@@ -30,7 +33,7 @@
                 <% if user_signed_in? %>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
                     <li><%= link_to current_user.last_name, user_path(current_user.id) %></li>
-                    <li><%= link_to "Cart", "/cart_details/#{current_user.id}" %></li>
+                    <li><%= link_to "Cart", cart_details_path(current_user) %></li>
                     <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete%></li>
                   </ul>
                 <%else%>
