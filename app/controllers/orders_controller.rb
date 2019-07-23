@@ -28,6 +28,7 @@ class OrdersController < ApplicationController
 	end
 
 	def confirm
+
 	    # 入力値のチェック
 	    @cart_detail = CartDetail.all
 		@cart_detail = current_user.cart_details

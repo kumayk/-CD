@@ -8,7 +8,7 @@
       <div class="row">
        <div class="mx-auto">
         <div class="col-xs-4 col-xs-offset-2">
-         <%= attachment_image_tag @item, :image, class: " profile-thumb", fallback: "no_img.png", size: "240x240" %>
+         <%= attachment_image_tag @item, :image, class: "profile-thumb", fallback: "no_img.png", size: "240x240" %>
         </div>
 
         <div class="col-xs-4">
@@ -30,12 +30,12 @@
 
       <p class="bg-info text-left">✾収録内容</p>
       <% @item.disks.each do |disk| %>
-         <p><%= disk.disk_name %></p>
+         <p><b><%= disk.disk_name %></b></p>
 
 	      <% disk.songs.each do |song| %>
-	         <ul>
-	         <li><%= song.song_name %></li>
-	         </ul>
+	     <p><%= song.truck_number %>
+	         <%= song.song_name %>
+	     </p>
 
 	      <% end %>
       <% end %>

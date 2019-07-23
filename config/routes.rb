@@ -45,13 +45,14 @@ Rails.application.routes.draw do
   post '/admin_items/label', to: 'admin_items#labelcreate'
   get '/admin_items/category', to: 'admin_items#categorynew'
   post '/admin_items/category', to: 'admin_items#categorycreate'
+  post '/admin_items/new', to: 'admin_items#create'
 
   resources :items, only: [:index, :show, :create] do
     resources :reviews, only: [:create, :update, :destroy]
   end
 
 
-  resources :cart_details, only: [:show, :destroy, :create, :update]
+  resources :cart_details, only: [:index, :destroy, :create, :update]
 
   resources :order_details, only: [:update]
 

@@ -1,35 +1,38 @@
 class CartDetailsController < ApplicationController
- before_action :setup_cart_detail!, only: [:cerate, :update, :destroy]
+	before_action :setup_cart_detail!, only: [:cerate, :update]
 
-	def show
-	  @item = Item.find(id: @cart_item)
-	  @cart_item = current_user.items
-
-	  @cart = CartDetail.all
-	  @totalprice = CartDetail.all.sum(:price)
-	  @totalquantity = CartDetail.all.sum(:quantity)
-	end
+	def index
+		@cart = CartDetail.all
+		@cart = current_user.cart_details
+	    @totalprice = 0
+	    @cart.each do |cart|
+	    	@totalprice += cart.item.price
+	    end
+    end
 
 	def create
-	  @cart_item = current_user.cart_details.build(item_id: params[:cart_detail][:item_id])
-	  @cart_item.save
-      redirect_to cart_detail_path
+	    @cart_item = current_user.cart_details.build(item_id: params[:cart_detail][:item_id])
+	    @cart_item.save
+        redirect_to cart_details_path
 	end
 
 	def update
-	  @cart_item.update(quantity: params[:quantity].to_i)
-      redirect_to current_cart_detail
+	    cart_item.update(quantity: params[:quantity].to_i)
+        redirect_to cart_details_path
 	end
 
 	def destroy
-	  @cart_item.destroy
-      redirect_to current_cart_detail
+	    cart = CartDetail.find(params[:id])
+	    cart.destroy
+        redirect_to cart_details_path
 	end
 
 	private
 
 	def setup_cart_item!
-      @cart_item = current_user.items.find(item_id: params[:item_id])
-    end
+        @cart_item = current_user.items.find(item_id: params[:item_id])
 
+    def cart_detail
+      params.require(:cart_detail).permit(:quantity, :item_id)
+    end
 end

@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_search
+<<<<<<< HEAD
+
+=======
+>>>>>>> aki/master
 
   def authenticate_user
     unless current_user

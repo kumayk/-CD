@@ -1,5 +1,9 @@
 class AdminItemsController < ApplicationController
 
+def show
+  @item = Item.find(params[:id])
+end
+
 ###newアクション###
 def new
 	@item = Item.new
@@ -88,4 +92,3 @@ private
   end
 
 end
-

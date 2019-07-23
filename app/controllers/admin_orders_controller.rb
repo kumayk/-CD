@@ -1,7 +1,7 @@
 class AdminOrdersController < ApplicationController
-	PER = 8
+
 def index
-	# @order = Orders.all.limit(4)
+	# @orders = Order.page(params[:page]).reverse_order
 end
 
 def show
