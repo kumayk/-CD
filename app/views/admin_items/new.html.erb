@@ -1,3 +1,47 @@
+<<<<<<< HEAD
+<h1>新規投稿</h1>
+
+<%= form_for(@item , url:new_admin_item_path) do |f| %>
+  <h4> シングル/アルバム名</h4>
+   <%= f.text_field :disk_name %>
+  <h4>画像</h4>
+   <%= f.attachment_field :image %>
+  <h4> 在庫</h4>
+   <%= f.text_field :stock %>
+  <h4> 価格</h4>
+   <%= f.text_field :price %>
+  <h4> ステータス</h4>
+   <%= f.select :item_status, Item.item_statuses.keys.map {|k| [k, k]} %>
+
+  <h4>アーティスト</h4>
+   <%= f.collection_select :artist_id, Artist.all, :id, :artist_name %>
+   <p><%= link_to "アーティスト追加", admin_items_artist_path %></p>
+  <h4>レーベル</h4>
+   <%= f.collection_select :label_id, Label.all, :id, :label_name %>
+   <p><%= link_to " レーベル追加", admin_items_label_path %></p>
+  <h4>カテゴリ</h4>
+   <%= f.collection_select :category_id, Category.all, :id, :category_name %>
+   <p><%= link_to "カテゴリ追加", admin_items_category_path %></p>
+
+<div>
+  <h4>ディスク</h4>
+   <%= f.fields_for :disks do |disk| %>
+    <%= render 'disk_fields', f: disk %>
+   <% end %>
+
+   <%= link_to_add_association 'ディスクを追加', f, :disks %>
+</div>
+<div>
+   <%= f.submit '登録' %>
+</div>
+<% end %>
+
+<% if @item.errors.any? %>
+<% @item.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+<% end %>
+=======
 <body>
 <div class="container">
 
@@ -54,5 +98,8 @@
      </div>
    </div>
  </div>
+>>>>>>> aki/master
+
+
 
 
