@@ -29,6 +29,9 @@
 	</div>
 
 
+
+
+
 <!-- カート内商品表示 -->
 	<h5>◾️　購入内容</h5>
 
@@ -62,7 +65,11 @@
 
 <% end %>
 
-
+<% if @order.errors.any? %>
+<% @order.errors.full_messages.each do |message| %>
+<li><%= message %></li>
+<% end %>
+<% end %>
 
 
 
