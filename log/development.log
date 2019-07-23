@@ -22517,3 +22517,524 @@ Processing by CartDetailsController#index as HTML
 Completed 200 OK in 667ms (Views: 581.8ms | ActiveRecord: 20.0ms)
 
 
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddUserIdToReviews (20190722045659)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "reviews" ADD "user_id" integer[0m
+  ↳ db/migrate/20190722045659_add_user_id_to_reviews.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (3.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/orders/new" for 10.0.2.2 at 2019-07-23 09:43:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:12
+  [1m[36mOrder Load (2.9ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:13
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mShippingAddress Load (4.0ms)[0m  [1m[34mSELECT "shipping_addresses".* FROM "shipping_addresses"[0m
+  ↳ app/views/orders/new.html.erb:8
+  [1m[36mCartDetail Load (3.8ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details" WHERE "cart_details"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/orders/new.html.erb:46
+  [1m[36mItem Load (3.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:49
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:49
+  Rendered orders/new.html.erb within layouts/application (341.9ms)
+Completed 200 OK in 4447ms (Views: 4215.0ms | ActiveRecord: 80.8ms)
+
+
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 09:46:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lb8S4VTbzMkmNaOkuRd/490xxyahpoLGb4fz2K1H22vH/60Z3gs3t0fFRr/Y2Cih7f/OWtR212fMw2sp/ulqAg==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (7.4ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 1.7ms)
+
+
+  
+SyntaxError (/vagrant/-CD/app/views/orders/confirm.html.erb:18: syntax error, unexpected keyword_do, expecting keyword_end
+....freeze;						 @cart_details do |cd| 
+...        						               ^~
+/vagrant/-CD/app/views/orders/confirm.html.erb:42: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end ;
+          ^~~):
+  
+app/views/orders/confirm.html.erb:18: syntax error, unexpected keyword_do, expecting keyword_end
+app/views/orders/confirm.html.erb:42: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/orders_controller.rb:38:in `confirm'
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 09:47:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lb8S4VTbzMkmNaOkuRd/490xxyahpoLGb4fz2K1H22vH/60Z3gs3t0fFRr/Y2Cih7f/OWtR212fMw2sp/ulqAg==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 1.4ms)
+
+
+  
+SyntaxError (/vagrant/-CD/app/views/orders/confirm.html.erb:18: syntax error, unexpected keyword_do, expecting keyword_end
+....freeze;						 @cart_details do |cd| 
+...        						               ^~
+/vagrant/-CD/app/views/orders/confirm.html.erb:42: syntax error, unexpected keyword_end, expecting end-of-input
+'.freeze; end ;
+          ^~~):
+  
+app/views/orders/confirm.html.erb:18: syntax error, unexpected keyword_do, expecting keyword_end
+app/views/orders/confirm.html.erb:42: syntax error, unexpected keyword_end, expecting end-of-input
+app/controllers/orders_controller.rb:38:in `confirm'
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 09:47:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lb8S4VTbzMkmNaOkuRd/490xxyahpoLGb4fz2K1H22vH/60Z3gs3t0fFRr/Y2Cih7f/OWtR212fMw2sp/ulqAg==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.5ms)
+
+
+  
+SyntaxError (/vagrant/-CD/app/views/orders/confirm.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/orders/confirm.html.erb:26: syntax error, unexpected end-of-input, expecting keyword_end
+app/controllers/orders_controller.rb:38:in `confirm'
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 09:48:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lb8S4VTbzMkmNaOkuRd/490xxyahpoLGb4fz2K1H22vH/60Z3gs3t0fFRr/Y2Cih7f/OWtR212fMw2sp/ulqAg==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 690ms (Views: 681.0ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 09:48:22 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lb8S4VTbzMkmNaOkuRd/490xxyahpoLGb4fz2K1H22vH/60Z3gs3t0fFRr/Y2Cih7f/OWtR212fMw2sp/ulqAg==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 533ms (Views: 525.0ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 09:49:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Lb8S4VTbzMkmNaOkuRd/490xxyahpoLGb4fz2K1H22vH/60Z3gs3t0fFRr/Y2Cih7f/OWtR212fMw2sp/ulqAg==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 666ms (Views: 656.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/admin_items/new" for 10.0.2.2 at 2019-07-23 09:50:24 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#new as HTML
+  Rendering admin_items/new.html.erb within layouts/application
+  [1m[36mArtist Load (3.8ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/admin_items/new.html.erb:17
+  [1m[36mLabel Load (4.1ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  ↳ app/views/admin_items/new.html.erb:20
+  [1m[36mCategory Load (3.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin_items/new.html.erb:23
+  Rendered admin_items/_song_fields.html.erb (1.9ms)
+  Rendered admin_items/_song_fields.html.erb (1.2ms)
+  Rendered admin_items/_disk_fields.html.erb (41.3ms)
+  Rendered admin_items/_song_fields.html.erb (0.4ms)
+  Rendered admin_items/_disk_fields.html.erb (18.3ms)
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/admin_items/new.html.erb:69
+  [1m[36mCACHE Label Load (0.0ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  ↳ app/views/admin_items/new.html.erb:72
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin_items/new.html.erb:75
+  Rendered admin_items/_song_fields.html.erb (0.4ms)
+  Rendered admin_items/_song_fields.html.erb (0.4ms)
+  Rendered admin_items/_disk_fields.html.erb (35.1ms)
+  Rendered admin_items/_song_fields.html.erb (0.4ms)
+  Rendered admin_items/_disk_fields.html.erb (17.7ms)
+  Rendered admin_items/new.html.erb within layouts/application (312.7ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:33
+Completed 200 OK in 1053ms (Views: 928.1ms | ActiveRecord: 63.1ms)
+
+
+Started GET "/admin_items/new" for 10.0.2.2 at 2019-07-23 09:51:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AdminItemsController#new as HTML
+  Rendering admin_items/new.html.erb within layouts/application
+  [1m[36mArtist Load (1.4ms)[0m  [1m[34mSELECT "artists".* FROM "artists"[0m
+  ↳ app/views/admin_items/new.html.erb:25
+  [1m[36mLabel Load (1.3ms)[0m  [1m[34mSELECT "labels".* FROM "labels"[0m
+  ↳ app/views/admin_items/new.html.erb:28
+  [1m[36mCategory Load (1.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/admin_items/new.html.erb:31
+  Rendered admin_items/_song_fields.html.erb (0.9ms)
+  Rendered admin_items/_song_fields.html.erb (0.8ms)
+  Rendered admin_items/_disk_fields.html.erb (42.9ms)
+  Rendered admin_items/_song_fields.html.erb (0.5ms)
+  Rendered admin_items/_disk_fields.html.erb (23.3ms)
+  Rendered admin_items/new.html.erb within layouts/application (117.7ms)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:33
+Completed 200 OK in 785ms (Views: 756.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2019-07-23 10:08:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/-CD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (4.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/items/index.html.erb:8
+  Rendered items/index.html.erb within layouts/application (274.2ms)
+Completed 500 Internal Server Error in 393ms (ActiveRecord: 12.5ms)
+
+
+  
+ActionView::Template::Error (The asset "no_image.png" is not present in the asset pipeline.):
+     7: 			<div class="items" style="text-align: center; margin-left: 20px;">
+     8:       			<% @items.each do |item| %>
+     9:         			<ul class="list-group col-lg-3" style="width: 230px;">
+    10: 						<li class="list-group-item"><%= attachment_image_tag item, :image, :fill, 180, 180, fallback: "no_image.png", size: '180x180' %></li>
+    11: 						<li class="list-group-item"><%= item.disk_name %></li>
+    12: 						<li class="list-group-item"><%= item.artist.artist_name %></li>
+    13: 						<li class="list-group-item"><%= item.price %>円（税込）</li>
+  
+app/views/items/index.html.erb:10:in `block in _app_views_items_index_html_erb___764930931127584079_47125269699860'
+app/views/items/index.html.erb:8:in `_app_views_items_index_html_erb___764930931127584079_47125269699860'
+Started GET "/" for 10.0.2.2 at 2019-07-23 10:09:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ItemsController#index as HTML
+DEPRECATION WARNING: Dangerous query method (method whose arguments are used as raw SQL) called with non-attribute argument(s): "RANDOM()". Non-attribute arguments will be disallowed in Rails 6.0. This method should not be called with user-provided values, such as request parameters or model attributes. Known-safe values can be passed by wrapping them in Arel.sql(). (called from index at /vagrant/-CD/app/controllers/items_controller.rb:4)
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" ORDER BY RANDOM() LIMIT ?[0m  [["LIMIT", 5]]
+  ↳ app/views/items/index.html.erb:8
+  [1m[36mArtist Load (3.1ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:12
+  [1m[36mCACHE Artist Load (0.0ms)[0m  [1m[34mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:12
+  Rendered items/index.html.erb within layouts/application (99.7ms)
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:33
+Completed 200 OK in 2844ms (Views: 2797.4ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/attachments/a8e985262ec550a955990f5c6745a0bb226bea33/store/fill/180/180/23e473a6661c32745304d3843a146f6511feb3044884aea1ecd2684b0348/image" for 10.0.2.2 at 2019-07-23 10:09:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/951cc1aa968d344aad776fc30ebd0367a35ec92f/store/fill/180/180/534113a6a844b9e64b9268d135240fec5ad69d3937f42a1757610b2f89f8/image" for 10.0.2.2 at 2019-07-23 10:09:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: Could not find attachment by id: 23e473a6661c32745304d3843a146f6511feb3044884aea1ecd2684b0348
+Refile::App: [2019-07-23 10:09:58 +0000] GET "/a8e985262ec550a955990f5c6745a0bb226bea33/store/fill/180/180/23e473a6661c32745304d3843a146f6511feb3044884aea1ecd2684b0348/image" 404 17.9ms
+
+Refile::App: Could not find attachment by id: 534113a6a844b9e64b9268d135240fec5ad69d3937f42a1757610b2f89f8
+Refile::App: [2019-07-23 10:09:58 +0000] GET "/951cc1aa968d344aad776fc30ebd0367a35ec92f/store/fill/180/180/534113a6a844b9e64b9268d135240fec5ad69d3937f42a1757610b2f89f8/image" 404 4.9ms
+
+Started GET "/cart_details.3" for 10.0.2.2 at 2019-07-23 10:10:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+SyntaxError (/vagrant/-CD/app/controllers/cart_details_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/cart_details_controller.rb:38: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/cart_details.3" for 10.0.2.2 at 2019-07-23 10:10:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CartDetailsController#index as 
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cart_details_controller.rb:6
+  [1m[36mCartDetail Load (4.3ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details" WHERE "cart_details"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/cart_details_controller.rb:8
+  [1m[36mItem Load (3.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cart_details_controller.rb:9
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/cart_details_controller.rb:9
+  Rendering cart_details/index.html.erb within layouts/application
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT SUM("cart_details"."quantity") FROM "cart_details" WHERE "cart_details"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/cart_details/index.html.erb:26
+  Rendered cart_details/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 3750ms (Views: 3331.4ms | ActiveRecord: 35.1ms)
+
+
+Started PATCH "/cart_details/3" for 10.0.2.2 at 2019-07-23 10:11:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by CartDetailsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I4h+JsvL0GXB7WSQibNUA076bunOZM8Os6d1SPNbTQHJyMHeQRsrG6AdgYvofANBfjRnlbu0mq8Q4+25oPX8aA==", "cart_detail"=>{"quantity"=>"28"}, "commit"=>"数量変更", "id"=>"3"}
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 225ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `setup_cart_detail!' for #<CartDetailsController:0x00007f995c1287f0>):
+  
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.7) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.7) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+better_errors (2.5.1) lib/better_errors/middleware.rb:59:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/orders/new" for 10.0.2.2 at 2019-07-23 10:14:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:12
+  [1m[36mOrder Load (3.9ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:13
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mShippingAddress Load (4.5ms)[0m  [1m[34mSELECT "shipping_addresses".* FROM "shipping_addresses"[0m
+  ↳ app/views/orders/new.html.erb:8
+  [1m[36mCartDetail Load (1.9ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details" WHERE "cart_details"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/orders/new.html.erb:46
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:49
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:49
+  Rendered orders/new.html.erb within layouts/application (414.0ms)
+Completed 200 OK in 1207ms (Views: 1097.3ms | ActiveRecord: 44.0ms)
+
+
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 10:15:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7QxbNCAwGivOOiGGLkHoCmr6dGDozl8x7d14UcDzKJkHTOTMquDhVa/KxJ1Pjr9IWjR9HJ0eCpBOmeCgk12Z8A==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (34.9ms)
+Completed 200 OK in 707ms (Views: 697.4ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/orders/commit" for 10.0.2.2 at 2019-07-23 10:16:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#commit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Zijgq8WjFZQEcMU1S6883TrQ75NATgKRi0GEEaXfWYP2Bx6JcZ3KDHhJg+04euxRCVKwjjRbavlaZ7hFTnMDw==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:48
+  [1m[36mOrder Create (12.2ms)[0m  [1m[32mINSERT INTO "orders" ("shipping_address", "payment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shipping_address", "渋谷"], ["payment", 1], ["created_at", "2019-07-23 10:16:13.072663"], ["updated_at", "2019-07-23 10:16:13.072663"]]
+  ↳ app/controllers/orders_controller.rb:48
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:48
+  Rendering orders/commit.html.erb within layouts/application
+  Rendered orders/commit.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:33
+Completed 200 OK in 647ms (Views: 615.8ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/orders/confirm" for 10.0.2.2 at 2019-07-23 10:16:16 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:4
+Completed 404 Not Found in 6ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order with 'id'=confirm):
+  
+app/controllers/orders_controller.rb:4:in `show'
+Started GET "/orders/new" for 10.0.2.2 at 2019-07-23 10:17:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:12
+  [1m[36mOrder Load (2.6ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:13
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mShippingAddress Load (1.6ms)[0m  [1m[34mSELECT "shipping_addresses".* FROM "shipping_addresses"[0m
+  ↳ app/views/orders/new.html.erb:8
+  [1m[36mCartDetail Load (2.0ms)[0m  [1m[34mSELECT "cart_details".* FROM "cart_details" WHERE "cart_details"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/views/orders/new.html.erb:46
+  [1m[36mItem Load (1.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:49
+  [1m[36mCACHE Item Load (0.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/orders/new.html.erb:49
+  Rendered orders/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 932ms (Views: 907.1ms | ActiveRecord: 10.2ms)
+
+
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 10:17:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ouef8AdwUryE7fQ5CAAuDsSgOYr+0DAYqZzNxa2m/mFIpyAIjaCpwuUdESJpz3lM9G4w9osAZbkK2FU0/ghPCA==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 533ms (Views: 525.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/orders/commit" for 10.0.2.2 at 2019-07-23 10:17:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#commit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOMRkrEAzZ/SgTbEZ/lfXGljfa7WenWyMzs6iqut4PnGo65qO9A24bNx098GNggeWa100qOqIBOQf6J7+ANRkA==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:48
+  [1m[36mOrder Create (6.9ms)[0m  [1m[32mINSERT INTO "orders" ("shipping_address", "payment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shipping_address", "渋谷"], ["payment", 1], ["created_at", "2019-07-23 10:17:44.306251"], ["updated_at", "2019-07-23 10:17:44.306251"]]
+  ↳ app/controllers/orders_controller.rb:48
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:48
+  Rendering orders/commit.html.erb within layouts/application
+  Rendered orders/commit.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:33
+Completed 200 OK in 535ms (Views: 510.3ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/orders/confirm" for 10.0.2.2 at 2019-07-23 10:20:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mOrder Load (1.8ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:4
+Completed 404 Not Found in 6ms (ActiveRecord: 1.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order with 'id'=confirm):
+  
+app/controllers/orders_controller.rb:4:in `show'
+Started POST "/orders/confirm" for 10.0.2.2 at 2019-07-23 10:21:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#confirm as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ouef8AdwUryE7fQ5CAAuDsSgOYr+0DAYqZzNxa2m/mFIpyAIjaCpwuUdESJpz3lM9G4w9osAZbkK2FU0/ghPCA==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:34
+  Rendering orders/confirm.html.erb within layouts/application
+  Rendered orders/confirm.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 725ms (Views: 717.6ms | ActiveRecord: 2.4ms)
+
+
+Started POST "/orders/commit" for 10.0.2.2 at 2019-07-23 10:21:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#commit as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0MoGUrKU12V5IPqg87MxYMI8QAGuFT4Jgv0dJ9RBJow6irmqOEQsGxjQH7uSfGYi8vJJfdvFa6ghuYXWh++X5Q==", "order"=>{"shipping_address"=>"渋谷", "payment"=>"振り込み"}, "commit"=>"Create Order"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:48
+  [1m[36mOrder Create (11.1ms)[0m  [1m[32mINSERT INTO "orders" ("shipping_address", "payment", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["shipping_address", "渋谷"], ["payment", 1], ["created_at", "2019-07-23 10:21:09.196947"], ["updated_at", "2019-07-23 10:21:09.196947"]]
+  ↳ app/controllers/orders_controller.rb:48
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:48
+  Rendering orders/commit.html.erb within layouts/application
+  Rendered orders/commit.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:33
+Completed 200 OK in 545ms (Views: 512.7ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/orders/confirm" for 10.0.2.2 at 2019-07-23 10:21:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"confirm"}
+  [1m[36mOrder Load (1.7ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:4
+Completed 404 Not Found in 7ms (ActiveRecord: 1.7ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Order with 'id'=confirm):
+  
+app/controllers/orders_controller.rb:4:in `show'
