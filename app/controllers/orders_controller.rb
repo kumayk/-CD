@@ -27,6 +27,7 @@ class OrdersController < ApplicationController
 	end
 
 	def confirm
+
 	    # 入力値のチェック
 	    @order = Order.new(order_params)
 	    if @order.valid?

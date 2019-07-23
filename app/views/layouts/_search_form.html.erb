@@ -7,6 +7,7 @@
     <div class="list-group card" style="width: 18rem; float: left;">
       <% @result.each do |item| %>
         <div class="card-img-top">
+
           <%= attachment_image_tag item, :image, :fill, 180, 180, fallback: "no_img.png", size: '180x180' %>
         </div>
         <ul class="list-group list-group-flush">
@@ -23,5 +24,6 @@
         </ul>
       <% end %>
     </div>
+
   </div>
 </div>

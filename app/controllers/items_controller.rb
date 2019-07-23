@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-  	@items =  Item.order("RANDOM()").limit(8)
+    	@items = Item.order("RANDOM()").limit(5)
   end
 
   def search
