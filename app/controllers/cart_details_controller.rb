@@ -11,7 +11,7 @@ class CartDetailsController < ApplicationController
     end
 
 	def create
-	    @cart_item = current_user.cart_details.build(item_id: params[:cart_detail][:item_id])
+	    @cart_item = current_user.cart_details.build(cart_detail)
 	    @cart_item.save
         redirect_to cart_details_path
 	end
@@ -35,5 +35,9 @@ class CartDetailsController < ApplicationController
 
     def cart_detail
       params.require(:cart_detail).permit(:quantity, :item_id)
+    end
+
+    def cart_params
+    	params.require(:cart_detail).permit(:quantity)
     end
 end

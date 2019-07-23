@@ -27,7 +27,7 @@
             <div class="item_add_price">
           	  <h2 style="text-align: center;" >￥<%= @totalprice %></h2>
             </div>
-            <%= link_to "レジへ進む", cart_details_path(current_user) %>
+            <%= link_to "レジへ進む", new_order_path(current_user) %>
         </div>
     </div>
 </div>
