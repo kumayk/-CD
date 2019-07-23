@@ -13,4 +13,11 @@ class OrdersController < ApplicationController
 		@cart_detail = CartDetail.all
 		@cart_detail = current_user.cart_details
 	end
+
+	def confirm
+		@order = Order.new
+		@orders = Order.find(1)
+		@cart_detail = CartDetail.all
+		@cart_detail = current_user.cart_details
+	end
 end

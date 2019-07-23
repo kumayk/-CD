@@ -25,14 +25,14 @@
 						    <tr>
 							    <td><%= order.item_disk_name %></td>
 							    <td><%= order.order_detail.quantity %></td>
-							    <td><%= order.item.price*order.order_detail.quantity %>円</td>
+							    <td><%= order.item.price.to_i*order.order_detail.quantity.to_i %>円</td>
 							</tr>
 						<% end %>
 					</tbody>
 				</table>
 			</li>
 		    <li class="list-group-item">送料　500円</li>
-		    <li class="list-group-item">合計<%= @order.item.price*@order.order_detail.quantity+@order.shipping_fee %>円</li>
+		    <li class="list-group-item">合計<%= @order.total.price%>円</li>
 		    <li class="list-group-item">配送先<%= @order.shipping_address.address %></li>
 		    <li class="list-group-item">支払い方法<%=@order.order_detail.order.payment %></li>
 		  </ul>
