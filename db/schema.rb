@@ -102,7 +102,10 @@ ActiveRecord::Schema.define(version: 2019_07_23_065408) do
     t.datetime "updated_at", null: false
     t.boolean "is_deleted"
     t.integer "user_id"
+<<<<<<< HEAD
+=======
     t.string "item_id"
+>>>>>>> aki/master
   end
 
   create_table "shipping_addresses", force: :cascade do |t|
