@@ -31,7 +31,7 @@
                 <% if user_signed_in? %>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
                     <li><%= link_to current_user.last_name, user_path(current_user.id) %></li>
-                    <li><%= link_to "Cart", "/cart_details/#{current_user.id}" %></li>
+                    <li><%= link_to "Cart", cart_details_path(current_user) %></li>
                     <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete%></li>
                   </ul>
                 <%else%>

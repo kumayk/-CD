@@ -1,0 +1,42 @@
+<html>
+<body>
+<div class="container">
+
+      <h1><%= @item.artist.artist_name %>/<%= @item.disk_name %></h1>
+
+      <p class="bg-info text-left">✾商品詳細</p>
+
+      <div class="row">
+       <div class="mx-auto">
+        <div class="col-xs-4 col-xs-offset-2">
+         <%= attachment_image_tag @item, :image, class: " profile-thumb", fallback: "no_img.png", size: "240x240" %>
+        </div>
+
+        <div class="col-xs-4">
+         <p>レーベル：<%= @item.label.label_name %></p>
+         <p>ジャンル：<%= @item.category.category_name %></p>
+         <p>価格：<%= @item.price %></p>
+         <p>在庫数：<%= @item.stock %>個</p>
+         <p>販売ステータス：<%= @item.item_status %></p>
+
+         <%= link_to "編集", edit_admin_item_path(@item.id) %> 
+
+        </div>
+       </div>
+      </div>
+
+      <p class="bg-info text-left">✾収録内容</p>
+      <% @item.disks.each do |disk| %>
+         <p><%= disk.disk_name %></p>
+
+	      <% disk.songs.each do |song| %>
+	         <ul>
+	         <li><%= song.song_name %></li>
+	         </ul>
+
+	      <% end %>
+      <% end %>
+
+</div>
+</body>
+</html>
