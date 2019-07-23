@@ -1,12 +1,13 @@
 class CartDetailsController < ApplicationController
-	before_action :setup_cart_detail!, only: [:cerate, :update]
+	before_action :setup_cart_detail!, only: [:cerate]
 
 	def index
 		@cart = CartDetail.all
 		@cart = current_user.cart_details
 	    @totalprice = 0
 	    @cart.each do |cart|
-	    	@totalprice += cart.item.price
+	    	@itemprice = cart.item.price * cart.quantity
+	    	@totalprice += @itemprice
 	    end
     end
 
@@ -17,7 +18,8 @@ class CartDetailsController < ApplicationController
 	end
 
 	def update
-	    cart_item.update(quantity: params[:quantity].to_i)
+	    cart = CartDetail.find(params[:id])
+	    cart.update(cart_params)
         redirect_to cart_details_path
 	end
 
@@ -40,4 +42,5 @@ class CartDetailsController < ApplicationController
     def cart_params
     	params.require(:cart_detail).permit(:quantity)
     end
+
 end
