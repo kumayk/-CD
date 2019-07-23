@@ -1,19 +1,19 @@
 class CartDetailsController < ApplicationController
- before_action :setup_cart_detail!, only: [:cerate, :update, :destroy]
+ before_action :setup_cart_detail!, only: [:cerate, :update]
 
 	def show
 	  @item = Item.find(id: @cart_item)
 	  @cart_item = current_user.items
 
 	  @cart = CartDetail.all
-	  @totalprice = CartDetail.all.sum(:price)
-	  @totalquantity = CartDetail.all.sum(:quantity)
+	  # @totalprice = CartDetail.all.sum(:price)
+	  # @totalquantity = CartDetail.all.sum(:quantity)
 	end
 
 	def create
-	  @cart_item = current_user.cart_details.build(item_id: params[:cart_detail][:item_id])
+	  @cart_item = current_user.cart_details.build(cart_detail)
 	  @cart_item.save
-      redirect_to cart_detail_path
+      redirect_to cart_detail_path(@cart_item.item_id)
 	end
 
 	def update
@@ -28,8 +28,8 @@ class CartDetailsController < ApplicationController
 
 	private
 
-	def setup_cart_item!
-      @cart_item = current_user.items.find(item_id: params[:item_id])
+    def cart_detail
+      params.require(:cart_detail).permit(:quantity, :item_id)
     end
 
 end
