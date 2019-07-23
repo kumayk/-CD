@@ -18,7 +18,11 @@
 			          <td><%= customer.last_name %></td>
 			          <td><%= customer.first_name %></td>
 			          <td><%= customer.email %></td>
-				      <td><input type="checkbox" value="checkboxA"></td>
+			          <% if customer.deleted_at.nil? %>
+				      	<td>会員</td>
+				      <% else %>
+				      	<td>退会済</td>
+				      <% end %>
 		            </tr>
 				<% end %>
 	        </tbody>

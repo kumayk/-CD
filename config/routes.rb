@@ -52,7 +52,7 @@ Rails.application.routes.draw do
   end
 
 
-  resources :cart_details, only: [:show, :destroy, :create, :update]
+  resources :cart_details, only: [:index, :destroy, :create, :update]
 
   resources :order_details, only: [:update]
 

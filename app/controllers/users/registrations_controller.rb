@@ -26,8 +26,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   
   def destroy
-    resource.destroy
-    resource.update(email: resource.deleted_at.to_i.to_s + '_' + resource.email.to_s)
+    current_user.destroy
+    flash[:notice] = "お客様のアカウントは退会されました。またの来店お待ちしております。"
     redirect_to root_path
   end
 

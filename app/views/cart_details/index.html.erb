@@ -1,0 +1,33 @@
+
+<div class="container">
+	<div class="row">
+		<div class="cart_index col-md-8 col-xs-12">
+			<h2 class="p-3 mb-2" style="width: 300px; padding: 20px; text-align: center;" >カート一覧</h2>
+			    <% @cart.each do |cart| %>
+			        <div class="row cart_item" style="margin-bottom: 20px" >
+				        <div class="item_img col-md-4">
+					      <%= attachment_image_tag cart.item, :image, :fill, 150, 150, fallback: "no_img.png", size:'150x150' %>
+				        </div>
+				        <div class="item_info col-md-8">
+				        	 <%= cart.item.disk_name %><br>
+				        	 ￥<%= cart.item.price %><br>
+				        	 <%= link_to "削除", cart_detail_path(cart.id), method: :delete %>
+				        </div>
+			        </div>
+			        <%= form_for cart do |f| %>
+			          <td><%= f.number_field :quantity %></td>
+			          <td><%= f.submit '数量変更' %></td>
+			        <% end %>
+			    <% end %>
+
+        </div>
+
+        <div class="price_box col-md-4 col-xs-12">
+          <h2 class="p-3 mb-2" style="width: 300px; padding: 20px; text-align: center; float-left;">小計<%= current_user.cart_details.sum(:quantity) %>点</h2>
+            <div class="item_add_price">
+          	  <h2 style="text-align: center;" >￥<%= @totalprice %></h2>
+            </div>
+            <%= link_to "レジへ進む", new_order_path(current_user) %>
+        </div>
+    </div>
+</div>

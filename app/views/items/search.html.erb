@@ -1,6 +1,5 @@
-<% if @result %>
-<%= render partial: 'layouts/search_form', collection: @result %>
+<% if @result.any? %>
+  <%= render partial: 'layouts/search_form' %>
 <% else %>
-<%= render 'index' %>
+  <h4 style="text-align: center;">一致する検索結果がありません</h4>
 <% end %>
-

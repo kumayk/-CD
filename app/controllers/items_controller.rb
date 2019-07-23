@@ -1,12 +1,11 @@
 class ItemsController < ApplicationController
-	PER = 8
 
   def index
-  	@items =  Item.order("RANDOM()").limit(8)
+    	@items = Item.order("RANDOM()").limit(5)
   end
 
   def search
-  	@items = Item.page(params[:page]).per(PER)
+  	@items = Item.page(params[:page]).reverse_order
   end
 
   def show
