@@ -6,11 +6,11 @@
 			    <% @cart.each do |cart| %>
 			        <div class="row cart_item" style="margin-bottom: 20px" >
 				        <div class="item_img col-md-4">
-					      <img src="/assets/no_img.png">
+					      <%= attachment_image_tag cart.item, :image, :fill, 150, 150, fallback: "no_img.png", size:'150x150' %>
 				        </div>
 				        <div class="item_info col-md-8">
-				        	 <%= cart.item.disk_name %>
-				        	 ￥<%= cart.item.price %>
+				        	 <%= cart.item.disk_name %><br>
+				        	 ￥<%= cart.item.price %><br>
 				        	 <%= link_to "削除", cart_detail_path(cart.id), method: :delete %>
 				        </div>
 			        </div>
@@ -27,7 +27,7 @@
             <div class="item_add_price">
           	  <h2 style="text-align: center;" >￥<%= @totalprice %></h2>
             </div>
-            <%= link_to "レジへ進む", cart_details_path(current_user) %>
+            <%= link_to "レジへ進む", new_order_path(current_user) %>
         </div>
     </div>
 </div>

@@ -21,6 +21,9 @@ class AdminUsersController < ApplicationController
     end
 
     def destroy
+        resource.destroy
+        resource.update(email: resource.deleted_at.to_i.to_s + '_' + resource.email.to_s)
+        redirect_to admin_users_path
     end
 
     private

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   def authenticate_user
     unless current_user
       flash[:notice] = "ログインが必要です"
-      redirect_to new_admin_registration_url
+      redirect_to new_user_registration_url
     end
   end
 
