@@ -12,29 +12,28 @@
 
   <body>
     <header class="clearfix">
-      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="container">
             <div class="row">
-              <div class="navbar-header col-sm-6">
+              <div class="page-header">
+                <div class="col-sm-5"> 
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample3">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                 </button>
-                <div class="navbar-brand">
 
+                  <a href="/"><%= image_tag 'logo.png', size:'120x80' %></a>
 
-                  <%= link_to "俺のCD", "/", class: "title", :style=>"text-decoration: none;"%>
                 </div>
-              </div>
-              <div class="collapse navbar-collapse clearfix col-sm-3" id="navbarEexample3">
+
+              <div class="clearfix col-sm-4" id="navbarEexample3">
                 <% if user_signed_in? %>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
-                    <li><%= link_to current_user.last_name, user_path(current_user.id) %></li>
-                    <li><%= link_to "Cart", "/cart_details/#{current_user.id}" %></li>
-                    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete%></li>
+                    <li><%= link_to current_user.last_name, user_path(current_user.id), class: "glyphicon glyphicon-user , text-muted" %></li>
+                    <li><%= link_to "_Cart", "/cart_details/#{current_user.id}", class: "glyphicon glyphicon-shopping-cart , text-muted" %></li>
+                    <li><%= link_to "_Sign out", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out, text-muted" %></li>
                   </ul>
                 <%else%>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
@@ -46,13 +45,14 @@
 
 
               <div class="container">
-                <div class="row">
                   <%= search_form_for @search, url: items_search_path, html: { method: :post} do |f| %>
                     <div class="form-group col-sm-1" style="padding: 0; margin: 16px 5px;">
                       <%= f.text_field :disk_name_cont, placeholder:  '検索キーワード' %>
-                    </div>
 
-                    <div class="actions col-sm-1" style="padding: 0; margin: 16px 53px;"><%= f.submit '検索' %></div>
+                    <div class="actions col-sm-1" style="padding: 0; margin: 16px 53px;"><%= f.submit '検索' %>
+
+                    </div>
+                    </div>
 
                   <% end %>
                 </div>
@@ -60,7 +60,6 @@
             </div>
           </div>
         </div>
-      </nav>
     </header>
 
     <% if flash[:notice] %>
