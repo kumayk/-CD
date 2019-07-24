@@ -109,7 +109,7 @@
 	        <div class="actions" style="text-align: center; margin: 40px 0; padding: 20px 40px">
 	          <%= f.submit "更新" %>
 	        </div>
-	        <button type="button" class="btn btn-warning" style="float: right; margin-bottom: 20px;"><%= link_to "削除",user_registration_path, method: :delete, "data-confirm" => "本当に消しますか？" %></button>
+	        <button type="button" class="btn btn-warning" style="float: right; margin-bottom: 20px;"><%= link_to "削除",admin_user_path(@user.id), method: :delete, "data-confirm" => "本当に消しますか？" %></button>
 	        
         <% end %>
 

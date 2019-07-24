@@ -26,17 +26,19 @@
                     </tr>
                 </tbody>
             </table>
-            <a class="btn btn-default" href="#" role="button">編集</a>
+            <%= link_to "編集", edit_admin_user_path,class:"btn btn-default" %>
         </div>
+        <div class="container">
         <div class="order table-responsive col-md-7 col-xs-7">
             <h3>注文履歴</h3>
-            <% @orders.each do |oreder| %>
+            <% @orders.each do |order| %>
                 <div class="col-xs-6 col-md-3">
                     <div class="thumbnail">
-                        <%= order %>
+                        <%= order.shipping_address %>
                     </div>
                 </div>
             <% end %>
         </div>
+    </div>
 	</div>
 </div>
