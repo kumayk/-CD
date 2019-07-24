@@ -10,7 +10,6 @@ class OrdersController < ApplicationController
 	def new
 		@cart_detail = CartDetail.all
 		@cart_detail = current_user.cart_details
-		@orders = Order.find(1)
 		@order = Order.new
 	    @order_detail = @order.order_details.build
 		render :action => 'new'
@@ -38,7 +37,6 @@ class OrdersController < ApplicationController
 	      render :action => 'confirm'
 	    else
 	      # NG。入力画面を再表示
-			@orders = Order.find(1)
 	    	render :action => 'new'
 	    end
     end
@@ -54,7 +52,6 @@ class OrdersController < ApplicationController
 			# NG。入力画面を再表示
 		    @cart_detail = CartDetail.all
 			@cart_detail = current_user.cart_details
-			@orders = Order.find(1)
 	    	render :action => 'new'
 	    end
     end
