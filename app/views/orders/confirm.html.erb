@@ -1,42 +1,26 @@
+<h3>購入情報確認</h3>
 
-<div class="container">
-	<div class="row">
-		<h4>購入確認</h4>
-		<div class="card">
-		  <ul class="list-group list-group-flush">
-		    <li class="list-group-item">
-		    	<table class="table">
-  					<thead>
-					    <tr>
-						    <th scope="col">購入商品名</th>
-						    <th scope="col">枚数</th>
-						    <th scope="col">価格</th>
-						    <th scope="col">小計</th>
-					    </tr>
-					</thead>
-					<tbody>
-						<% @cart_details do |cd| %>
-						    <tr>
-						    	<% sum = 0 %>
-							    <td><%= cd.item_disk_name %></td>
-							    <td><%= cd.order_detail.quantity %>枚</td>
-							    <td><%= cd.item.price %>円</td>
-							    <% sub_total = cd.item.price.to_i*order.order_detail.quantity.to_i %>
-							    <% sum += sub_total %>
-							    <td><%= sub_total %>円</td>
-							</tr>
-						<% end %>
-					</tbody>
-				</table>
-			</li>
-		    <li class="list-group-item">@order.shipping_fee</li>
-		    <li class="list-group-item">合計<%= sum + 500 %>円（税込）</li>
-		    <li class="list-group-item">配送先<%= @cart_details.user.shipping_address.address %></li>
-		    <li class="list-group-item">支払い方法<%= @order.order_detail.order.payment %></li>
-		  </ul>
-		</div>
-		<button type="submit">購入</button>
-	</div>
+<%= form_for(@order , url: orders_commit_path) do |f| %>
+
+<h4> 送付先</h4>
+<%= f.hidden_field :shipping_address %>
+<%= @order.shipping_address %>
+
+<h4> 支払い方法</h4>
+<%= f.hidden_field :payment %>
+<%= @order.payment %>
+
+	<!-- order_detail -->
+	<%= f.fields_for :order_details do |od| %>
+		<%= od.hidden_field :quantity %>
+		<%= od.hidden_field :user_id %>
+	   	<%= od.hidden_field :item_id %>
+	<% end %>
+
+
+<div>
+  <%= f.submit %>
 </div>
+
 
 <% end %>
