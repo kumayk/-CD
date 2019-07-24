@@ -2,11 +2,12 @@ class AdminUsersController < ApplicationController
 	PER = 8
 
     def index
-	  @customer = User.all.page(params[:page]).per(8)
+	  @customer = User.with_deleted.all.page(params[:page]).per(8)
     end
 
     def show
-      @orders = Oder.find(current_user.id)
+      @user = User.find(params[:id])
+      @orders = OrderDetail.where(user_id: @user.id)
     end
 
     def edit
@@ -21,8 +22,9 @@ class AdminUsersController < ApplicationController
     end
 
     def destroy
-        resource.destroy
-        resource.update(email: resource.deleted_at.to_i.to_s + '_' + resource.email.to_s)
+        user = User.find(params[:id])
+        user.destroy
+        user.update(email: user.deleted_at.to_i.to_s + '_' + user.email.to_s)
         redirect_to admin_users_path
     end
 
