@@ -34,7 +34,7 @@
             <% @orders.each do |order| %>
                 <div class="col-xs-6 col-md-3">
                     <div class="thumbnail">
-                        <%= order.shipping_address %>
+                        <%= order.item.disk_name %>
                     </div>
                 </div>
             <% end %>
