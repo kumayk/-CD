@@ -12,8 +12,8 @@
 
 <!-- order_detail -->
 <%= f.fields_for :order_details do |od| %>
-<%= od.hidden_field :quantity, :value => @cart_detail[od.index].quantity %>
-<%= od.hidden_field :user_id, :value => @cart_detail[od.index].user_id %>
+	<%= od.hidden_field :quantity, :value => @cart_detail[od.index].quantity %>
+	<%= od.hidden_field :user_id, :value => @cart_detail[od.index].user_id %>
    	<%= od.hidden_field :item_id, :value => @cart_detail[od.index].item_id %>
 <% end %>
 
