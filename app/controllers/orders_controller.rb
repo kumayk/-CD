@@ -51,6 +51,7 @@ class OrdersController < ApplicationController
 	    @order = Order.new(order_params)
 	    @cart_details = CartDetail.all
 		@cart_details = current_user.cart_details
+		@order.user_id = current_user.id
 
 	    if @order.save!
 		    #itemの在庫を減らす
