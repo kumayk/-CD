@@ -9,6 +9,22 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def authenticate_admin
+    unless current_admin
+      flash[:notice] = "帰れ!"
+      redirect_to root_path
+    end
+  end
+
+  def after_sign_in_path_for(resource)
+    case resource
+    when Admin
+      admin_path
+    when User
+      root_path
+    end
+  end
+
   def set_search
 	  @search = Item.ransack(params[:q])
   	@result = @search.result
