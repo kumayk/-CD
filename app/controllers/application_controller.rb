@@ -9,10 +9,33 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def authenticate_admin
+    unless current_admin
+      flash[:notice] = "帰れ!"
+      redirect_to root_path
+    end
+  end
+
+  def after_sign_in_path_for(resource)
+    case resource
+    when Admin
+      admin_path
+    when User
+      root_path
+    end
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    if resource_or_scope == :admin
+      new_admin_session_path
+    else
+      root_path
+    end
+  end
+
   def set_search
 	  @search = Item.ransack(params[:q])
   	@result = @search.result
-
   end
 
   #binding.pry
@@ -27,6 +50,7 @@ class ApplicationController < ActionController::Base
 	  devise_parameter_sanitizer.permit(:sign_in,keys:[:email])
 	  devise_parameter_sanitizer.permit(:account_update,keys:[:last_name, :first_name, :last_name_kana, :first_name_kana, :zip_code, :address, :phone_number])
     end
+
 end
 
 

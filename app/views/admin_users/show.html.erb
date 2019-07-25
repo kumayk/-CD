@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="user_info table-responsive col-md-5 col-xs-5">
+		<div class="user_info table-responsive col-md-12 col-xs-12">
             <table class="table">
                 <thead>
                     <div>
@@ -26,17 +26,31 @@
                     </tr>
                 </tbody>
             </table>
-            <a class="btn btn-default" href="#" role="button">編集</a>
+            <div style="float: right;">
+                <%= link_to "編集", edit_admin_user_path,class:"btn btn-default " %>
+            </div>
         </div>
-        <div class="order table-responsive col-md-7 col-xs-7">
-            <h3>注文履歴</h3>
-            <% @orders.each do |oreder| %>
-                <div class="col-xs-6 col-md-3">
-                    <div class="thumbnail">
-                        <%= order %>
-                    </div>
-                </div>
-            <% end %>
+        <div class="container">
+            <div class="order table-responsive col-md-12 col-xs-12">
+                <table class="table">
+                    <thead>
+                        <div>
+                            <tr>
+                                <th>注文履歴</th>
+                                <th>配送先</th>
+                            </tr>
+                        </div>
+                    </thead>
+                    <tbody>
+                        <ul>
+                        <% @order.each do |order| %>
+                           <th><%= link_to order.created_at, admin_order_path(order.id) %></th>
+                           <th><%= order.shipping_address %></th>
+                        <% end %>
+                        </ul>
+                    </tbody>
+                </table>
+            </div>
         </div>
 	</div>
 </div>

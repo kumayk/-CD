@@ -27,8 +27,14 @@
                   <span class="icon-bar"></span>
                 </button>
 
-                  <a href="/"><%= image_tag 'logo.png', size:'120x80' %></a>
+                <a href="/"><%= image_tag 'logo.png', size:'120x80' %></a>
 
+                <div class="navbar-brand">
+                  <% if admin_signed_in? %>
+                    <%= link_to "俺のCD", admin_path, class: "title", :style=>"text-decoration: none;"%>
+                  <% else %>
+                    <%= link_to "俺のCD", root_path, class: "title", :style=>"text-decoration: none;"%>
+                  <% end %>
                 </div>
 
               <div class="clearfix col-sm-4" id="navbarEexample3">
@@ -40,7 +46,11 @@
                     <li><%= link_to "_Sign out", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out , text-muted" %></li>
 
                   </ul>
-                <%else%>
+                <% elsif admin_signed_in? %>
+                  <ul class="nav navbar-nav" style="margin-top:5px;">
+                    <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete%></li>
+                  </ul>
+                <% else %>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
                     <li><%=link_to "_Sign Up", new_user_registration_path, class: "glyphicon glyphicon-log-in , text-muted" %></li>
                     <li><%=link_to "_Log In", new_user_session_path, class: "glyphicon glyphicon-home , text-muted" %></li>

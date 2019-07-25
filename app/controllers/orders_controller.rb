@@ -10,10 +10,8 @@ class OrdersController < ApplicationController
 	def new
 		@cart_detail = CartDetail.all
 		@cart_detail = current_user.cart_details
-		@orders = Order.find(1)
 		@order = Order.new
 	    @order_detail = @order.order_details.build
-		render :action => 'new'
 	end
 
 	def shipping_address_new
@@ -28,33 +26,50 @@ class OrdersController < ApplicationController
 	end
 
 	def confirm
-
 	    # 入力値のチェック
 	    @cart_detail = CartDetail.all
 		@cart_detail = current_user.cart_details
 	    @order = Order.new(order_params)
+		@order.user_id = current_user.id
+	    current_user.cart_details.each do |detail|
+			@order.order_details.build(quantity: detail.quantity, user_id: detail.user_id, item_id: detail.item_id)
+	    end
+
+
+
 	    if @order.valid?
 	      # OK。確認画面を表示
 	      render :action => 'confirm'
 	    else
 	      # NG。入力画面を再表示
-			@orders = Order.find(1)
 	    	render :action => 'new'
 	    end
     end
 
     def commit
 	    @order = Order.new(order_params)
-	    if @order.save
+	    @order.sub_total_price = 0
+	    @cart_details = CartDetail.all
+		@cart_details = current_user.cart_details
+		@order.user_id = current_user.id
+	    @cart_details.each do |cd|
+	    	@order.sub_total_price += cd.quantity * cd.item.price
+		end
+		@order.total_price = @order.sub_total_price + @order.shipping_fee
+
+	    if @order.save!
+		    #itemの在庫を減らす
+		    @order.order_details.each do |od|
+		    	item = Item.find(od.item_id)
+		    	item.stock = item.stock - od.quantity
+		    	item.save
+		    end
 		    #cartの中身を削除
-		    # redirect_to controller: 'cart_details', action: 'destroy'
+		    @cart_details.destroy_all
 		    # 完了画面を表示
-		    render :action => 'commit'
+		    redirect_to order_path(@order.id)
 		else
 			# NG。入力画面を再表示
-		    @cart_detail = CartDetail.all
-			@cart_detail = current_user.cart_details
-			@orders = Order.find(1)
 	    	render :action => 'new'
 	    end
     end

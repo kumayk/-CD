@@ -20,7 +20,11 @@
           <p class="card-link list-group-item label">
             <%= item.label.label_name %>
           </p>
-          <%= link_to "詳細", item_path(item.id) %>
+          <% if admin_signed_in? %>
+            <%= link_to "詳細", admin_item_path(item.id) %>
+          <% else %>
+            <%= link_to "詳細", item_path(item.id) %>
+          <% end %>
         </ul>
       <% end %>
     </div>

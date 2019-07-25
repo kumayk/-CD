@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<h4>購入履歴詳細（注文日：@order.created_at）</h4>
+		<h4>購入履歴詳細（注文日：<%= @order.created_at %>）</h4>
 		<div class="card">
 		  <ul class="list-group list-group-flush">
 		    <li class="list-group-item">
@@ -14,13 +14,13 @@
 					    </tr>
 					</thead>
 					<tbody>
-						<% orders.each do |order| %>
+						<% @order.order_details.each do |order| %>
 						    <tr>
 						    	<% sum = 0 %>
-							    <td><%= order.item_disk_name %></td>
-							    <td><%= order.order_detail.quantity %>枚</td>
+							    <td><%= order.item.disk_name %></td>
+							    <td><%= order.quantity %>枚</td>
 							    <td><%= order.item.price %>円</td>
-							    <% sub_total = order.item.price.to_i * order.order_detail.quantity.to_i %>
+							    <% sub_total = order.item.price.to_i * order.quantity.to_i %>
 							    <% sum += sub_total %>
 							    <td><%= sub_total %>円</td>
 							</tr>
@@ -28,11 +28,11 @@
 					</tbody>
 				</table>
 			</li> 
-		    <li class="list-group-item">@order.shipping_address</li>
-		    <li class="list-group-item">合計<%= sum + 500 %>円（税込）</li>
-		    <li class="list-group-item">配送先<%= @order.shipping_address.address %></li>
-		    <li class="list-group-item">支払い方法<%=@order.order_detail.order.payment %></li>
-		    <li class="list-group-item">@order.order_status</li>
+		    <li class="list-group-item"><%= @order.shipping_address %></li>
+   		    <li class="list-group-item">合計<%= @order.total_price %>円（税込）</li>
+		    <li class="list-group-item">配送先<%= @order.shipping_address %></li>
+		    <li class="list-group-item">支払い方法<%=@order.payment %></li>
+		    <li class="list-group-item"><%= @order.order_status %></li>
 		  </ul>
 		</div>
 	</div>

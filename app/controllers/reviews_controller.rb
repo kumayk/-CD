@@ -27,3 +27,4 @@ private
       params.require(:review).permit(:review_comment, :item_id)
     end
 end
+

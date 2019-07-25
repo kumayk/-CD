@@ -18,7 +18,7 @@
 			<div class="items" style="text-align: center; margin-left: 20px;">
       			<% @items.each do |item| %>
         			<ul class="list-group col-lg-3" style="width: 230px;">
-						<li class="list-group-item"><%= attachment_image_tag item, :image, :fill, 180, 180, fallback: "no_image.png", size: '180x180' %></li>
+						<li class="list-group-item"><%= attachment_image_tag item, :image, :fill, 180, 180, size: '180x180' %></li>
 						<li class="list-group-item"><%= item.disk_name %></li>
 						<li class="list-group-item"><%= item.artist.artist_name %></li>
 						<li class="list-group-item"><%= item.price %>円（税込）</li>
