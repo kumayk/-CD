@@ -2,11 +2,11 @@
 
 <%= form_for(@order , url: orders_commit_path) do |f| %>
 
-<h4> 送付先</h4>
+<h4>◾️ 送付先</h4>
 <%= f.hidden_field :shipping_address %>
 <%= @order.shipping_address %>
 
-<h4> 支払い方法</h4>
+<h4>◾️ 支払い方法</h4>
 <%= f.hidden_field :payment %>
 <%= @order.payment %>
 
@@ -16,6 +16,32 @@
 		<%= od.hidden_field :user_id %>
 	   	<%= od.hidden_field :item_id %>
 	<% end %>
+
+		<h5>◾️　購入内容</h5>
+
+	<table>
+			<tr>
+			   <th>購入商品</th>
+			   <th>枚数</th>
+			   <th>価格</th>
+			   <th>小計</th>
+			</tr>
+
+	    <% @cart_detail.each do |cart_detail| %>
+			<tr>
+			   <td>
+			    <%= cart_detail.item.disk_name %></td>
+			   <td>
+			    <%= cart_detail.quantity %></td>
+			   <td>
+			    <%= cart_detail.item.price %></td>
+			   <td>
+			    <%= cart_detail.quantity * cart_detail.item.price %></td>
+			</tr>
+	    <% end %>
+	</table>
+
+	<p>送料　¥500</p>
 
 
 <div>
