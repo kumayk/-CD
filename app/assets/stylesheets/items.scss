@@ -1,3 +1,23 @@
-// Place all the styles related to the items controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.main-visual {
+  width: 100%;
+  height: 500px;
+  background-position: center;
+}
+.image1{
+  background-image: url(cd_shop.jpg);
+}
+.image2{
+  background-image: url(avicii.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.image3{
+  background-image: url(aaa.jpg);
+}
+.image4{
+  background-image: url(bbb.jpg);
+}
+
+.recommend {
+  font-family:"Comic Sans MS";
+}

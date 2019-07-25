@@ -18,14 +18,17 @@
            <!-- 販売ステータスの表示 -->
            <%= @item.item_status %>
            <!-- 個数選択ボックス -->
-         <% if @item.item_status == "販売中" %>
+         <% if @item.item_status == "販売中" and if user_signed_in? %>
            <%= form_for @cart do |t| %>
            	   <%= t.hidden_field :item_id, :value => @item.id %>
 	           <%= t.select :quantity, @current_stock %>個
 	           <%= t.submit "カートに追加", class: "btn btn-danger" %>
 	       <% end %>
+	       <% end %>
 	     <% elsif @item.item_status == "販売停止中"%>
            <button type="button" class="btn btn-danger" disabled="disabled">選択できません</button>
+         <% else %>
+           <button type="button" class="btn btn-danger" disabled="disabled">ログインしてください</button>
          <% end %>
 
         </div>

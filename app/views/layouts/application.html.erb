@@ -8,6 +8,9 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="jQuery.js"></script>
+    <script src="skippr.min.js"></script>
+
   </head>
 
   <body>
@@ -34,13 +37,14 @@
 
                     <li><%= link_to current_user.last_name, user_path(current_user.id), class: "glyphicon glyphicon-user , text-muted" %></li>
                     <li><%= link_to "_Cart", "/cart_details/#{current_user.id}", class: "glyphicon glyphicon-shopping-cart , text-muted" %></li>
-                    <li><%= link_to "_Sign out", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out, text-muted" %></li>
+                    <li><%= link_to "_Sign out", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out , text-muted" %></li>
 
                   </ul>
                 <%else%>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
-                    <li><%=link_to "Sign Up", new_user_registration_path %></li>
-                    <li><%=link_to "Log In", new_user_session_path %></li>
+                    <li><%=link_to "_Sign Up", new_user_registration_path, class: "glyphicon glyphicon-log-in , text-muted" %></li>
+                    <li><%=link_to "_Log In", new_user_session_path, class: "glyphicon glyphicon-home , text-muted" %></li>
+                    </li>
                   </ul>
                 <%end%>
               </div>
