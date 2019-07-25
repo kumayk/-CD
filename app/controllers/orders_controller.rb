@@ -49,9 +49,14 @@ class OrdersController < ApplicationController
 
     def commit
 	    @order = Order.new(order_params)
+	    @order.sub_total_price = 0
 	    @cart_details = CartDetail.all
 		@cart_details = current_user.cart_details
 		@order.user_id = current_user.id
+	    @cart_details.each do |cd|
+	    	@order.sub_total_price += cd.quantity * cd.item.price
+		end
+		@order.total_price = @order.sub_total_price + @order.shipping_fee
 
 	    if @order.save!
 		    #itemの在庫を減らす
@@ -63,7 +68,7 @@ class OrdersController < ApplicationController
 		    #cartの中身を削除
 		    @cart_details.destroy_all
 		    # 完了画面を表示
-		    render :action => 'commit'
+		    redirect_to order_path(@order.id)
 		else
 			# NG。入力画面を再表示
 	    	render :action => 'new'
