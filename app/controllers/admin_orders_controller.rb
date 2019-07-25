@@ -1,11 +1,11 @@
 class AdminOrdersController < ApplicationController
 before_action :authenticate_admin
 def index
-	# @orders = Order.page(params[:page]).reverse_order
+	@orders = Order.page(params[:page]).reverse_order
 end
 
 def show
-	# @order = Orders.find(params[:id])
+	@order = Order.find(params[:id])
 end
 
 def update

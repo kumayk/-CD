@@ -24,9 +24,11 @@
                   <span class="icon-bar"></span>
                 </button>
                 <div class="navbar-brand">
-
-
-                  <%= link_to "俺のCD", "/", class: "title", :style=>"text-decoration: none;"%>
+                  <% if admin_signed_in? %>
+                    <%= link_to "俺のCD", admin_path, class: "title", :style=>"text-decoration: none;"%>
+                  <% else %>
+                    <%= link_to "俺のCD", root_path, class: "title", :style=>"text-decoration: none;"%>
+                  <% end %>
                 </div>
               </div>
               <div class="collapse navbar-collapse clearfix col-sm-3" id="navbarEexample3">
@@ -36,7 +38,11 @@
                     <li><%= link_to "Cart", cart_details_path(current_user) %></li>
                     <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete%></li>
                   </ul>
-                <%else%>
+                <% elsif admin_signed_in? %>
+                  <ul class="nav navbar-nav" style="margin-top:5px;">
+                    <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete%></li>
+                  </ul>
+                <% else %>
                   <ul class="nav navbar-nav" style="margin-top:5px;">
                     <li><%=link_to "Sign Up", new_user_registration_path %></li>
                     <li><%=link_to "Log In", new_user_session_path %></li>
