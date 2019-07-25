@@ -32,8 +32,8 @@
                               <td><%= od.item.disk_name %></td>
                               <td><%= od.order.total_price %></td>
                               <td><%= od.created_at %></td>
-                              <td><%= @user.shipping_addresses.address %></td>
-                              <td><%= od.payment%></td>
+                              <td><%= od.order.shipping_address %></td>
+                              <td><%= od.order.payment%></td>
                             </tr>
                         <% end %>
                     </tbody>
