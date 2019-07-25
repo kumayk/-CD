@@ -15,8 +15,7 @@
 				        </div>
 			        </div>
 			        <%= form_for cart do |f| %>
-
-
+			        <td><%= f.number_field :quantity %></td>
 			          <td><%= f.submit '数量変更' %></td>
 			        <% end %>
 			    <% end %>
