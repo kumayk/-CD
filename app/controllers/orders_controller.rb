@@ -12,7 +12,6 @@ class OrdersController < ApplicationController
 		@cart_detail = current_user.cart_details
 		@order = Order.new
 	    @order_detail = @order.order_details.build
-		render :action => 'new'
 	end
 
 	def shipping_address_new
@@ -31,7 +30,7 @@ class OrdersController < ApplicationController
 	    @cart_detail = CartDetail.all
 		@cart_detail = current_user.cart_details
 	    @order = Order.new(order_params)
-
+		@order.user_id = current_user.id
 	    current_user.cart_details.each do |detail|
 			@order.order_details.build(quantity: detail.quantity, user_id: detail.user_id, item_id: detail.item_id)
 	    end

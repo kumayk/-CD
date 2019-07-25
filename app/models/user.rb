@@ -3,6 +3,7 @@ class User < ApplicationRecord
 	has_many :reviews, inverse_of: :user
 	has_many :cart_details, inverse_of: :user
 	has_many :order_details, inverse_of: :user
+	has_many :orders, inverse_of: :user
 
 
 	acts_as_paranoid
