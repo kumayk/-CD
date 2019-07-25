@@ -1,4 +1,6 @@
 class AdminUsersController < ApplicationController
+    before_action :authenticate_admin
+
 	PER = 8
 
     def index
@@ -7,7 +9,7 @@ class AdminUsersController < ApplicationController
 
     def show
       @user = User.find(params[:id])
-      @orders = OrderDetail.where(user_id: @user.id)
+      @order = Order.where(user_id: @user.id)
     end
 
     def edit
