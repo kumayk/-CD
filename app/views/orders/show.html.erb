@@ -28,11 +28,12 @@
 					</tbody>
 				</table>
 			</li> 
-		    <li class="list-group-item"><%= @order.shipping_address %></li>
-   		    <li class="list-group-item">合計<%= @order.total_price %>円（税込）</li>
-		    <li class="list-group-item">配送先<%= @order.shipping_address %></li>
-		    <li class="list-group-item">支払い方法<%=@order.payment %></li>
-		    <li class="list-group-item"><%= @order.order_status %></li>
+			<div class="order-info" style="text-align: center;">
+	   		    <li class="list-group-item">合計　　<%= @order.total_price %>円（税込）</li>
+			    <li class="list-group-item">配送先　　<%= @order.shipping_address %></li>
+			    <li class="list-group-item">支払い方法　　<%=@order.payment %></li>
+			    <li class="list-group-item">受注状況　　<%= @order.order_status %></li>
+			</div>
 		  </ul>
 		</div>
 	</div>
