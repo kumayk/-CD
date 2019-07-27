@@ -2,7 +2,7 @@
 	<div class="row">
 		<h4 class="edit-title" style="text-align: center;">ユーザー編集</h4>
 
-		<%= form_for(@user) do |f| %>
+		<%= form_for(@user, :url => {:controller => :admin_users, :action => :update}) do |f| %>
 
 			<div class="name-form container">
           		<div class="row">
@@ -85,11 +85,6 @@
 	          <div class="row">
 	            <div class="space col-sm-2"></div>
 	            <div class="field col-sm-5">
-	              <%= f.label :パスワード %>
-	              <% if @minimum_password_length %>
-	              <em>(<%= @minimum_password_length %> 文字以上)</em>
-	              <% end %><br />
-	              <%= f.password_field :password, autocomplete: "new-password", :size => "60*60" %>
 	            </div>
 	            <div class="space col-sm-5"></div>
 	          </div>

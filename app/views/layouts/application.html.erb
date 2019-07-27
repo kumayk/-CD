@@ -8,66 +8,74 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <script src="jQuery.js"></script>
+    <script src="skippr.min.js"></script>
+
   </head>
 
   <body>
     <header class="clearfix">
-      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="container">
             <div class="row">
-              <div class="navbar-header col-sm-6">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample3">
+              <div class="page-header">
+                <div class="col-sm-4">
+                  <button type="button" class="navbar-toggle collapsed"data-toggle="collapse"data-target="#navbarEexample8">
                   <span class="sr-only">Toggle navigation</span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-brand">
+                  </button>
+
+                 <div class="navbar-brand">
                   <% if admin_signed_in? %>
-                    <%= link_to "俺のCD", admin_path, class: "title", :style=>"text-decoration: none;"%>
+                    <%= link_to admin_path do %>
+                    <%= image_tag 'logo.png', size:'120x80' %>
+                    <% end %>
                   <% else %>
-                    <%= link_to "俺のCD", root_path, class: "title", :style=>"text-decoration: none;"%>
+                    <a href="/"><%= image_tag 'logo.png', size:'120x80' %></a>
                   <% end %>
+                 </div>
                 </div>
-              </div>
-              <div class="collapse navbar-collapse clearfix col-sm-3" id="navbarEexample3">
-                <% if user_signed_in? %>
-                  <ul class="nav navbar-nav" style="margin-top:5px;">
-                    <li><%= link_to current_user.last_name, user_path(current_user.id) %></li>
-                    <li><%= link_to "Cart", cart_details_path(current_user) %></li>
-                    <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete%></li>
-                  </ul>
-                <% elsif admin_signed_in? %>
-                  <ul class="nav navbar-nav" style="margin-top:5px;">
-                    <li><%= link_to "Sign out", destroy_admin_session_path, :method => :delete%></li>
-                  </ul>
-                <% else %>
-                  <ul class="nav navbar-nav" style="margin-top:5px;">
-                    <li><%=link_to "Sign Up", new_user_registration_path %></li>
-                    <li><%=link_to "Log In", new_user_session_path %></li>
-                  </ul>
-                <%end%>
-              </div>
 
-
-              <div class="container">
-                <div class="row">
-                  <%= search_form_for @search, url: items_search_path, html: { method: :post} do |f| %>
-                    <div class="form-group col-sm-1" style="padding: 0; margin: 16px 5px;">
-                      <%= f.text_field :disk_name_cont, placeholder:  '検索キーワード' %>
-                    </div>
-
-                    <div class="actions col-sm-1" style="padding: 0; margin: 16px 53px;"><%= f.submit '検索' %></div>
-
+              <div class="clearfix col-sm-8">
+               <div class="collapse navbar-collapse"  id="navbarEexample8">
+                <div class="navbar-right">
+                  <% if user_signed_in? %>
+                    <ul class="nav navbar-nav" style="margin-top:5px;">
+                     <li><%= link_to current_user.last_name, user_path(current_user.id), class: "glyphicon glyphicon-user , text-muted" %></li>
+                     <li><%= link_to "_Cart", "/cart_details", class: "glyphicon glyphicon-shopping-cart , text-muted" %></li>
+                     <li><%= link_to "_Sign out", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out , text-muted" %></li>
+                    </ul>
+                  <% elsif admin_signed_in? %>
+                    <ul class="nav navbar-nav" style="margin-top:5px;">
+                     <li><%= link_to "_Sign out", destroy_admin_session_path, :method => :delete, class: "glyphicon glyphicon-log-out , text-muted" %></li>
+                    </ul>
+                  <% else %>
+                    <ul class="nav navbar-nav" style="margin-top:5px;">
+                      <li><%=link_to "_Sign Up", new_user_registration_path, class: "glyphicon glyphicon-log-in , text-muted" %></li>
+                      <li><%=link_to "_Log In", new_user_session_path, class: "glyphicon glyphicon-home , text-muted" %></li>
+                    </ul>
                   <% end %>
+
+                   <ul class="nav navbar-nav" style="margin-top:5px;">
+                     <%= search_form_for @search, url: items_search_path, html: { method: :post} do |f| %>
+                         <div class="form-group col-sm-12" style="padding: 0; margin: 16px 5px;">
+                           <li><%= f.text_field :disk_name_cont, placeholder: '検索キーワード' %><%= f.submit '検索' %></li>
+                         </div>
+                         </div>
+                    <% end %>
+                   </ul>
+
                 </div>
-              </div>
+               </div>
+             </div>
             </div>
           </div>
-        </div>
-      </nav>
-    </header>
+         </div>
+       </div>
+    </body>
+   </header>
 
     <% if flash[:notice] %>
       <div class="container">
@@ -83,21 +91,27 @@
 
       <%= yield %>
 
-
-    <footer class="container well">
+ <div class="row">
+  <footer class="footer style-2">
+    <div class="container">
       <div class="row">
         <div class="footer-title col-lg-6">
           <h3>俺のCD</h3>
         </div>
-        <div class="footer-store-info col-lg-6">
-          <p>店舗情報</p><br>
-          <p>0773-22-3456</p><br>
-          <p>〒390-1243 長野県松本市神林5300</p><br>
-          <p>Open 7days 10AM-7PM</p>
+          <div class="footer-store-info col-lg-6">
+            <p>店舗情報</p>
+            <p>0773-22-3456</p>
+            <p>〒390-1243 長野県松本市神林5300</p>
+            <p>Open 7days 10AM-7PM</p>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
 
-  </body>
+ 　　　　 <div class="col-xs-3 col-xs-offset-9">
+        　　<p>CopyRight Orenocd.inc</p>
+     　　 </div>
+
+ </div>
 </html>
 
