@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row">
-		<div class="user_info table-responsive col-md-12 col-xs-12">
+		<div class="user_info table-responsive col-md-4 col-xs-4">
             <table class="table">
                 <thead>
                     <div>
@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="container">
-            <div class="order table-responsive col-md-12 col-xs-12">
+            <div class="order col-md-8 col-xs-8">
                 <table class="table">
                     <thead>
                         <div>
@@ -42,12 +42,12 @@
                         </div>
                     </thead>
                     <tbody>
-                        <ul>
-                        <% @order.each do |order| %>
-                           <th><%= link_to order.created_at, admin_order_path(order.id) %></th>
-                           <th><%= order.shipping_address %></th>
-                        <% end %>
-                        </ul>
+                        <tr>
+                          <% @order.each do |order| %>
+                             <td><%= link_to order.created_at, admin_order_path(order.id) %></td>
+                             <td><%= order.shipping_address %></td>
+                          <% end %>
+                        </tr>
                     </tbody>
                 </table>
             </div>
