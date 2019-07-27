@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main-visual {
   width: 100%;
   height: 500px;
@@ -8,8 +14,6 @@
 }
 .image2{
   background-image: url(avicii.jpg);
-  background-size: cover;
-  background-position: center;
 }
 .image3{
   background-image: url(aaa.jpg);
@@ -20,4 +24,6 @@
 
 .recommend {
   font-family:"Comic Sans MS";
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

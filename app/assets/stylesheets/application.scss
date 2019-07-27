@@ -16,9 +16,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .title {
-	color: black;
-	font-size: 30px;
+  color: black;
+  font-size: 30px;
+}
+
+.page-header {
+  padding-bottom: 108px;
+  margin: 40px 20px;
+  border-bottom: 1px solid #eeeeee;
+    }
+
+.footer {
+  background-color: black;
+  margin: 50px 0px 10px 0px;
+  padding: 20px 300px;
+  -webkit-text-fill-color: gray;
 }
