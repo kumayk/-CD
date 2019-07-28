@@ -44,7 +44,7 @@
                   <% if user_signed_in? %>
                     <ul class="nav navbar-nav" style="margin-top:5px;">
                      <li><%= link_to current_user.last_name, user_path(current_user.id), class: "glyphicon glyphicon-user , text-muted" %></li>
-                     <li><%= link_to "_Cart", "/cart_details/#{current_user.id}", class: "glyphicon glyphicon-shopping-cart , text-muted" %></li>
+                     <li><%= link_to "_Cart", "/cart_details/", class: "glyphicon glyphicon-shopping-cart , text-muted" %></li>
                      <li><%= link_to "_Sign out", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out , text-muted" %></li>
                     </ul>
                   <% elsif admin_signed_in? %>
