@@ -11,9 +11,12 @@ class UsersController < ApplicationController
 
 	def update
 		user = User.find(params[:id])
-	    user.update(user_params)
-	    sign_in(user, bypass: true)
-	    redirect_to user_path(user.id)
+		    if user.update(user_params)
+			    sign_in(user, bypass: true)
+			    redirect_to user_path(user.id)
+			else
+				redirect_to edit_user_path(user.id) ,notice: '入力した値に誤りがあるか、入力されていない箇所があります'
+			end
 	end
 
     private
