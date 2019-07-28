@@ -1,53 +1,57 @@
 <div class="container">
 	<div class="row">
-		<div class="user_info table-responsive col-md-12 col-xs-12">
+		<div class="user_info table-responsive col-md-4 col-xs-4">
             <table class="table">
                 <thead>
                     <div>
                         <tr>
-                            <th>姓/名<br>
-                                カナ姓/カナ名
+                            <th><%= @user.last_name %>/<%= @user.first_name %><br>
+                                <%= @user.last_name_kana %>/<%= @user.first_name %>
+                            </th>
+                            <th>
+                                <div style="float: right;">
+                                    <%= link_to "編集", edit_admin_user_path,class:"btn btn-warning " %>
+                                </div>
                             </th>
                         </tr>
                     </div>
                 </thead>
                 <tbody>
                     <tr>
-                      <th>・アドレス</th><td>a</td>
+                      <th>・アドレス</th>
+                      <td><%= @user.email %></td>
                     </tr>
                     <tr>
-                      <th>・電話番号</th><td>a</td>
+                      <th>・電話番号</th>
+                      <td><%= @user.phone_number%></td>
                     </tr>
                     <tr>
-                      <th>・住所(郵便番号)</th><td>a</td>
+                      <th>・郵便番号/住所</th>
+                      <td>〒<%= @user.zip_code %>/<%= @user.address %></td>
                     </tr>
                     <tr>
-                      <th>・登録日</th><td>a</td>
+                      <th>・登録日</th>
+                      <td><%= @user.created_at %></td>
                     </tr>
                 </tbody>
             </table>
-            <div style="float: right;">
-                <%= link_to "編集", edit_admin_user_path,class:"btn btn-default " %>
-            </div>
         </div>
         <div class="container">
-            <div class="order table-responsive col-md-12 col-xs-12">
+            <div class="order col-md-6 col-xs-6">
                 <table class="table">
                     <thead>
-                        <div>
                             <tr>
                                 <th>注文履歴</th>
                                 <th>配送先</th>
                             </tr>
-                        </div>
                     </thead>
                     <tbody>
-                        <ul>
                         <% @order.each do |order| %>
-                           <th><%= link_to order.created_at, admin_order_path(order.id) %></th>
-                           <th><%= order.shipping_address %></th>
+                            <tr>
+                                <td><%= link_to order.created_at, admin_order_path(order.id) %></td>
+                                <td><%= order.shipping_address %></td>
+                            </tr>
                         <% end %>
-                        </ul>
                     </tbody>
                 </table>
             </div>

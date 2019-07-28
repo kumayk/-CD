@@ -2,32 +2,38 @@
 <div class="container">
 	<div class="row">
 		<div class="cart_index col-md-8 col-xs-12">
-			<h2 class="p-3 mb-2" style="width: 300px; padding: 20px; text-align: center;" >カート一覧</h2>
-			    <% @cart.each do |cart| %>
-			        <div class="row cart_item" style="margin-bottom: 20px" >
-				        <div class="item_img col-md-4">
-					      <%= attachment_image_tag cart.item, :image, :fill, 150, 150, fallback: "no_img.png", size:'150x150' %>
+			<h2 class="p-3 mb-2" style="width: 300px; text-align: center;" >カート一覧</h2>
+			<table style="border-collapse: collapse; border-spacing: 0; width: 90%; text-align: center;">
+				<% @cart.each do |cart| %>
+			        <tr class="row cart_item" style="margin-bottom: 20px; border-top: solid 3px #eee; cursor: pointer;" >
+				        <td class="item_img col-md-4 col-xs-6">
+					      <%= attachment_image_tag cart.item, :image, :fill, 50, 50, fallback: "no_img.png", size:'50x50' %>
+				        </td>
+				        <div class="item_info col-md-4 col-xs-6">
+				        	<td>
+				        		<h3><%= cart.item.disk_name %></h3>
+				        	</td>
+				        	<td>
+				        		<h3>￥<%= cart.item.price %></h3>
+				        	</td>
 				        </div>
-				        <div class="item_info col-md-8">
-				        	 <%= cart.item.disk_name %><br>
-				        	 ￥<%= cart.item.price %><br>
-				        	 <%= link_to "削除", cart_detail_path(cart.id), method: :delete %>
-				        </div>
-			        </div>
-			        <%= form_for cart do |f| %>
-			        <td><%= f.number_field :quantity %></td>
-			          <td><%= f.submit '数量変更' %></td>
-			        <% end %>
+			            <%= form_for cart do |f| %>
+			        　  <td><%= f.number_field :quantity, min:"1", max:cart.item.stock %><%= f.submit '数量変更' %></td>
+			            <% end %>
+			            <td><%= link_to "削除", cart_detail_path(cart.id), method: :delete %></td>
+			        </tr>
 			    <% end %>
-
+			</table>
         </div>
 
-        <div class="price_box col-md-4 col-xs-12">
-          <h2 class="p-3 mb-2" style="width: 300px; padding: 20px; text-align: center; float-left;">小計<%= current_user.cart_details.sum(:quantity) %>点</h2>
+        <div class="price_box col-md-4 col-xs-12" style="font-weight: bold; color: black; background: #FFF; border: solid 3px #6091d3; border-radius: 10px; margin-top: 75px; margin-bottom: 50px;">
+          <h2 class="p-3 mb-2" style="width: 300px; padding: 20px; float-left;">小計<%= current_user.cart_details.sum(:quantity) %>点</h2>
             <div class="item_add_price">
-          	  <h2 style="text-align: center;" >￥<%= @totalprice %></h2>
+          	  <h2 style="padding: 20px; float-left; text-align: center;" >￥<%= @totalprice %></h2>
             </div>
-            <%= link_to "レジへ進む", new_order_path(current_user) %>
+            <div style="text-align: center;">
+            <%= link_to "レジへ進む", new_order_path(current_user), class:"btn btn-warning" %>
+            </div>
         </div>
     </div>
 </div>
