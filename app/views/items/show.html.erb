@@ -5,13 +5,15 @@
 
       <p class="bg-info text-left">✾商品詳細</p>
 
-      <div class="row">
+      <div class="row" style="margin-bottom: 10px;">
        <div class="mx-auto">
         <div class="col-xs-4 col-xs-offset-2">
          <%= attachment_image_tag @item, :image, class: "profile-thumb", fallback: "no_img.png", size: "240x240" %>
         </div>
 
         <div class="col-xs-4">
+         <br>
+         <br>
          <p>レーベル：<%= @item.label.label_name %></p>
          <p>ジャンル：<%= @item.category.category_name %></p>
          <p>価格：<%= @item.price %></p>

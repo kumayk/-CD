@@ -1,12 +1,13 @@
-<h3>購入情報確認</h3>
+<div style="text-align:center;">
+<h3><b>購入情報確認</b></h3>
 
 <%= form_for(@order , url: orders_commit_path) do |f| %>
 
-<h4>◾️ 送付先</h4>
+<h5>◾️ 送付先</h5>
 <%= f.hidden_field :shipping_address %>
 <%= @order.shipping_address %>
 
-<h4>◾️ 支払い方法</h4>
+<h5>◾️ 支払い方法</h5>
 <%= f.hidden_field :payment %>
 <%= @order.payment %>
 
@@ -18,16 +19,18 @@
 	<% end %>
 
 		<h5>◾️　購入内容</h5>
-
-	<table>
+   <table class="table" style="width: 50%; margin: 0 auto; border-style:solid ; border-width:1px ;">
+		<thead>
 			<tr>
-			   <th>購入商品</th>
-			   <th>枚数</th>
-			   <th>価格</th>
-			   <th>小計</th>
+			   <th style="text-align: center;">購入商品</th>
+			   <th style="text-align: center;">枚数</th>
+			   <th style="text-align: center;">価格</th>
+			   <th style="text-align: center;">小計</th>
 			</tr>
+	    </thead>
 
-	    <% @cart_detail.each do |cart_detail| %>
+        <tbody>
+	      <% @cart_detail.each do |cart_detail| %>
 			<tr>
 			   <td>
 			    <%= cart_detail.item.disk_name %></td>
@@ -38,15 +41,17 @@
 			   <td>
 			    <%= cart_detail.quantity * cart_detail.item.price %></td>
 			</tr>
-	    <% end %>
-	</table>
+	      <% end %>
+	    </tbody>
+   </table>
+
+   <br>
 
 	<p>送料　¥500</p>
 
 
-<div>
-  <%= f.submit %>
-</div>
-
-
+    <div>
+        <%= f.submit '注文を確定する', class:"btn btn-danger glyphicon glyphicon-wrench", :style=>"width: 200px;" %>
+    </div>
 <% end %>
+</div>

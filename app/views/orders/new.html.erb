@@ -1,4 +1,5 @@
-<h3>購入情報入力</h3>
+<div style="text-align:center;">
+<h3><b>購入情報入力</b></h3>
 
 
 <!-- 配送先 -->
@@ -32,34 +33,35 @@
 
 
 <!-- カート内商品表示 -->
-	<h5>◾️　購入内容</h5>
-
-	<table>
+  <h5>◾️　購入内容</h5>
+   <table class="table" style="width: 50%; margin: 0 auto; border-style:solid ; border-width:1px ;">
+		<thead>
 			<tr>
-			   <th>購入商品</th>
-			   <th>枚数</th>
-			   <th>価格</th>
-			   <th>小計</th>
+			   <th style="text-align: center;">購入商品</th>
+			   <th style="text-align: center;">枚数</th>
+			   <th style="text-align: center;">価格</th>
+			   <th style="text-align: center;">小計</th>
 			</tr>
-
+		</thead>
+        
+        <tbody>
 	    <% @cart_detail.each do |cart_detail| %>
 			<tr>
-			   <td>
-			    <%= cart_detail.item.disk_name %></td>
-			   <td>
-			    <%= cart_detail.quantity %></td>
-			   <td>
-			    <%= cart_detail.item.price %></td>
-			   <td>
-			    <%= cart_detail.quantity * cart_detail.item.price %></td>
+			   <td> <%= cart_detail.item.disk_name %></td>
+			   <td> <%= cart_detail.quantity %></td>
+			   <td> <%= cart_detail.item.price %></td>
+			   <td> <%= cart_detail.quantity * cart_detail.item.price %></td>
 			</tr>
 	    <% end %>
-	</table>
+	    </tbody>
+   </table>
+
+    <br>
 
 	<p>送料　¥500</p>
 
 	<div>
-		<%= f.submit %>
+		<%= f.submit '次に進む', class:"btn btn-danger glyphicon glyphicon-wrench", :style=>"width: 200px;" %>
 	</div>
 
 <% end %>
@@ -69,6 +71,8 @@
 <li><%= message %></li>
 <% end %>
 <% end %>
+
+</div>
 
 
 
