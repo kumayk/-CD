@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2019_07_25_085527) do
+=======
 ActiveRecord::Schema.define(version: 2019_07_28_045005) do
+>>>>>>> aki/master
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
