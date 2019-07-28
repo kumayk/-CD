@@ -8,18 +8,17 @@ class AdminUsersController < ApplicationController
     end
 
     def show
-      @user = User.find(params[:id])
+      @user = User.with_deleted.find(params[:id])
       @order = Order.where(user_id: @user.id)
     end
 
     def edit
-	  @user = User.find(params[:id])
+	  @user = User.with_deleted.find(params[:id])
     end
 
     def update
 	  user = User.find(params[:id])
 	  user.update(user_params)
-	  sign_in(user, bypass: true)
 	  redirect_to admin_user_path(user.id)
     end
 

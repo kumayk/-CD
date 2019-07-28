@@ -46,7 +46,8 @@
                     <br>
                     <ul class="nav navbar-nav" style="margin-top:5px;">
                      <li><%= link_to current_user.last_name, user_path(current_user.id), class: "glyphicon glyphicon-user , text-muted" %></li>
-                     <li><%= link_to "_Cart", "/cart_details/#{current_user.id}", class: "glyphicon glyphicon-shopping-cart , text-muted" %></li>
+                     <li><%= link_to "_Cart", "/cart_details/", class: "glyphicon glyphicon-shopping-cart , text-muted" %></li>
+
                      <li><%= link_to "_Sign out", destroy_user_session_path, :method => :delete, class: "glyphicon glyphicon-log-out , text-muted" %></li>
                     </ul>
                   <% elsif admin_signed_in? %>
@@ -97,27 +98,22 @@
 
       <%= yield %>
 
- <div class="row">
   <footer class="footer style-2">
     <div class="container">
       <div class="row">
-        <div class="footer-title col-lg-6">
+        <div class="footer-title col-lg-6" style="text-align: left;">
           <h3>俺のCD</h3>
         </div>
-          <div class="footer-store-info col-lg-6">
+          <div class="footer-store-info col-lg-6" style="margin-top: 10px;">
             <p>店舗情報</p>
             <p>0773-22-3456</p>
             <p>〒390-1243 長野県松本市神林5300</p>
-            <p>Open 7days 10AM-7PM</p>
+            <p style="float: left; margin-right: 150px">Open 7days 10AM-7PM</p>
+            <p>CopyRight Orenocd.inc</p>
         </div>
       </div>
     </div>
   </footer>
-
- 　　　　 <div class="col-xs-3 col-xs-offset-9">
-        　　<p>CopyRight Orenocd.inc</p>
-     　　 </div>
-
  </div>
 </html>
 

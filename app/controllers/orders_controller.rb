@@ -10,8 +10,12 @@ class OrdersController < ApplicationController
 	def new
 		@cart_detail = CartDetail.all
 		@cart_detail = current_user.cart_details
+		if @cart_detail.exists?
 		@order = Order.new
 	    @order_detail = @order.order_details.build
+		else
+			redirect_to cart_details_path(user_id: current_user.id),notice: 'カートが空っぽです'
+		end
 	end
 
 	def shipping_address_new

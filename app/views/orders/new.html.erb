@@ -16,16 +16,16 @@
 	<div class="field">
 		  <span id= "hoge" class="job_type_engine">◾️　支払い方法</span><br>
 			  <div class="radio-inline">
-				    <%= f.radio_button :payment, :bank, checked: "checked" %>
-				    <%= f.label :bank, class: "job_type_label" %>
+				    <%= f.radio_button :payment, :振り込み, checked: "checked" %>
+				    <%= f.label :振り込み, class: "job_type_label" %>
 			  </div>
 			  <div class="radio-inline">
-				 　　<%= f.radio_button :payment, :cash %>
-					<%= f.label :cash, class: "job_type_label" %>
+				 　　<%= f.radio_button :payment, :代引き %>
+					<%= f.label :代引き, class: "job_type_label" %>
 			  </div>
 			  <div class="radio-inline">
-				    <%= f.radio_button :payment, :credit %>
-				    <%= f.label :credit, class: "job_type_label" %>
+				    <%= f.radio_button :payment, :クレジットカード %>
+				    <%= f.label :クレジットカード, class: "job_type_label" %>
 			  </div>
 	</div>
 
@@ -43,7 +43,7 @@
 			   <th style="text-align: center;">小計</th>
 			</tr>
 		</thead>
-        
+
         <tbody>
 	    <% @cart_detail.each do |cart_detail| %>
 			<tr>

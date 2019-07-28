@@ -52,7 +52,7 @@
                               <th scope="row"><%= od.order_id %></th>
                               <td><%= od.item.disk_name %></td>
                               <td><%= od.order.total_price %></td>
-                              <td><%= od.created_at %></td>
+                              <td><%= link_to od.created_at, order_path(id: od.order_id) %></td>
                               <td><%= od.order.shipping_address %></td>
                               <td><%= od.order.payment%></td>
                             </tr>
@@ -63,6 +63,4 @@
     	</div>
 	</div>
 </div>
-
-
 
