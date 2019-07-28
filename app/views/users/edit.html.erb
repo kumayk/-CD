@@ -108,10 +108,10 @@
 	          </div>
 	        </div>
 
-	        <div class="actions" style="text-align: center; margin: 40px 0; padding: 20px 40px">
-	          <%= f.submit "編集" %>
+	        <div class="actions" style="text-align: left; margin: 10px 0px 0px 170px; padding: 20px 40px">
+	          <%= f.submit "編集を保存", class:"btn btn-warning glyphicon glyphicon-wrench", :style=>"width: 200px;" %>
 	        </div>
-	        <button type="button" class="btn btn-warning" style="float: right; margin-bottom: 20px;"><%= link_to "退会",user_registration_path, method: :delete, "data-confirm" => "本当に退会しますか？"%></button>
+	        <button type="button" class="btn btn-danger" style="float: right; margin-bottom: 20px;"><%= link_to "退会",user_registration_path, method: :delete, "data-confirm" => "本当に退会しますか？"%></button>
 	        
         <% end %>
 

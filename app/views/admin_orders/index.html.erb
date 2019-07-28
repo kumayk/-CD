@@ -3,7 +3,7 @@
 		<h4>注文履歴一覧</h4>
 
 			<% if @orders.present? %>
-				<table class="table">
+				<table class="table" style="width: 100%;">
 
 				  <thead>
 				    <tr>
@@ -17,15 +17,17 @@
 				  </thead>
 
 				  <tbody>
-
+				    <% @orders.each do |od| %>
 					    <tr>
-					      <th scope="row"><%= @orders.id %></th>
-					      <td><%= @orders.user.last_name %><%= @orders.user.first_name %></td>
-					      <td><%= @orders.total_price %></td>
-					      <td><%= @orders.created_at %></td>
-					      <td><%= @orders.order_status %></td>
-					      <td><%= link_to "詳細", admin_order_path(@orders) %></td>
-					    </tr>
+					      <th scope="row"><%= od.id %></th>
+					      <td><%= od.user.last_name %><%= od.user.first_name %></td>
+					      <td><%= od.total_price %></td>
+					      <td><%= od.created_at %></td>
+					      <td><%= od.order_status %></td>
+					      <td><%= link_to "詳細", admin_order_path(od.id) %></td>
+					    </tr> 
+		 		    <% end %>
+
 
 				  </tbody>
 
