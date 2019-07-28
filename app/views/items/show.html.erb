@@ -5,30 +5,35 @@
 
       <p class="bg-info text-left">✾商品詳細</p>
 
-      <div class="row">
+      <div class="row" style="margin-bottom: 10px;">
        <div class="mx-auto">
         <div class="col-xs-4 col-xs-offset-2">
          <%= attachment_image_tag @item, :image, class: "profile-thumb", fallback: "no_img.png", size: "240x240" %>
         </div>
 
         <div class="col-xs-4">
+         <br>
+         <br>
          <p>レーベル：<%= @item.label.label_name %></p>
          <p>ジャンル：<%= @item.category.category_name %></p>
          <p>価格：<%= @item.price %></p>
            <!-- 販売ステータスの表示 -->
            <%= @item.item_status %>
            <!-- 個数選択ボックス -->
-         <% if @item.item_status == "販売中" and if user_signed_in? %>
+         <% if @item.item_status == "販売中" and if user_signed_in? and if @item.stock > 0 %>
            <%= form_for @cart do |t| %>
            	   <%= t.hidden_field :item_id, :value => @item.id %>
 	           <%= t.select :quantity, @current_stock %>個
 	           <%= t.submit "カートに追加", class: "btn btn-danger" %>
-	       <% end %>
+	         <% end %>
 	       <% end %>
 	     <% elsif @item.item_status == "販売停止中"%>
            <button type="button" class="btn btn-danger" disabled="disabled">選択できません</button>
-         <% else %>
+       <% elsif @item.stock == 0 %>
+           <button type="button" class="btn btn-danger" disabled="disabled">売り切れ中です</button>
+      　<% else %>
            <button type="button" class="btn btn-danger" disabled="disabled">ログインしてください</button>
+         <% end %>
          <% end %>
 
         </div>

@@ -20,8 +20,6 @@
   <h4>カテゴリ</h4>
    <%= f.collection_select :category_id, Category.all, :id, :category_name %>
    <p><%= link_to "カテゴリ追加", admin_items_category_path %></p>
-  <h4> ディスク</h4>
-   <%= f.text_field :disk_id %>
 
 
 <div>
