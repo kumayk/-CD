@@ -24,7 +24,7 @@
            <%= form_for @cart do |t| %>
            	   <%= t.hidden_field :item_id, :value => @item.id %>
 	           <%= t.select :quantity, @current_stock %>個
-	           <%= t.submit "カートに追加", class: "btn btn-danger" %>
+	           <%= t.submit "カートに追加", class: "btn btn-warning" %>
 	         <% end %>
 	       <% end %>
 	     <% elsif @item.item_status == "販売停止中"%>

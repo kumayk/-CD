@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-25.times do |i|
-     Item.create(disk_name: "テスト #{i}", stock: 50,price: 980, item_status:0)
+Admin.find_or_create_by(id: 1) do |admin|
+  admin.email = 'admin@admin'
+  admin.password = 'password'
 end
