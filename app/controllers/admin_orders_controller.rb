@@ -1,11 +1,11 @@
 class AdminOrdersController < ApplicationController
 before_action :authenticate_admin
 def index
-	@orders = Order.all
+	@orders = Order.with_deleted.all
 end
 
 def show
-	@order = Order.find(params[:id])
+	@order = Order.with_deleted.find(params[:id])
 end
 
 def update

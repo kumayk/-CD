@@ -18,9 +18,10 @@
 
 				  <tbody>
 				    <% @orders.each do |od| %>
+				    	<% user = User.with_deleted.find(od.user_id) %>
 					    <tr>
 					      <th scope="row"><%= od.id %></th>
-					      <td><%= od.user.last_name %><%= od.user.first_name %></td>
+					      <td><%= user.last_name %><%= user.first_name %></td>
 					      <td><%= od.total_price %></td>
 					      <td><%= od.created_at %></td>
 					      <td><%= od.order_status %></td>
