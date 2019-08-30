@@ -24,15 +24,15 @@
            <%= form_for @cart do |t| %>
            	   <%= t.hidden_field :item_id, :value => @item.id %>
 	           <%= t.select :quantity, @current_stock %>個
-	           <%= t.submit "カートに追加", class: "btn btn-danger" %>
+	           <%= t.submit "カートに追加", class: "btn btn-warning" %>
 	         <% end %>
 	       <% end %>
 	     <% elsif @item.item_status == "販売停止中"%>
-           <button type="button" class="btn btn-danger" disabled="disabled">選択できません</button>
-       <% elsif @item.stock == 0 %>
-           <button type="button" class="btn btn-danger" disabled="disabled">売り切れ中です</button>
-      　<% else %>
-           <button type="button" class="btn btn-danger" disabled="disabled">ログインしてください</button>
+             <button type="button" class="btn btn-danger" disabled="disabled">選択できません</button>
+         <% elsif @item.stock == 0 %>
+             <button type="button" class="btn btn-danger" disabled="disabled">売り切れ中です</button>
+      　 <% else %>
+             <button type="button" class="btn btn-danger" disabled="disabled">ログインしてください</button>
          <% end %>
          <% end %>
 

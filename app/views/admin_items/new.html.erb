@@ -24,19 +24,18 @@
         <%= f.collection_select :category_id, Category.all, :id, :category_name %>
         <p><%= link_to "カテゴリ追加", admin_items_category_path %></p>
 
-      </div>
 
-
-
-
+    <div>
       <h4> - ディスク - </h4>
         <%= f.fields_for :disks do |disk| %>
         <%= render 'disk_fields', f: disk %>
-        <% end %>
-
         <%= link_to_add_association 'ディスクを追加', f, :disks %>
-
+        <% end %>
+    </div>
+    
+    <div>
         <%= f.submit '登録' %>
+    </div>
 
         <% end %>
 
@@ -44,8 +43,5 @@
 
 
 
-     </div>
-   </div>
- </div>
 
 
