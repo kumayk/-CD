@@ -24,7 +24,6 @@
         <%= f.collection_select :category_id, Category.all, :id, :category_name %>
         <p><%= link_to "カテゴリ追加", admin_items_category_path %></p>
 
-
     <div>
       <h4> - ディスク - </h4>
         <%= f.fields_for :disks do |disk| %>

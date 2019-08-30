@@ -12,7 +12,8 @@
   			</li>
 		    <li class="list-group-item"><%= @order.order_status %></li>
 		    <li class="list-group-item">orderID <%= @order.id %></li>
-		    <li class="list-group-item"><%= @order.user.last_name %><%= @order.user.first_name %></li>
+		   <% user = User.with_deleted.find(@order.user_id) %>
+		    <li class="list-group-item"><%= user.last_name %><%= user.first_name %></li>
 		    <li class="list-group-item"><%= @order.created_at %></li>
 		    <li class="list-group-item">
 		    	<table class="table">
